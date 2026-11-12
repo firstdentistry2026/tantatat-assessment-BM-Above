@@ -1,452 +1,10 @@
+<!-- BUILD:2026-11-11-assessment60-management-approved -->
+<!-- BUILD:2026-11-06-a60-original-ui-central -->
 <!DOCTYPE html>
 <html lang="th"><head>
-<meta charset="UTF-8"><style id="qw-theme">:root {
-  --color-bg: #faf9fc !important;
-  --color-text: #131920 !important;
-  --react-pdf-text-layer: 1 !important;
-  --highlight-bg-color: #b400aa !important;
-  --highlight-selected-bg-color: #006400 !important;
-  --react-pdf-annotation-layer: 1 !important;
-  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>") !important;
-  --input-focus-border-color: Highlight !important;
-  --input-focus-outline: 1px solid Canvas !important;
-  --input-unfocused-border-color: transparent !important;
-  --input-disabled-border-color: transparent !important;
-  --input-hover-border-color: black !important;
-  --link-outline: none !important;
-  --flow-size-overview-canvas-min-height: 480px !important;
-  --chat-column-max: 720px !important;
-  --color-navbar-bg: #f9f9fb !important;
-  --color-navbar-fg: #131920 !important;
-  --color-navbar-fg-muted: color-mix(in srgb, #131920 65%, #f9f9fb) !important;
-  --color-navbar-divider: #0000001f !important;
-  --color-leftnav-bg: #f9f9fb !important;
-  --color-bg-chat-view: #f9f9fb !important;
-  --color-bg-secondary: #fff !important;
-  --color-bg-tertiary: #f9fafb !important;
-  --color-bg-hover: #f3f4f6 !important;
-  --color-surface: #f9fafb !important;
-  --color-surface-hover: #f3f4f6 !important;
-  --color-surface-active: #e5e7eb !important;
-  --color-border: #0000001f !important;
-  --color-border-light: #0000000f !important;
-  --color-border-strong: #d1d5db !important;
-  --background-toggle-off-default: #fff0 !important;
-  --color-primary: #4200db !important;
-  --color-primary-dark: #35009e !important;
-  --color-primary-light: #8575ff !important;
-  --color-primary-bg: #e8e6ff !important;
-  --color-primary-hover-border: #35009e !important;
-  --color-nav-icon-active: #4200db !important;
-  --color-nav-hover-border: #4200db !important;
-  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent) !important;
-  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent) !important;
-  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent) !important;
-  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent) !important;
-  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent) !important;
-  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent) !important;
-  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent) !important;
-  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent) !important;
-  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent) !important;
-  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent) !important;
-  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent) !important;
-  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent) !important;
-  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent) !important;
-  --color-focus-ring: #4200db !important;
-  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent) !important;
-  --color-sidebar-hover-solid: color-mix(in srgb, #4200db 12%, #faf9fc) !important;
-  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent) !important;
-  --block-selected-outline: 1px solid #8575ff !important;
-  --block-selection-outline-offset: 2px !important;
-  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent) !important;
-  --color-accent: #4200db !important;
-  --color-accent-foreground: #4200db !important;
-  --color-accent-dark: #35009e !important;
-  --color-accent-light: #e8e6ff !important;
-  --color-accent-inverse: #fff !important;
-  --color-link: #4200db !important;
-  --color-brand-ai-gradient-start: #6842ff !important;
-  --color-brand-ai-gradient-mid: #d600ba !important;
-  --color-brand-ai-gradient-end: #ff4b14 !important;
-  --color-brand-kiro: #9147ff !important;
-  --color-primary-gradient-end: #e8e6ff !important;
-  --color-primary-bg-solid: #e8e6ff !important;
-  --color-user-bubble: #f3f3f7 !important;
-  --color-user-bubble-text: #131920 !important;
-  --color-text-secondary: #5e5e5e !important;
-  --color-text-tertiary: #656871 !important;
-  --color-text-muted: #656871 !important;
-  --color-text-on-primary: #fff !important;
-  --color-success: #00802f !important;
-  --color-success-dark: #00471e !important;
-  --color-success-light: #d9ffd6 !important;
-  --color-success-hover: #005c26 !important;
-  --color-success-bg: #e6f5eb !important;
-  --color-success-border: #b3d9bf !important;
-  --color-success-foreground: #00802f !important;
-  --color-success-dark-foreground: #00471e !important;
-  --color-success-text: #00471e !important;
-  --color-error: #db0000 !important;
-  --color-error-dark: #700000 !important;
-  --color-error-light: #ffe0e0 !important;
-  --color-error-hover: #ffe0e0 !important;
-  --color-error-bg: #fceaea !important;
-  --color-error-border: #f2cccc !important;
-  --color-error-active-border: #db0000 !important;
-  --color-error-foreground: #db0000 !important;
-  --color-error-dark-foreground: #700000 !important;
-  --color-error-inverse: #fff !important;
-  --color-error-text: #700000 !important;
-  --color-warning: #f2b100 !important;
-  --color-warning-dark: #573a00 !important;
-  --color-warning-light: #fffbbd !important;
-  --color-warning-hover: #db9200 !important;
-  --color-warning-bg: #fef7e6 !important;
-  --color-warning-border: #f9dfa3 !important;
-  --color-warning-foreground: #f2b100 !important;
-  --color-warning-dark-foreground: #573a00 !important;
-  --color-warning-inverse: #573a00 !important;
-  --color-surface-warning: #fffbbd !important;
-  --color-text-warning: #573a00 !important;
-  --color-info: #006ce0 !important;
-  --color-info-dark: #002a66 !important;
-  --color-info-light: #d1f1ff !important;
-  --color-info-hover: #003b8f !important;
-  --color-info-bg: #ebf3fc !important;
-  --color-info-border: #b3d1f0 !important;
-  --color-info-foreground: #006ce0 !important;
-  --color-info-dark-foreground: #002a66 !important;
-  --color-info-inverse: #fff !important;
-  --color-overlay: #00000080 !important;
-  --color-shadow: #00000014 !important;
-  --color-hover: #0000000d !important;
-  --color-tooltip-bg: #000000d9 !important;
-  --color-tooltip-text: #fff !important;
-  --color-voice-purple: #8575ff !important;
-  --color-voice-purple-dark: #4200db !important;
-  --color-voice-purple-light: #8575ff !important;
-  --color-voice-red: #db0000 !important;
-  --color-voice-red-dark: #700000 !important;
-  --color-voice-amber: #f2b100 !important;
-  --color-voice-purple-glow: #4200db66 !important;
-  --color-voice-red-glow: #db000066 !important;
-  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
-  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace !important;
-  --text-2xs: .5625rem !important;
-  --text-xs: .625rem !important;
-  --text-sm: .6875rem !important;
-  --text-base: .75rem !important;
-  --text-md: .8125rem !important;
-  --text-lg: .875rem !important;
-  --text-xl: 1rem !important;
-  --text-2xl: 1.125rem !important;
-  --text-3xl: 1.25rem !important;
-  --text-4xl: 1.5rem !important;
-  --text-5xl: 2rem !important;
-  --spacing-1: calc(.25rem * 1) !important;
-  --spacing-1-5: calc(.25rem * 1.5) !important;
-  --spacing-2: calc(.25rem * 2) !important;
-  --spacing-3: calc(.25rem * 3) !important;
-  --spacing-4: calc(.25rem * 4) !important;
-  --spacing-5: calc(.25rem * 5) !important;
-  --spacing-6: calc(.25rem * 6) !important;
-  --spacing-7: calc(.25rem * 7) !important;
-  --spacing-8: calc(.25rem * 8) !important;
-  --spacing-9: calc(.25rem * 9) !important;
-  --spacing-10: calc(.25rem * 10) !important;
-  --border-radius-rounded-lg: 8px !important;
-  --radius-sm: 6px !important;
-  --radius-md: 10px !important;
-  --radius-card: 12px !important;
-  --radius-lg: 16px !important;
-  --radius-pill: 8px !important;
-  --shadow-sm: 0 1px 2px #0000000d !important;
-  --shadow-md: 0 4px 12px #00000014 !important;
-  --shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029 !important;
-  --color-success-bg-solid: #d9ffd6 !important;
-  --color-error-bg-solid: #ffe0e0 !important;
-  --color-error-border-solid: #ffe0e0 !important;
-  --color-warning-bg-solid: #fffbbd !important;
-  --color-warning-text: #573a00 !important;
-  --color-info-bg-solid: #d1f1ff !important;
-  --color-info-bg-solid-alt: #d1f1ff !important;
-  --color-info-text: #002a66 !important;
-  --color-info-text-alt: #002a66 !important;
-  --color-emerald: #10b981 !important;
-  --color-teal: #4ecdc4 !important;
-  --color-code-bg: #f3f3f7 !important;
-  --color-code-header-bg: #f1f3f5 !important;
-  --color-code-text: #24292e !important;
-  --color-code-border: #e1e4e8 !important;
-  --color-code-muted: #6a737d !important;
-  --color-inline-code-bg: #f3f3f7 !important;
-  --color-inline-code-text: #24292e !important;
-  --color-inline-code-border: #e1e4e8 !important;
-  --color-scrollbar-thumb: #d1d5db !important;
-  --color-scrollbar-track: transparent !important;
-  --color-graph-node-text: #333 !important;
-  --color-graph-node-text-dim: #7f8c8d !important;
-  --color-graph-edge-default: #95a5a6 !important;
-  --color-graph-edge-cross: #e67e22 !important;
-  --color-graph-edge-text: #666 !important;
-  --color-graph-edge-stroke: #fff !important;
-  --color-graph-highlight-bg: #ff6b6b !important;
-  --color-graph-highlight-border: #e74c3c !important;
-  --color-graph-search-bg: gold !important;
-  --color-graph-search-border: orange !important;
-  --color-graph-focus-border: #c0392b !important;
-  --color-graph-external-border: #95a5a6 !important;
-  --color-graph-selected-border: #4200db !important;
-  --qs-data-cat-01: #4338ca !important;
-  --qs-data-cat-02: #d97706 !important;
-  --qs-data-cat-03: #0891b2 !important;
-  --qs-data-cat-04: #8b5cf6 !important;
-  --qs-data-cat-05: #15803d !important;
-  --qs-data-cat-06: #0c4a6e !important;
-  --qs-data-cat-07: #d946ef !important;
-  --qs-data-cat-08: #65a30d !important;
-  --qs-data-cat-09: #1d4ed8 !important;
-  --qs-data-cat-10: #831843 !important;
-  --qs-data-cat-11: #c2410c !important;
-  --qs-data-cat-12: #115e59 !important;
-  --qs-data-cat-other: #737373 !important;
-  --color-graph-cat-person: #4338ca !important;
-  --color-graph-cat-module: #4338ca !important;
-  --color-graph-cat-organization: #d97706 !important;
-  --color-graph-cat-org: #d97706 !important;
-  --color-graph-cat-variable: #d97706 !important;
-  --color-graph-cat-column: #d97706 !important;
-  --color-graph-cat-project: #0891b2 !important;
-  --color-graph-cat-sheet: #0891b2 !important;
-  --color-graph-cat-url: #0891b2 !important;
-  --color-graph-cat-product: #8b5cf6 !important;
-  --color-graph-cat-class: #8b5cf6 !important;
-  --color-graph-cat-dashboard: #8b5cf6 !important;
-  --color-graph-cat-place: #15803d !important;
-  --color-graph-cat-location: #15803d !important;
-  --color-graph-cat-function: #15803d !important;
-  --color-graph-cat-event: #0c4a6e !important;
-  --color-graph-cat-date: #0c4a6e !important;
-  --color-graph-cat-service: #0c4a6e !important;
-  --color-graph-cat-creativework: #d946ef !important;
-  --color-graph-cat-doc: #d946ef !important;
-  --color-graph-cat-message: #65a30d !important;
-  --color-graph-cat-channel: #65a30d !important;
-  --color-graph-cat-email: #65a30d !important;
-  --color-graph-cat-visual: #65a30d !important;
-  --color-graph-cat-file: #1d4ed8 !important;
-  --color-graph-cat-file-aggregate: #1d4ed8 !important;
-  --color-graph-cat-code: #1d4ed8 !important;
-  --color-graph-cat-decision: #831843 !important;
-  --color-graph-cat-action: #831843 !important;
-  --color-graph-cat-observation: #831843 !important;
-  --color-graph-cat-metric: #831843 !important;
-  --color-graph-cat-topic: #c2410c !important;
-  --color-graph-cat-concept: #c2410c !important;
-  --color-graph-cat-definedterm: #c2410c !important;
-  --color-graph-cat-instruction: #c2410c !important;
-  --color-graph-cat-import: #c2410c !important;
-  --color-graph-cat-dataset: #115e59 !important;
-  --color-graph-cat-occupation: #115e59 !important;
-  --color-graph-cat-method: #115e59 !important;
-  --color-graph-cat-folder: #737373 !important;
-  --color-graph-cat-unknown: #737373 !important;
-  --color-graph-rel-contains: #bdc3c7 !important;
-  --color-graph-rel-extends: #9b59b6 !important;
-  --color-graph-rel-implements: #3498db !important;
-  --color-graph-rel-imports: #e67e22 !important;
-  --color-graph-rel-uses: #2ecc71 !important;
-  --color-graph-rel-calls: #27ae60 !important;
-  --color-graph-rel-references: #f39c12 !important;
-  --color-graph-rel-related-to: #95a5a6 !important;
-  --color-graph-rel-works-on: #e74c3c !important;
-  --color-graph-rel-owns: #1abc9c !important;
-  --color-graph-rel-depends-on: #e67e22 !important;
-  --color-graph-rel-parent-of: #bdc3c7 !important;
-  --qs-content: #fff !important;
-  --qs-main: #fff !important;
-  --qs-primary-foreground: #131920 !important;
-  --qs-secondary-foreground: #656871 !important;
-  --qs-tertiary-foreground: #656871 !important;
-  --qs-placeholder-foreground: #656871 !important;
-  --qs-divider: #dedee3 !important;
-  --qs-default-border: #8c8c94 !important;
-  --qs-neutral-soft: #b4b4bb !important;
-  --qs-neutral-gray-50: #f9fafb !important;
-  --qs-tertiary-background: #f9fafb !important;
-  --qs-action-hover: #f3f3f7 !important;
-  --qs-primary-default: #4200db !important;
-  --qs-primary-dark: #35009e !important;
-  --qs-primary-light: #e8e6ff !important;
-  --qs-primary-inverse: #fff !important;
-  --qs-success-default: #00802f !important;
-  --qs-success-dark: #00471e !important;
-  --qs-error-default: #db0000 !important;
-  --qs-warning-default: #f2b100 !important;
-  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif !important;
-  --safe-top: 0px !important;
-  --safe-bottom: 0px !important;
-  --safe-left: 0px !important;
-  --safe-right: 0px !important;
-  --qs-action-active: #e8e6ff !important;
-  --qs-action-disabled: #f3f3f7 !important;
-  --qs-active-border: #4200db !important;
-  --qs-application-navbar: #4200db !important;
-  --qs-application-navbar-dark: #35009e !important;
-  --qs-application-navbar-foreground: #fff !important;
-  --qs-application-navbar-light: #e8e6ff !important;
-  --qs-automation-dark: #660052 !important;
-  --qs-automation-default: #d600ba !important;
-  --qs-automation-light: #ffe0fb !important;
-  --qs-automation-medium: #b3008f !important;
-  --qs-automation-soft: #ff94f1 !important;
-  --qs-avatar-blue-bg: #d1f1ff !important;
-  --qs-avatar-blue-fg: #002a66 !important;
-  --qs-avatar-fuchsia-bg: #fce6ff !important;
-  --qs-avatar-fuchsia-fg: #590066 !important;
-  --qs-avatar-green-bg: #d9ffd6 !important;
-  --qs-avatar-green-fg: #00471e !important;
-  --qs-avatar-neutral-bg: #dedee3 !important;
-  --qs-avatar-neutral-fg: #131920 !important;
-  --qs-avatar-orange-bg: #ffe0d6 !important;
-  --qs-avatar-orange-fg: #661800 !important;
-  --qs-avatar-pink-bg: #ffe0fb !important;
-  --qs-avatar-pink-fg: #660052 !important;
-  --qs-avatar-primary-bg: #e8e6ff !important;
-  --qs-avatar-primary-fg: #35009e !important;
-  --qs-avatar-red-bg: #ffe0e0 !important;
-  --qs-avatar-red-fg: #700000 !important;
-  --qs-avatar-violet-bg: #f2e5ff !important;
-  --qs-avatar-violet-fg: #45008a !important;
-  --qs-avatar-yellow-bg: #fffbbd !important;
-  --qs-avatar-yellow-fg: #573a00 !important;
-  --qs-brand: #fff !important;
-  --qs-brand-foreground: #131920 !important;
-  --qs-brand-navbar: #131920 !important;
-  --qs-brand-navbar-dark: #000 !important;
-  --qs-brand-navbar-foreground: #fff !important;
-  --qs-brand-navbar-light: #dedee3 !important;
-  --qs-coachmark: #006ce0 !important;
-  --qs-connection-dark: #661800 !important;
-  --qs-connection-default: #db3300 !important;
-  --qs-connection-light: #ffe0d6 !important;
-  --qs-connection-soft: #ff997a !important;
-  --qs-content-inverse: #333843 !important;
-  --qs-content-inverse-active: #131920 !important;
-  --qs-contrast-foreground: #131920 !important;
-  --qs-data-categorical-01: #4338ca !important;
-  --qs-data-categorical-02: #d97706 !important;
-  --qs-data-categorical-03: #0891b2 !important;
-  --qs-data-categorical-04: #8b5cf6 !important;
-  --qs-data-categorical-05: #15803d !important;
-  --qs-data-categorical-06: #0c4a6e !important;
-  --qs-data-categorical-07: #d946ef !important;
-  --qs-data-categorical-08: #65a30d !important;
-  --qs-data-categorical-09: #1d4ed8 !important;
-  --qs-data-categorical-10: #831843 !important;
-  --qs-data-categorical-11: #c2410c !important;
-  --qs-data-categorical-12: #115e59 !important;
-  --qs-data-categorical-other: #737373 !important;
-  --qs-data-divergent-negative: #ea580c !important;
-  --qs-data-divergent-positive: #4f46e5 !important;
-  --qs-data-divergent-red-green-negative: #dc2626 !important;
-  --qs-data-divergent-red-green-positive: #16a34a !important;
-  --qs-data-missing: #d4d4d4 !important;
-  --qs-data-sentiment-neutral: #737373 !important;
-  --qs-data-sentiment-warning: #9e6900 !important;
-  --qs-data-sequential-duochromatic-high: #1e1b4b !important;
-  --qs-data-sequential-duochromatic-low: #8b5cf6 !important;
-  --qs-data-sequential-monochromatic-high: #4f46e5 !important;
-  --qs-default-badge: #b4b4bb !important;
-  --qs-default-badge-dot: #656871 !important;
-  --qs-dimension: #4200db !important;
-  --qs-dimension-experimental: #4200db !important;
-  --qs-dimension-experimental-foreground: #4200db !important;
-  --qs-dimension-foreground: #fff !important;
-  --qs-disabled: #8c8c94 !important;
-  --qs-disabled-border: #dedee3 !important;
-  --qs-disabled-foreground: #b4b4bb !important;
-  --qs-divider-light: #f3f3f7 !important;
-  --qs-error-active-border: #db0000 !important;
-  --qs-error-border: #ffe0e0 !important;
-  --qs-error-dark: #700000 !important;
-  --qs-error-foreground: #db0000 !important;
-  --qs-error-inverse: #fff !important;
-  --qs-error-light: #ffe0e0 !important;
-  --qs-error-medium: #900 !important;
-  --qs-error-soft: #ff9e9e !important;
-  --qs-focus-offset: 1px !important;
-  --qs-font-base-letter-spacing: .15px !important;
-  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif !important;
-  --qs-grid-gap: 16px !important;
-  --qs-grid-gap-xl: 24px !important;
-  --qs-hero-banner-button-hover: color-mix(in srgb, #fff, transparent 60%) !important;
-  --qs-hover-border: #333843 !important;
-  --qs-info-dark: #002a66 !important;
-  --qs-info-default: #006ce0 !important;
-  --qs-info-inverse: #fff !important;
-  --qs-info-light: #d1f1ff !important;
-  --qs-info-medium: #003b8f !important;
-  --qs-info-soft: #75cfff !important;
-  --qs-insight-dark: #590066 !important;
-  --qs-insight-default: #a000b8 !important;
-  --qs-insight-light: #fce6ff !important;
-  --qs-insight-soft: #f299ff !important;
-  --qs-main-foreground: #131920 !important;
-  --qs-main-secondary-foreground: #656871 !important;
-  --qs-measure: #00802f !important;
-  --qs-measure-experimental: #f2b100 !important;
-  --qs-measure-experimental-foreground: #f2b100 !important;
-  --qs-measure-foreground: #fff !important;
-  --qs-neutral-black: #000 !important;
-  --qs-neutral-dark: #333843 !important;
-  --qs-neutral-deep: #656871 !important;
-  --qs-neutral-default: #dedee3 !important;
-  --qs-neutral-light: #f3f3f7 !important;
-  --qs-neutral-lightest: #f9f9fb !important;
-  --qs-neutral-medium: #8c8c94 !important;
-  --qs-neutral-strong: #131920 !important;
-  --qs-neutral-white: #fff !important;
-  --qs-overlay: color-mix(in srgb, #131920, transparent 50%) !important;
-  --qs-primary-inverse-foreground: #fff !important;
-  --qs-primary-medium: #8575ff !important;
-  --qs-primary-soft: #b2a8ff !important;
-  --qs-secondary: #dedee3 !important;
-  --qs-secondary-dark: #b4b4bb !important;
-  --qs-secondary-light: #f3f3f7 !important;
-  --qs-spice: #ff9800 !important;
-  --qs-success-inverse: #fff !important;
-  --qs-success-light: #d9ffd6 !important;
-  --qs-success-medium: #005c26 !important;
-  --qs-success-soft: #aeffa8 !important;
-  --qs-tag-default: #dedee3 !important;
-  --qs-tag-soft-border: #b4b4bb !important;
-  --qs-toggle-tile-lg: calc(.25rem * 15) !important;
-  --qs-toggle-tile-md: calc(.25rem * 12) !important;
-  --qs-toggle-tile-sm: calc(.25rem * 8) !important;
-  --qs-transparent: transparent !important;
-  --qs-visualization-dark: #45008a !important;
-  --qs-visualization-default: #7300e5 !important;
-  --qs-visualization-light: #f2e5ff !important;
-  --qs-visualization-soft: #d4a8ff !important;
-  --qs-warning-dark: #573a00 !important;
-  --qs-warning-experimental: #f2b100 !important;
-  --qs-warning-experimental-light: #fffbbd !important;
-  --qs-warning-experimental-light-foreground: #fffbbd !important;
-  --qs-warning-inverse: #573a00 !important;
-  --qs-warning-light: #fffbbd !important;
-  --qs-warning-medium: #db9200 !important;
-  --qs-warning-soft: #ffed4d !important;
-  --qs-width-modal-lg: 1136px !important;
-  --qs-width-modal-md: 600px !important;
-  --qs-width-modal-sm: 384px !important;
-  --qs-duration-reorder: .125s !important;
-  --qs-ease-reorder: ease-in-out !important;
-  --z-subtask-modal: 10000 !important;
-  --z-above-subtask-modal: 10001 !important;
-}</style>
+<meta charset="UTF-8"><script>try{if(parent!==window&&(parent.HRA60Bridge||parent.HRU?.token))document.documentElement.setAttribute('data-hr-master-admin','1')}catch(e){}</script><style>html[data-hr-master-admin] #hrLockCard,html[data-hr-master-admin] #candView,html[data-hr-master-admin] .modebtns{display:none!important}html[data-hr-master-admin] #hrView,html[data-hr-master-admin] #hrPanel{display:block!important}</style>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TANTATAT Frontline Candidate Assessment</title>
+<title>TANTATAT Management Candidate Assessment</title>
 <style>
 :root{
   --bg:#f6f3ee; --card:#ffffff; --card2:#f3efe8; --line:#e4ddd1;
@@ -550,7 +108,7 @@ th{color:var(--muted);font-weight:600}
   .card { box-shadow: none !important; border: 1px solid #ccc !important; page-break-inside: avoid; }
 }
 </style>
-</head>
+<style id="hrm-theme"></style><style>input[type=file]::file-selector-button{font:inherit;background:var(--accent,#5e7d6a);color:#fff;border:0;border-radius:8px;padding:10px}.report-actions{margin:12px 0}.dimbar i{background:#5e7d6a}#hrResult td{overflow-wrap:anywhere}#hrResult{overflow-x:auto}#filterBar{grid-template-columns:repeat(auto-fit,minmax(145px,1fr))!important}@media print{@page{size:A4;margin:12mm}body *{visibility:visible!important}header,#candView,#hrLockCard,#hrListCard,#manualCard,#detailStatus,.footer,#publicLink,.report-actions{display:none!important}.wrap{max-width:none;padding:0}#hrView,#hrPanel,#hrResult{display:block!important;position:static!important}#hrResult.hidden{display:none!important}#hrResult .card{break-inside:auto}#hrResult tr{break-inside:avoid}#hrResult table{table-layout:fixed;width:100%}#hrResult th:first-child{width:18%}#hrResult th:last-child{width:12%}details{display:none!important}}</style><style>.exam-rules{border:1px solid #c9c2b7;border-radius:12px;padding:16px;margin:16px 0;background:#faf7f0}.exam-rules li{margin:8px 0;line-height:1.6}.exam-nav{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:16px 0}.exam-nav strong{margin-right:auto}.exam-watermark{text-align:right;font-size:12px;color:#777;padding-top:18px;user-select:none}body.exam-in-progress #questions{user-select:none;-webkit-user-select:none}#questions .qtext{font-size:20px;line-height:1.7}.exam-in-progress #mCand,.exam-in-progress #mHR{display:none}@media print{body.exam-in-progress .wrap,body.exam-in-progress #candView,body.exam-in-progress #questions{display:none!important}}@media(max-width:600px){.exam-nav{gap:6px}.exam-nav .btn{padding:10px}.exam-rules{padding:12px}}</style></head>
 <body>
 <div class="wrap">
   <header>
@@ -558,8 +116,8 @@ th{color:var(--muted);font-weight:600}
       <img class="logo" src="data:image/png;base64,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" alt="TANTATAT" onerror="this.style.display='none';document.getElementById('brandFallback').style.display='block'">
       <div class="brandfallback" id="brandFallback" style="display:none">TANTATAT</div>
       <div>
-        <h1>TANTATAT Frontline Candidate Assessment</h1>
-        <div class="sub">แบบประเมิน EQ / IQ / AQ · 60 ข้อ · ~45–60 นาที</div>
+        <h1>TANTATAT Management Candidate Assessment</h1>
+        <div class="sub">Management JG13+ · 60 ข้อ · 60 นาที · ทีละข้อ · ส่งเมื่อออกจากหน้าสอบ</div>
       </div>
     </div>
     <div class="modebtns">
@@ -573,11 +131,11 @@ th{color:var(--muted);font-weight:600}
     <div class="card" id="introCard">
       <h2>ข้อมูลผู้สมัคร</h2>
       <div class="grid2">
-        <div><label>ชื่อ-นามสกุล <span style="color:var(--bad)">*</span></label><input id="cName" placeholder="กรอกทั้งชื่อและนามสกุล เช่น สมชาย ใจดี"></div>
+        <div><label>ชื่อ-นามสกุล <span style="color:var(--bad)">*</span></label><input id="cName" placeholder="ชื่อ–นามสกุล *" autocomplete="name" maxlength="160"></div>
         <div><label>ตำแหน่งที่สมัคร (Role Profile)</label><select id="cRole"></select><input id="cRoleOther" class="hidden" style="margin-top:8px" placeholder="ระบุตำแหน่งที่สมัคร"></div>
       </div>
       <p class="note" style="margin-top:14px">เลือกคำตอบที่ใกล้เคียงกับตัวคุณมากที่สุดเพียง 1 ข้อ · คุณจะไม่เห็นคะแนนหรือเฉลย ผลจะถูกส่งให้ฝ่าย HR โดยอัตโนมัติ</p>
-      <div style="margin-top:16px"><button class="btn" id="startBtn" type="button">เริ่มทำแบบทดสอบ</button></div>
+      <div style="margin-top:16px"><label>สาขา<input id="cBranch" maxlength="160"></label><label style="margin:12px 0"><input id="candidateConsent" type="checkbox" style="width:auto"> ฉันรับทราบการเก็บชื่อ ตำแหน่ง สาขา และคำตอบ เพื่อให้ HR ใช้ประกอบการสัมภาษณ์ และยินยอมส่งข้อมูล</label><div class="exam-rules"><h3>กติกาก่อนเริ่มสอบ</h3><ul><li>60 ข้อ ภายใน 60 นาที แสดงครั้งละ 1 ข้อ</li><li>ต้องตอบข้อปัจจุบันก่อนจึงไปข้อถัดไปได้ ย้อนกลับไปแก้คำตอบได้</li><li>สลับแท็บ เปลี่ยนหน้าต่าง เปิดแอปอื่น หรือออกจากหน้าข้อสอบ ระบบจะยุติและพยายามส่งคำตอบทันที</li><li>ห้ามบันทึกหรือเผยแพร่ข้อสอบ มีข้อจำกัดการคัดลอกและพิมพ์บนเว็บ</li><li>อย่าเปลี่ยนแอปหรือเปิดหน้าต่างอื่นระหว่างสอบ</li></ul><label><input id="examRules" type="checkbox" style="width:auto"> ฉันอ่านกติกาแล้ว และรับทราบว่าการออกจากหน้าข้อสอบจะส่งคำตอบทันที</label></div><button class="btn" id="startBtn" type="button">เริ่มทำแบบทดสอบ</button></div>
     </div>
 
     <div id="testCard" class="hidden">
@@ -588,9 +146,9 @@ th{color:var(--muted);font-weight:600}
             <span class="pill timer" id="timer">⏱ 60:00</span>
           </div></div>
         <div class="bar"><i id="pbar"></i></div>
-        <div class="phint">ระบบบันทึกคำตอบให้อัตโนมัติ (กันเผลอปิดหน้า) · มีเวลาทำ 30 นาที · หมดเวลาระบบจะส่งอัตโนมัติ</div>
+        <div class="phint">มีเวลา 60 นาที · เลือกคำตอบก่อนจึงไปข้อถัดไปได้ · ย้อนกลับไปแก้คำตอบได้ · สลับแท็บหรือออกจากหน้าต่างข้อสอบจะส่งทันที</div>
       </div>
-      <div id="questions"></div>
+      <div class="exam-nav"><strong id="questionNo">ข้อ 1 / 60</strong><button id="prevQuestion" class="btn ghost" type="button">← ข้อก่อนหน้า</button><button id="nextQuestion" class="btn" type="button">ข้อถัดไป →</button></div><p id="examNotice" class="note" role="status"></p><div id="questions"></div>
       <div class="card">
         <div class="spread">
           <div class="note">ตรวจสอบว่าตอบครบทุกข้อแล้ว ระบบจะไม่แสดงคะแนนให้ผู้สมัคร</div>
@@ -600,9 +158,9 @@ th{color:var(--muted);font-weight:600}
     </div>
 
     <div id="doneCard" class="card hidden">
-      <h2>✅ ส่งแบบทดสอบเรียบร้อย</h2>
-      <p>ขอบคุณ <strong id="doneName"></strong> คำตอบของคุณถูกส่งให้ฝ่าย HR เรียบร้อยแล้ว</p>
-      <div id="sendStatus"></div>
+      <h2 id="receiptHeading">กำลังส่งแบบทดสอบ</h2>
+      <p>ขอบคุณ <strong id="doneName"></strong> กรุณารอเลขยืนยันการรับข้อมูลจากระบบ</p>
+      <div id="sendStatus" role="status"></div><div id="retryBox" class="hidden"><button class="btn" id="retrySend">ส่งคำตอบเดิมอีกครั้ง</button></div>
       <div id="backupBox" class="hidden">
         <p class="note" style="margin-top:14px">หากระบบส่งอัตโนมัติไม่สำเร็จ กรุณาส่งรหัสสำรองนี้ให้ HR:</p>
         <div class="result-code" id="resultCode"></div>
@@ -621,8 +179,8 @@ th{color:var(--muted);font-weight:600}
       <div class="lock">
         <div class="ico">🔒</div>
         <h2>HR Admin Access</h2>
-        <p class="note">ส่วนนี้แสดงคะแนน เฉลย และ Decision Support สำหรับ HR เท่านั้น</p>
-        <div style="max-width:280px;margin:14px auto 0"><input id="hrPass" type="password" placeholder="รหัสผ่าน HR"></div>
+        <p class="note">ใช้ ID และรหัสบัญชี HR Master ที่มีสิทธิ Assessment 60 เพื่อเปิดผล ชื่อบัญชีและรหัสตรวจสอบกับเซิร์ฟเวอร์</p>
+        <div style="max-width:280px;margin:14px auto 0"><input id="hrUser" autocomplete="username" placeholder="ID บัญชี HR Master" style="margin-bottom:8px"><input id="hrPass" type="password" placeholder="รหัสผ่าน HR"></div>
         <div style="margin-top:12px"><button class="btn" id="hrLoginBtn" type="button">เข้าสู่ระบบ</button></div>
         <p class="note" id="hrErr" style="color:var(--bad);margin-top:10px"></p>
       </div>
@@ -637,17 +195,11 @@ th{color:var(--muted);font-weight:600}
             <button class="btn ghost sm" id="manualBtn" type="button">วางรหัสด้วยมือ</button>
           </div>
         </div>
-        <div id="listStatus" class="note" style="margin-top:8px">กด "โหลดรายชื่อ" เพื่อดึงข้อมูลล่าสุดจาก Sheet</div>
+        <div class="flex" style="margin:12px 0"><input id="publicLink" value="https://tantatat-assessmentbm.vercel.app/" readonly aria-label="ลิงก์ผู้สมัคร"><button class="btn ghost sm" id="copyPublic">คัดลอกลิงก์ผู้สมัคร</button></div><p class="note">ผลด้านล่างเป็นชุด Management JG13+ ผลชุดเก่ายังคงอยู่ในฐานเดิม และเปิดจากส่วนผลชุดเดิมใน HR Master ได้</p><div id="listStatus" class="note" style="margin-top:8px">กด "โหลดรายชื่อ" เพื่อดึงข้อมูลล่าสุดจาก Sheet</div>
         <div id="filterBar" class="hidden" style="margin-top:12px;display:grid;grid-template-columns:1.4fr 1fr 1fr 0.9fr 1fr;gap:8px">
-          <input id="fSearch" placeholder="ค้นหาชื่อผู้สมัคร...">
+          <input id="fSearch" placeholder="ค้นหาชื่อ ตำแหน่ง หรือสาขา...">
           <select id="fRole"><option value="">ทุกตำแหน่ง</option></select>
-          <select id="fLevel">
-            <option value="">ทุกระดับผล</option>
-            <option value="Strong signal">Strong signal</option>
-            <option value="Suitable signal">Suitable signal</option>
-            <option value="Mixed signal">Mixed signal</option>
-            <option value="Needs validation">Needs validation</option>
-          </select>
+          <select id="fLevel"><option value="">ทุกระดับผล</option><option>สูงตามเกณฑ์คะแนนที่ออกแบบ</option><option>ระดับกลางตามเกณฑ์คะแนนที่ออกแบบ</option><option>ควรสำรวจเพิ่มเติม</option><option>ทำไม่ครบ · รอ HR ตรวจ</option></select>
           <select id="fScore">
             <option value="0">คะแนนทั้งหมด</option>
             <option value="80">Overall ≥ 80</option>
@@ -667,18 +219,18 @@ th{color:var(--muted);font-weight:600}
       </div>
 
       <div class="card hidden" id="manualCard">
-        <h2>ประมวลผลจากรหัสสำรอง (ออฟไลน์)</h2>
-        <label>วางรหัสผลลัพธ์ (Result Code) จากผู้สมัคร แล้วกดประมวลผล</label>
-        <textarea id="hrCodeIn" rows="3" style="font-family:ui-monospace,monospace;font-size:12px" placeholder="วางรหัสผลลัพธ์ที่ขึ้นต้นด้วย TANTER1:"></textarea>
+        <h2>นำเข้าคำตอบสำรองให้ HR บันทึก</h2>
+        <label>วาง JSON สำรองชุด Management JG13+ แล้วกดนำเข้า</label>
+        <textarea id="hrCodeIn" rows="3" style="font-family:ui-monospace,monospace;font-size:12px" placeholder="วาง JSON สำรองชุด Management JG13+"></textarea>
         <div style="margin-top:12px" class="flex">
-          <button class="btn sm" id="procBtn" type="button">ประมวลผล</button>
+          <button class="btn sm" id="procBtn" type="button">นำเข้าและบันทึก</button>
           <button class="btn ghost sm" id="fileBtn" type="button">โหลดจากไฟล์</button>
           <input id="fileIn" type="file" accept=".txt,.json" class="hidden">
         </div>
         <p class="note" id="hrProcErr" style="color:var(--bad);margin-top:8px"></p>
       </div>
 
-      <div id="hrResult" class="hidden"></div>
+      <p class="note" id="detailStatus" role="status"></p><div id="hrResult" class="hidden"></div>
     </div>
   </section>
 
@@ -687,619 +239,62 @@ th{color:var(--muted);font-weight:600}
 
 <iframe name="sinkFrame" id="sinkFrame" style="display:none"></iframe>
 
-<script>
-// ========================================================
-//  TANTATAT Assessment — CONFIG (แก้ไฟล์นี้ไฟล์เดียวพอ)
-// ========================================================
-window.ASSESSMENT_CONFIG = {
 
-  // (1) วาง URL ของ Google Apps Script Web App (ลงท้ายด้วย /exec)
-  SHEET_ENDPOINT: "https://script.google.com/macros/s/AKfycbyYg_Dw1clC10W7VpKeRIWj0eXWQPQS3Q0HOmOE1U1H0faNClWNbyff657AWNQGRCkh4g/exec",
 
-  // (2) รหัสผ่านสำหรับหน้า HR Admin
-  HR_PASSWORD: "2468"
 
-};
 
-</script>
-<script>
-window.ASSESSMENT_DATA = {"questions": [{"no": 1, "dim": "EQ", "value": "BOLD", "q": "หลังได้รับ feedback ว่าพูดเร็วและทำให้ทีมตามไม่ทัน คุณจะทำอย่างไร", "options": ["รับฟังแต่ยังไม่แน่ใจว่าจะต้องทำอะไร", "ขอ feedback เพิ่มและทดลองปรับจังหวะการสื่อสาร", "คิดว่าเป็นเรื่องของคนฟังและไม่เปลี่ยนวิธีพูด", "สรุป pattern ของตนเอง ปรับวิธีพูด และติดตามผลกับทีม", "ถามตัวอย่างเพื่อดูว่าปัญหาเกิดเมื่อใด"]}, {"no": 2, "dim": "EQ", "value": "BOLD", "q": "คุณรู้สึกหงุดหงิดก่อนประชุมเรื่องสำคัญ วิธีที่ใกล้เคียงกับคุณที่สุดคือข้อใด", "options": ["จัดการอารมณ์ วางเป้าหมายการประชุม และเลือกวิธีตอบที่เหมาะสม", "พยายามเก็บอารมณ์โดยไม่หาสาเหตุ", "ระบุสาเหตุของอารมณ์และเตรียมข้อเท็จจริงก่อนประชุม", "เข้าประชุมทันทีและปล่อยให้อารมณ์นำการตอบโต้", "เลื่อนการตอบประเด็นที่อาจทำให้ขัดแย้ง"]}, {"no": 3, "dim": "EQ", "value": "BOLD", "q": "เมื่อผลงานของคุณต่ำกว่าเป้าหมาย คุณมักเริ่มจากอะไร", "options": ["อธิบายว่าปัจจัยภายนอกเป็นสาเหตุหลัก", "ทบทวนเฉพาะจุดที่เห็นชัดที่สุด", "วิเคราะห์สาเหตุของตนเองและระบบ แล้วกำหนดการเปลี่ยนแปลงที่วัดผลได้", "รอดูผลรอบถัดไปก่อน", "แยกสิ่งที่ควบคุมได้และขอข้อมูลเพิ่มเติม"]}, {"no": 4, "dim": "EQ", "value": "BOLD", "q": "คุณได้รับมอบหมายงานที่ไม่ถนัด คุณจะประเมินตนเองอย่างไร", "options": ["ระบุสิ่งที่ทำได้ สิ่งที่ต้องเรียนรู้ และขอ support", "รับงานโดยไม่แจ้งข้อจำกัดและหวังว่าจะทำได้", "แจ้งว่าต้องการเวลาเรียนรู้เพิ่มเติม", "ประเมิน gap วางแผนเรียนรู้ ขอ support เฉพาะจุด และกำหนด checkpoint", "ปฏิเสธเพราะไม่ใช่ความถนัด"]}, {"no": 5, "dim": "EQ", "value": "CRAFTED", "q": "ลูกค้าไม่พอใจและพูดเสียงดังต่อหน้าทีม คุณจะทำอย่างไร", "options": ["รับฟังแต่รีบจบการสนทนา", "รักษาความสงบ แยกอารมณ์ออกจากข้อเท็จจริง แก้ปัญหาและติดตามผล", "หลีกเลี่ยงและให้คนอื่นจัดการ", "ควบคุมน้ำเสียง รับฟัง และชี้แจงขั้นตอนช่วยเหลือ", "โต้แย้งทันทีเพื่อปกป้องทีม"]}, {"no": 6, "dim": "EQ", "value": "CRAFTED", "q": "งานเร่งด่วนหลายเรื่องเข้ามาพร้อมกัน คุณมักทำอย่างไร", "options": ["เลือกทำเรื่องที่ง่ายที่สุดก่อน", "จัดลำดับ แจ้ง trade-off ประสานผู้เกี่ยวข้อง และติดตามจนเสร็จ", "ขอให้หัวหน้าบอกว่าต้องทำอะไร", "เริ่มทำทุกเรื่องพร้อมกัน", "จัดลำดับตามผลกระทบและ deadline"]}, {"no": 7, "dim": "EQ", "value": "CRAFTED", "q": "เมื่อเพื่อนร่วมงานวิจารณ์งานคุณต่อหน้าคนอื่น คุณจะตอบอย่างไร", "options": ["ขอคุยด้วยข้อมูลหลังประชุม", "เงียบและไม่ร่วมงานกับคนนั้นต่อ", "ควบคุมปฏิกิริยา แยก feedback จากวิธีสื่อสาร และคุยตรงอย่างสร้างสรรค์", "รับฟังแต่ยังเก็บความไม่พอใจไว้", "ตอบกลับทันทีเพื่อไม่ให้เสียหน้า"]}, {"no": 8, "dim": "EQ", "value": "CRAFTED", "q": "แผนงานเปลี่ยนกะทันหันก่อนส่งมอบ คุณจะทำอย่างไร", "options": ["บ่นว่าไม่สามารถทำได้ตามเวลา", "ประเมินผลกระทบและปรับลำดับงาน", "ทำตามแผนเดิมเพราะเปลี่ยนไม่ทัน", "ประเมินผลกระทบ เสนอทางเลือก ตกลง priority และสื่อสารความเสี่ยงทันที", "รอคำสั่งใหม่ทั้งหมด"]}, {"no": 9, "dim": "EQ", "value": "CRAFTED", "q": "พนักงานที่ปกติทำงานดีเริ่มผิดพลาดบ่อย คุณจะทำอย่างไร", "options": ["รับฟังโดยไม่ด่วนสรุป แยกปัจจัยงานและส่วนตัว แล้วตกลง support กับความคาดหวัง", "ปล่อยไว้เพราะเป็นเรื่องส่วนตัว", "สรุปว่าเขาขาดความรับผิดชอบ", "คุยเป็นการส่วนตัวและถามข้อเท็จจริง", "เตือนต่อหน้าทีมเพื่อให้ระวัง"]}, {"no": 10, "dim": "EQ", "value": "CRAFTED", "q": "ผู้สมัครดูตื่นเต้นจนตอบคำถามไม่ชัด คุณจะทำอย่างไร", "options": ["ลดคะแนนโดยไม่สอบถามเพิ่ม", "ตัดสินว่าไม่เหมาะกับงานที่ต้องสื่อสาร", "ให้เวลาตั้งสติและถามคำถามใหม่", "ถามต่ออย่างรวดเร็วเพื่อทดสอบแรงกดดัน", "สร้างบรรยากาศที่เป็นธรรม ใช้คำถามเจาะหลักฐาน และแยกความตื่นเต้นจากความสามารถจริง"]}, {"no": 11, "dim": "EQ", "value": "CRAFTED", "q": "เพื่อนร่วมทีมไม่เห็นด้วยกับการตัดสินใจของคุณ คุณจะทำอย่างไร", "options": ["หลีกเลี่ยงการคุยเพื่อไม่ให้เกิดความขัดแย้ง", "ถามเหตุผลและข้อมูลของอีกฝ่าย", "ยืนยันอำนาจตัดสินใจของตน", "รับฟังมุมมอง ตรวจข้อสมมติฐานร่วมกัน และปรับการตัดสินใจเมื่อมีข้อมูลที่ดีกว่า", "อธิบายเหตุผลของตนฝ่ายเดียว"]}, {"no": 12, "dim": "EQ", "value": "CRAFTED", "q": "ลูกค้าบอกว่ารู้สึกไม่ได้รับการใส่ใจ แม้ทีมทำตามขั้นตอนครบ คุณจะทำอย่างไร", "options": ["รับฟังประสบการณ์ลูกค้า แก้ไขจุดที่กระทบความรู้สึก และปรับกระบวนการป้องกันซ้ำ", "อธิบายขั้นตอนทั้งหมดเพื่อพิสูจน์ว่าทีมไม่ผิด", "ยอมรับความรู้สึกและถามว่าจุดใดทำให้รู้สึกเช่นนั้น", "บอกว่าทีมทำตามมาตรฐานแล้ว", "ขอโทษเพื่อให้เรื่องจบ"]}, {"no": 13, "dim": "EQ", "value": "BOLD", "q": "สองฝ่ายโต้แย้งกันเรื่องความรับผิดชอบ คุณจะจัดการอย่างไร", "options": ["เลือกฝ่ายที่คุณคิดว่าถูกทันที", "แยกทั้งสองฝ่ายและเลื่อนเรื่องออกไป", "กำหนดประเด็นร่วม ใช้ข้อมูล แยกคนออกจากปัญหา และตกลง owner กับ next step", "ปล่อยให้ทั้งสองฝ่ายตกลงกันเอง", "ให้แต่ละฝ่ายอธิบายข้อเท็จจริงและความต้องการ"]}, {"no": 14, "dim": "EQ", "value": "BOLD", "q": "คุณต้องแจ้งข่าวที่ทีมอาจไม่พอใจ วิธีใดใกล้เคียงกับคุณที่สุด", "options": ["อธิบายเหตุผล ผลกระทบ และเปิดรับคำถาม", "ส่งข้อความสั้นโดยไม่เปิดให้ถาม", "แจ้งเฉพาะบางคนก่อนโดยไม่มีเหตุผล", "สื่อสารตรงเวลา โปร่งใส แยกสิ่งที่ตัดสินใจแล้วกับสิ่งที่รับฟังได้ และระบุ support", "ชะลอการแจ้งจนกว่าจะหลีกเลี่ยงไม่ได้"]}, {"no": 15, "dim": "EQ", "value": "BOLD", "q": "เพื่อนร่วมงานเข้าใจคำสั่งคุณไม่ตรงกันหลายคน คุณจะทำอย่างไร", "options": ["แก้เฉพาะคนที่ถาม", "ปรับโครงสร้างการสื่อสาร ยืนยันความเข้าใจ และกำหนดช่องทางถามตอบ", "ส่งข้อความเดิมซ้ำอีกครั้ง", "ทบทวนว่าข้อความส่วนใดไม่ชัดและสรุปใหม่", "ย้ำว่าคุณอธิบายชัดแล้ว"]}, {"no": 16, "dim": "EQ", "value": "BOLD", "q": "ในการประชุม มีคนหนึ่งพูดแทรกผู้อื่นตลอด คุณจะทำอย่างไร", "options": ["ตำหนิต่อหน้าทุกคนทันที", "บริหารเวลาพูดในห้องประชุมและคุยส่วนตัวหลังประชุมด้วยตัวอย่างพฤติกรรม", "ไม่เชิญเขาเข้าประชุมครั้งต่อไป", "ปล่อยไปเพราะไม่อยากขัดจังหวะ", "กำหนดกติกาการพูดและเชิญคนอื่นให้มีส่วนร่วม"]}, {"no": 17, "dim": "EQ", "value": "PROGRESSIVE", "q": "ทีมต้องใช้วิธีทำงานใหม่ที่คุณยังไม่เห็นด้วย คุณจะทำอย่างไร", "options": ["ทดลองใช้และเก็บข้อมูลปัญหา", "บอกทีมว่าวิธีใหม่จะไม่สำเร็จ", "เข้าใจเป้าหมาย ทดลองอย่างมีขอบเขต ให้ feedback จากข้อมูล และช่วยทีมปรับใช้", "ทำตามขั้นต่ำเพื่อรอให้ยกเลิก", "ใช้วิธีเดิมต่อไปโดยไม่แจ้ง"]}, {"no": 18, "dim": "EQ", "value": "PROGRESSIVE", "q": "สมาชิกใหม่ทำงานช้ากว่าทีม คุณจะทำอย่างไร", "options": ["ลดงานเขาออกโดยไม่อธิบาย", "อธิบายมาตรฐานและช่วยวางแผนเรียนรู้", "บอกให้เขาเร่งความเร็ว", "ระบุ skill gap จัด coaching และ checkpoint พร้อมรักษามาตรฐานผลงาน", "รอดูจนผ่านทดลองงาน"]}, {"no": 19, "dim": "EQ", "value": "PROGRESSIVE", "q": "ทีมอื่นขอความช่วยเหลือขณะที่ทีมคุณมีงานมาก คุณจะทำอย่างไร", "options": ["ประเมิน priority ระดับองค์กร เสนอขอบเขตและเวลา พร้อมแจ้ง trade-off อย่างชัดเจน", "ส่งต่อให้สมาชิกทีมจัดการเอง", "ปฏิเสธทันทีเพราะไม่ใช่งานของทีม", "สอบถามผลกระทบและตกลงสิ่งที่ช่วยได้", "รับทุกอย่างโดยไม่ประเมินภาระ"]}, {"no": 20, "dim": "EQ", "value": "PROGRESSIVE", "q": "เมื่อเกิดความผิดพลาดร่วมกันของหลายฝ่าย คุณจะทำอย่างไร", "options": ["แก้เฉพาะส่วนของตนเอง", "หาว่าใครเป็นคนเริ่มผิด", "รวบรวมข้อเท็จจริงและแก้ปัญหาร่วมกัน", "หลีกเลี่ยงการพูดถึงเพื่อรักษาความสัมพันธ์", "สร้าง psychological safety วิเคราะห์ระบบ กำหนด owner และติดตามมาตรการป้องกันซ้ำ"]}, {"no": 21, "dim": "IQ", "value": "CRAFTED", "q": "ลำดับ 3, 6, 12, 24 ตัวเลขถัดไปคือข้อใด", "options": ["36", "42", "48", "54"]}, {"no": 22, "dim": "IQ", "value": "CRAFTED", "q": "สาขามีนัดหมาย 200 ราย เพิ่มขึ้น 20% และมีการยกเลิก 15% ของยอดใหม่ เหลือนัดหมายกี่ราย", "options": ["196", "200", "204", "210"]}, {"no": 23, "dim": "IQ", "value": "CRAFTED", "q": "อัตราส่วนผู้ช่วยทันตแพทย์ต่อทันตแพทย์เท่ากับ 3:2 หากมีผู้ช่วย 18 คน ควรมีทันตแพทย์กี่คน", "options": ["9", "12", "15", "27"]}, {"no": 24, "dim": "IQ", "value": "CRAFTED", "q": "ค่าเฉลี่ยของ 72, 78, 84 และ 66 เท่ากับเท่าใด", "options": ["72", "74", "75", "76"]}, {"no": 25, "dim": "IQ", "value": "CRAFTED", "q": "คลินิก 5 สาขา สาขาละ 8 ห้อง หากใช้งาน 75% จะมีห้องที่ใช้งานทั้งหมดกี่ห้อง", "options": ["25", "28", "30", "32"]}, {"no": 26, "dim": "IQ", "value": "CRAFTED", "q": "แผน : การดำเนินงาน มีความสัมพันธ์ใกล้เคียงกับ แบบพิมพ์เขียว : ข้อใด", "options": ["อาคาร", "สี", "วัสดุ", "วิศวกร"]}, {"no": 27, "dim": "IQ", "value": "CRAFTED", "q": "กำหนดว่า ผู้ประสานงานทุกคนต้องบันทึกข้อมูล และณิชาเป็นผู้ประสานงาน ข้อสรุปใดถูกต้อง", "options": ["ณิชาอาจไม่ต้องบันทึกข้อมูล", "ณิชาต้องบันทึกข้อมูล", "ทุกคนที่บันทึกข้อมูลคือผู้ประสานงาน", "สรุปไม่ได้"]}, {"no": 28, "dim": "IQ", "value": "CRAFTED", "q": "คำใดแตกต่างจากคำอื่นมากที่สุด", "options": ["วิเคราะห์", "ประเมิน", "เปรียบเทียบ", "คาดเดาโดยไม่มีข้อมูล"]}, {"no": 29, "dim": "IQ", "value": "CRAFTED", "q": "นโยบายระบุว่า ผู้ที่ใบอนุญาตหมดอายุห้ามให้บริการ วันนี้ทันตแพทย์ ก ให้บริการตามตาราง ภายใต้สมมติฐานว่าบริษัทปฏิบัติตามนโยบาย ข้อใดสรุปได้", "options": ["ใบอนุญาตของ ก ยังไม่หมดอายุ", "ก เป็นทันตแพทย์เฉพาะทาง", "ก ทำงานเต็มเวลา", "ก ไม่เคยถูกตรวจใบอนุญาต"]}, {"no": 30, "dim": "IQ", "value": "CRAFTED", "q": "ข้อใดเรียงลำดับการแก้ปัญหาได้เหมาะสมที่สุด", "options": ["ลงมือทำ–หาสาเหตุ–วัดผล–กำหนดปัญหา", "กำหนดปัญหา–หาสาเหตุ–เลือกทางแก้–วัดผล", "หาสาเหตุ–วัดผล–กำหนดปัญหา–ลงมือทำ", "เลือกทางแก้–กำหนดปัญหา–หาสาเหตุ–วัดผล"]}, {"no": 31, "dim": "IQ", "value": "PROGRESSIVE", "q": "ถ้า A ต้องเสร็จก่อน B และ B ต้องเสร็จก่อน C ข้อใดถูกต้อง", "options": ["C เสร็จก่อน A", "A เสร็จก่อน C", "B เสร็จหลัง C", "สรุปไม่ได้"]}, {"no": 32, "dim": "IQ", "value": "PROGRESSIVE", "q": "ผู้จัดการสาขาทุกคนเป็นผู้นำ และผู้นำบางคนเป็น Trainer สรุปได้หรือไม่ว่าผู้จัดการสาขาบางคนเป็น Trainer", "options": ["ได้เสมอ", "ไม่ได้เสมอ", "ข้อมูลไม่เพียงพอ", "ไม่มีผู้จัดการเป็น Trainer"]}, {"no": 33, "dim": "IQ", "value": "PROGRESSIVE", "q": "รูปแบบเวรคือ จันทร์ พุธ ศุกร์ วันถัดไปตามรูปแบบคือวันใด", "options": ["เสาร์", "อาทิตย์", "จันทร์", "อังคาร"]}, {"no": 34, "dim": "IQ", "value": "PROGRESSIVE", "q": "ถ้า DENTAL เข้ารหัสโดยเลื่อนตัวอักษรภาษาอังกฤษไปข้างหน้า 1 ตัว เป็น EFOUBM แล้ว CLINIC จะเป็นข้อใด", "options": ["DMJOJD", "DMJNJD", "CKHMHB", "ENKPKE"]}, {"no": 35, "dim": "IQ", "value": "PROGRESSIVE", "q": "มีงาน X, Y, Z โดย X ห้ามทำพร้อม Y และ Z ต้องทำหลัง X แผนใดเป็นไปได้", "options": ["X และ Y พร้อมกัน แล้ว Z", "Z ก่อน X แล้ว Y", "X แล้ว Z โดย Y ทำหลัง X", "Y และ X พร้อมกัน โดย Z ก่อน X"]}, {"no": 36, "dim": "IQ", "value": "CRAFTED", "q": "รหัสใดตรงกับต้นฉบับ TD-2026-08157 ทุกตัว", "options": ["TD-2026-08175", "TD-2026-08157", "TD-2028-08157", "TD2026-08157"]}, {"no": 37, "dim": "IQ", "value": "CRAFTED", "q": "จากรายการ 4821, 4918, 4821, 4281 หมายเลขใดปรากฏซ้ำ", "options": ["4821", "4918", "4281", "ไม่มีหมายเลขซ้ำ"]}, {"no": 38, "dim": "IQ", "value": "CRAFTED", "q": "การสัมภาษณ์เริ่ม 09:20 น. ใช้เวลา 45 นาที จะสิ้นสุดเวลาใด", "options": ["09:55", "10:00", "10:05", "10:15"]}, {"no": 39, "dim": "IQ", "value": "CRAFTED", "q": "ข้อใดควรตรวจสอบก่อนที่สุดเมื่อผู้สมัครทันตแพทย์จะเริ่มให้บริการพรุ่งนี้", "options": ["รูปถ่ายพนักงาน", "ขนาดชุดยูนิฟอร์ม", "สถานะใบอนุญาตประกอบวิชาชีพ", "เมนูอาหารกลางวัน"]}, {"no": 40, "dim": "IQ", "value": "CRAFTED", "q": "มีตำแหน่งเปิด 24 อัตรา ปิดได้ 18 อัตรา คิดเป็น Fill Rate เท่าใด", "options": ["60%", "70%", "75%", "80%"]}, {"no": 41, "dim": "AQ", "value": "BOLD", "q": "คุณพบข้อผิดพลาดที่ตนมีส่วนทำให้เกิดขึ้นและยังไม่มีใครทราบ คุณจะทำอย่างไร", "options": ["แก้เฉพาะส่วนที่เห็นโดยไม่แจ้ง", "แจ้งผู้เกี่ยวข้องพร้อมเสนอวิธีแก้", "รอดูว่าจะมีใครพบหรือไม่", "รับผิดชอบทันที จำกัดผลกระทบ แก้ไข และป้องกันการเกิดซ้ำ", "แจ้งเมื่อมีคนถาม"]}, {"no": 42, "dim": "AQ", "value": "BOLD", "q": "งานที่รับช่วงต่อไม่มีข้อมูลครบและ deadline ใกล้เข้ามา คุณจะทำอย่างไร", "options": ["กำหนด minimum information เดินหน้าส่วนที่ทำได้ แจ้งความเสี่ยงและ owner ชัดเจน", "รอข้อมูลให้ครบก่อนเริ่ม", "ระบุข้อมูลที่ขาดและประสานขอข้อมูล", "แจ้งว่างานทำต่อไม่ได้", "ทำตามข้อมูลที่มีโดยไม่แจ้งความเสี่ยง"]}, {"no": 43, "dim": "AQ", "value": "BOLD", "q": "ผลงานทีมไม่ถึงเป้าเพราะหลายฝ่ายส่งข้อมูลช้า คุณจะตอบอย่างไร", "options": ["ระบุว่าความผิดอยู่ที่ฝ่ายอื่น", "ลดเป้าหมายลงโดยไม่วิเคราะห์", "รับ ownership ต่อผลลัพธ์ ประสาน dependency เสนอ recovery plan และ escalate เมื่อจำเป็น", "รอให้หัวหน้าจัดการ", "ติดตามข้อมูลและปรับแผนงาน"]}, {"no": 44, "dim": "AQ", "value": "BOLD", "q": "คุณรับปากงานเกินกำลังและอาจส่งไม่ทัน คุณจะทำอย่างไร", "options": ["แจ้งล่วงหน้าและขอปรับ priority", "รอจนถึง deadline แล้วแจ้ง", "ส่งงานบางส่วนโดยไม่อธิบาย", "ประเมินใหม่ แจ้งผลกระทบ เสนอทางเลือก และรับผิดชอบแผนส่งมอบที่ตกลงกัน", "ทำงานเงียบ ๆ และหวังว่าจะทัน"]}, {"no": 45, "dim": "AQ", "value": "PROGRESSIVE", "q": "ข้อเสนอที่คุณเตรียมมาหลายวันถูกปฏิเสธ คุณจะทำอย่างไร", "options": ["เก็บงานไว้โดยไม่ขอเหตุผล", "แยกอารมณ์จากข้อมูล วิเคราะห์เหตุผล และปรับหรือยุติแนวคิดอย่างมีหลักฐาน", "โต้แย้งว่าผู้ตัดสินใจไม่เข้าใจ", "ขอ feedback และปรับข้อเสนอ", "หยุดเสนอแนวคิดในอนาคต"]}, {"no": 46, "dim": "AQ", "value": "PROGRESSIVE", "q": "คุณทำผิดพลาดในช่วงทดลองงาน วิธีใดใกล้เคียงกับคุณที่สุด", "options": ["โทษว่าไม่ได้รับการสอนเพียงพอ", "ยอมรับ เรียนรู้ ขอ feedback และแสดงการเปลี่ยนแปลงที่ตรวจสอบได้", "ขอโทษแต่ไม่ทบทวนสาเหตุ", "พยายามปกปิดเพราะกลัวกระทบผลประเมิน", "ยอมรับและแก้ไขสิ่งที่ผิด"]}, {"no": 47, "dim": "AQ", "value": "PROGRESSIVE", "q": "ต้องทำงานซ้ำหลายครั้งเพราะ requirement เปลี่ยน คุณจะทำอย่างไร", "options": ["ยืนยัน requirement ล่าสุดก่อนทำต่อ", "แสดงความไม่พอใจและหยุดรอ", "จัดการ frustration หา root cause ของการเปลี่ยนแปลง และกำหนดจุดอนุมัติเพื่อลดงานซ้ำ", "ทำใหม่ทุกครั้งโดยไม่สอบถาม", "ลดคุณภาพงานเพราะไม่คุ้มเวลา"]}, {"no": 48, "dim": "AQ", "value": "PROGRESSIVE", "q": "ผลงานของคุณถูกเปรียบเทียบกับเพื่อนที่ทำได้ดีกว่า คุณจะทำอย่างไร", "options": ["หลีกเลี่ยงงานประเภทนั้น", "ขอเรียนรู้วิธีทำงานของเพื่อน", "อธิบายว่าเงื่อนไขของคุณยากกว่า", "ใช้ข้อมูลหา gap เรียนรู้วิธีที่เหมาะสม และตั้งเป้าพัฒนาที่ติดตามได้", "พยายามทำให้มากขึ้นโดยไม่มีแผน"]}, {"no": 49, "dim": "AQ", "value": "CRAFTED", "q": "ระบบล่มในช่วงลูกค้าหนาแน่น คุณจะทำอย่างไร", "options": ["เปิด contingency plan จัดลำดับลูกค้า สื่อสารเวลา และบันทึกข้อมูลเพื่อคืนระบบภายหลัง", "ให้ลูกค้ากลับทั้งหมด", "รอระบบกลับมาโดยไม่แจ้งลูกค้า", "ใช้วิธีสำรองและแจ้งผู้รับผิดชอบ", "พยายามแก้ระบบเองแม้ไม่ใช่ผู้รับผิดชอบ"]}, {"no": 50, "dim": "AQ", "value": "CRAFTED", "q": "ยอดสมัครงานต่ำกว่าเป้า 50% ก่อนเปิดสาขา 30 วัน คุณจะทำอย่างไร", "options": ["ลดเกณฑ์ผู้สมัครทันที", "หวังว่ายอดจะเพิ่มในสัปดาห์สุดท้าย", "วิเคราะห์ช่องทางและเพิ่มการสรรหาเชิงรุก", "ลงประกาศเพิ่มแบบเดิมทุกช่องทาง", "ทบทวน profile, package, location และ funnel พร้อม recovery plan รายสัปดาห์"]}, {"no": 51, "dim": "AQ", "value": "CRAFTED", "q": "วิธีแก้ปัญหาครั้งแรกไม่ได้ผล คุณจะทำอย่างไร", "options": ["สรุปว่าปัญหาแก้ไม่ได้", "ตรวจว่าข้อสมมติฐานใดผิด", "ทำซ้ำวิธีเดิมให้มากขึ้น", "วัดผล ทบทวน root cause ทดลองทางเลือกใหม่ และกำหนดเกณฑ์หยุดหรือขยายผล", "เปลี่ยนวิธีทันทีโดยไม่เก็บข้อมูล"]}, {"no": 52, "dim": "AQ", "value": "CRAFTED", "q": "ข้อมูลจากสองระบบไม่ตรงกัน คุณจะทำอย่างไร", "options": ["ตรวจ source, definition, cutoff และ owner ก่อนสรุปตัวเลขที่ใช้ตัดสินใจ", "เฉลี่ยตัวเลขทั้งสองระบบ", "ตรวจนิยามและช่วงเวลาของข้อมูล", "เลือกใช้ตัวเลขที่ดูสมเหตุสมผลกว่า", "ส่งต่อให้คนอื่นตัดสินใจ"]}, {"no": 53, "dim": "AQ", "value": "BOLD", "q": "มีเหตุเร่งด่วนกระทบลูกค้าหลายรายพร้อมกัน คุณจะทำอย่างไร", "options": ["แก้เรื่องที่คนร้องเรียนเสียงดังที่สุด", "รอหัวหน้ามาสั่งการ", "ตั้ง incident lead แบ่ง owner สื่อสารสถานะ และติดตาม critical issue จนปิด", "ทำทุกเรื่องด้วยตนเอง", "จัดลำดับตามความปลอดภัยและผลกระทบ"]}, {"no": 54, "dim": "AQ", "value": "BOLD", "q": "deadline ถูกเลื่อนให้เร็วขึ้นครึ่งหนึ่ง คุณจะทำอย่างไร", "options": ["ประเมิน scope และทรัพยากรใหม่", "รับปากว่าจะเสร็จโดยไม่ปรับ scope", "เร่งทีมทำ OT โดยไม่วางแผน", "เสนอ trade-off ระหว่าง scope, quality, time และขอการตัดสินใจที่ชัดเจน", "ปฏิเสธทันที"]}, {"no": 55, "dim": "AQ", "value": "BOLD", "q": "คุณได้รับคำถามที่ยังไม่มีข้อมูลระหว่างประชุมผู้บริหาร คุณจะทำอย่างไร", "options": ["บอกว่าไม่ทราบและจบการตอบ", "แยก fact กับ assumption ระบุข้อมูลที่ต้องหา owner และเวลาจะกลับมาตอบ", "เปลี่ยนเรื่องโดยไม่ตอบ", "แจ้งสิ่งที่ทราบและขอเวลาตรวจสอบ", "ตอบจากความรู้สึกเพื่อไม่ให้ดูไม่พร้อม"]}, {"no": 56, "dim": "AQ", "value": "BOLD", "q": "ทีมกังวลก่อนเปิดสาขาเพราะงานยังไม่ครบ คุณจะทำอย่างไร", "options": ["ทำทุกงานแทนทีม", "สร้าง war room ระบุ critical path, owner, contingency และอัปเดตสถานะตามรอบ", "ลดการประชุมเพื่อไม่ให้เห็นปัญหา", "บอกให้ทุกคนหยุดกังวลและทำงานต่อ", "ทำ readiness checklist และจัดลำดับงาน"]}, {"no": 57, "dim": "AQ", "value": "PROGRESSIVE", "q": "คุณได้รับเครื่องมือใหม่ที่ไม่มีใครในทีมเคยใช้ คุณจะทำอย่างไร", "options": ["ศึกษาและทดลองกับงานขนาดเล็ก", "ใช้วิธีเดิมต่อไป", "กำหนด use case ทดลอง วัดผล สรุปบทเรียน และถ่ายทอดให้ทีม", "ลองใช้โดยไม่อ่านข้อกำหนด", "รอจนบริษัทจัดอบรม"]}, {"no": 58, "dim": "AQ", "value": "PROGRESSIVE", "q": "หลังจบโครงการที่มีปัญหา คุณจะทำอย่างไร", "options": ["รีบไปงานใหม่และไม่พูดถึงปัญหา", "จัด retrospective กับทีม", "เก็บบทเรียนไว้กับตนเอง", "ทบทวนข้อมูล หา systemic lesson กำหนด action owner และติดตามว่าการแก้ไขเกิดขึ้นจริง", "สรุปว่าเกิดจากคนบางคน"]}, {"no": 59, "dim": "AQ", "value": "PROGRESSIVE", "q": "ได้รับ feedback เดิมซ้ำเป็นครั้งที่สอง คุณจะทำอย่างไร", "options": ["วิเคราะห์เหตุที่เปลี่ยนไม่สำเร็จ ขอ coaching ทดลองวิธีใหม่ และนัดติดตามผล", "พยายามระวังมากขึ้นโดยไม่มีวิธีวัด", "คิดว่าผู้ให้ feedback มีอคติ", "ขอตัวอย่างและกำหนดพฤติกรรมใหม่", "รับฟังแต่ไม่เห็นว่าต้องเปลี่ยน"]}, {"no": 60, "dim": "AQ", "value": "PROGRESSIVE", "q": "คุณต้องทำงานในบริบทที่ไม่เคยเจอมาก่อน คุณจะทำอย่างไร", "options": ["เริ่มทำทันทีโดยไม่หาข้อมูล", "รอคำสั่งทีละขั้น", "หา benchmark และขอคำแนะนำ", "ใช้วิธีเดิมทั้งหมด", "ตั้งสมมติฐาน หาแหล่งเรียนรู้ ทดลองเป็นรอบสั้น และปรับจาก feedback"]}], "scoring": {"1": {"dim": "EQ", "scores": [2, 4, 1, 5, 3]}, "2": {"dim": "EQ", "scores": [5, 2, 4, 1, 3]}, "3": {"dim": "EQ", "scores": [1, 3, 5, 2, 4]}, "4": {"dim": "EQ", "scores": [4, 1, 3, 5, 2]}, "5": {"dim": "EQ", "scores": [3, 5, 2, 4, 1]}, "6": {"dim": "EQ", "scores": [2, 5, 3, 1, 4]}, "7": {"dim": "EQ", "scores": [4, 2, 5, 3, 1]}, "8": {"dim": "EQ", "scores": [1, 4, 2, 5, 3]}, "9": {"dim": "EQ", "scores": [5, 3, 1, 4, 2]}, "10": {"dim": "EQ", "scores": [3, 1, 4, 2, 5]}, "11": {"dim": "EQ", "scores": [2, 4, 1, 5, 3]}, "12": {"dim": "EQ", "scores": [5, 2, 4, 1, 3]}, "13": {"dim": "EQ", "scores": [1, 3, 5, 2, 4]}, "14": {"dim": "EQ", "scores": [4, 1, 3, 5, 2]}, "15": {"dim": "EQ", "scores": [3, 5, 2, 4, 1]}, "16": {"dim": "EQ", "scores": [2, 5, 3, 1, 4]}, "17": {"dim": "EQ", "scores": [4, 2, 5, 3, 1]}, "18": {"dim": "EQ", "scores": [1, 4, 2, 5, 3]}, "19": {"dim": "EQ", "scores": [5, 3, 1, 4, 2]}, "20": {"dim": "EQ", "scores": [3, 1, 4, 2, 5]}, "21": {"dim": "IQ", "scores": [0, 0, 1, 0]}, "22": {"dim": "IQ", "scores": [0, 0, 1, 0]}, "23": {"dim": "IQ", "scores": [0, 1, 0, 0]}, "24": {"dim": "IQ", "scores": [0, 0, 1, 0]}, "25": {"dim": "IQ", "scores": [0, 0, 1, 0]}, "26": {"dim": "IQ", "scores": [1, 0, 0, 0]}, "27": {"dim": "IQ", "scores": [0, 1, 0, 0]}, "28": {"dim": "IQ", "scores": [0, 0, 0, 1]}, "29": {"dim": "IQ", "scores": [1, 0, 0, 0]}, "30": {"dim": "IQ", "scores": [0, 1, 0, 0]}, "31": {"dim": "IQ", "scores": [0, 1, 0, 0]}, "32": {"dim": "IQ", "scores": [0, 0, 1, 0]}, "33": {"dim": "IQ", "scores": [0, 1, 0, 0]}, "34": {"dim": "IQ", "scores": [1, 0, 0, 0]}, "35": {"dim": "IQ", "scores": [0, 0, 1, 0]}, "36": {"dim": "IQ", "scores": [0, 1, 0, 0]}, "37": {"dim": "IQ", "scores": [1, 0, 0, 0]}, "38": {"dim": "IQ", "scores": [0, 0, 1, 0]}, "39": {"dim": "IQ", "scores": [0, 0, 1, 0]}, "40": {"dim": "IQ", "scores": [0, 0, 1, 0]}, "41": {"dim": "AQ", "scores": [2, 4, 1, 5, 3]}, "42": {"dim": "AQ", "scores": [5, 2, 4, 1, 3]}, "43": {"dim": "AQ", "scores": [1, 3, 5, 2, 4]}, "44": {"dim": "AQ", "scores": [4, 1, 3, 5, 2]}, "45": {"dim": "AQ", "scores": [3, 5, 2, 4, 1]}, "46": {"dim": "AQ", "scores": [2, 5, 3, 1, 4]}, "47": {"dim": "AQ", "scores": [4, 2, 5, 3, 1]}, "48": {"dim": "AQ", "scores": [1, 4, 2, 5, 3]}, "49": {"dim": "AQ", "scores": [5, 3, 1, 4, 2]}, "50": {"dim": "AQ", "scores": [3, 1, 4, 2, 5]}, "51": {"dim": "AQ", "scores": [2, 4, 1, 5, 3]}, "52": {"dim": "AQ", "scores": [5, 2, 4, 1, 3]}, "53": {"dim": "AQ", "scores": [1, 3, 5, 2, 4]}, "54": {"dim": "AQ", "scores": [4, 1, 3, 5, 2]}, "55": {"dim": "AQ", "scores": [3, 5, 2, 4, 1]}, "56": {"dim": "AQ", "scores": [2, 5, 3, 1, 4]}, "57": {"dim": "AQ", "scores": [4, 2, 5, 3, 1]}, "58": {"dim": "AQ", "scores": [1, 4, 2, 5, 3]}, "59": {"dim": "AQ", "scores": [5, 3, 1, 4, 2]}, "60": {"dim": "AQ", "scores": [3, 1, 4, 2, 5]}}, "roles": [{"name": "Balanced / Default", "EQ": 0.3333, "IQ": 0.3334, "AQ": 0.3333}, {"name": "Dentist / Clinical", "EQ": 0.3, "IQ": 0.35, "AQ": 0.35}, {"name": "Dental Assistant", "EQ": 0.35, "IQ": 0.25, "AQ": 0.4}, {"name": "Treatment Advisor / CS", "EQ": 0.45, "IQ": 0.2, "AQ": 0.35}, {"name": "Branch Leadership", "EQ": 0.35, "IQ": 0.3, "AQ": 0.35}, {"name": "Head Office / Management", "EQ": 0.3, "IQ": 0.4, "AQ": 0.3}], "bands": [{"min": 85, "level": "Strong signal", "interp": "มีหลักฐานเชิงพฤติกรรม/การคิดที่ค่อนข้างแข็งแรง ควรยืนยันด้วย structured interview"}, {"min": 70, "level": "Suitable signal", "interp": "อยู่ในระดับเหมาะสมเบื้องต้น ตรวจสอบจุดเด่นและจุดเสี่ยงตามตำแหน่ง"}, {"min": 55, "level": "Mixed signal", "interp": "ผลไม่สม่ำเสมอ ควรใช้คำถามเจาะลึกหรือ work sample เพิ่ม"}, {"min": 0, "level": "Needs validation", "interp": "มีประเด็นที่ต้องตรวจสอบเพิ่มเติม ไม่ควรสรุปจากคะแนนเพียงอย่างเดียว"}], "values": [{"value": "BOLD", "def": "Courage & Ownership — กล้าคิด กล้าตัดสินใจ สื่อสารตรง รับผิดชอบต่อผลลัพธ์"}, {"value": "CRAFTED", "def": "Quality & Care — ทำงานประณีต ใส่ใจรายละเอียด คุณภาพและประสบการณ์"}, {"value": "PROGRESSIVE", "def": "Learning & Improvement — เรียนรู้ ปรับตัว ทดลอง และพัฒนาต่อเนื่อง"}], "dimmax": {"EQ": 100, "IQ": 20, "AQ": 100}};
 
-</script>
-<script>
-/* TANTATAT Frontline Candidate Assessment — app logic */
-(function () {
-  "use strict";
-
-  var DATA = window.ASSESSMENT_DATA || {};
-  var CONFIG = window.ASSESSMENT_CONFIG || { SHEET_ENDPOINT: "", HR_PASSWORD: "2468" };
-  var VALUE_COLORS = { BOLD: "#da9770", CRAFTED: "#5e7d6a", PROGRESSIVE: "#5b6a86" };
-  var LS_KEY = "tantatat_assessment_progress";
-  var TIME_LIMIT_MS = 60 * 60 * 1000;   // 60 นาที
-
-  var answers = {};   // no -> 0..3
-  var meta = {};
-  var lastCode = "";
-  var candidates = [];
-  var timerInterval = null;
-  var submitted = false;
-
-  function $(id) { return document.getElementById(id); }
-
-  // ---------------- init ----------------
-  function initRoles() {
-    var sel = $("cRole");
-    if (!sel || !DATA.roles) return;
-    DATA.roles.forEach(function (r) {
-      var o = document.createElement("option");
-      o.value = r.name; o.textContent = r.name; sel.appendChild(o);
-    });
-    var other = document.createElement("option");
-    other.value = "__other__"; other.textContent = "อื่นๆ (ระบุเอง)"; sel.appendChild(other);
-    sel.addEventListener("change", function () {
-      var o = $("cRoleOther");
-      if (!o) return;
-      if (sel.value === "__other__") { o.classList.remove("hidden"); o.focus(); }
-      else { o.classList.add("hidden"); }
-    });
-  }
-
-  function setMode(m) {
-    $("mCand").classList.toggle("active", m === "cand");
-    $("mHR").classList.toggle("active", m === "hr");
-    $("candView").classList.toggle("hidden", m !== "cand");
-    $("hrView").classList.toggle("hidden", m !== "hr");
-  }
-
-  // ---------------- candidate test ----------------
-  function startTest() {
-    var name = $("cName").value.trim();
-    var role = $("cRole").value;
-    if (role === "__other__") {
-      role = ($("cRoleOther").value || "").trim();
-      if (!role) { alert("กรุณาระบุตำแหน่งที่สมัคร"); return; }
-    }
-    if (!name) { alert("กรุณากรอกชื่อ-นามสกุล"); $("cName").focus(); return; }
-    var nameParts = name.split(/\s+/).filter(function (w) { return w.length > 0; });
-    if (nameParts.length < 2 || nameParts.some(function (w) { return w.length < 2; })) {
-      alert("กรุณากรอกทั้งชื่อและนามสกุลให้ครบ (เช่น สมชาย ใจดี)"); $("cName").focus(); return;
-    }
-    if (!role) { alert("กรุณาเลือกหรือระบุตำแหน่งที่สมัคร"); return; }
-    meta = { name: name, role: role, date: new Date().toISOString(), startTime: Date.now() };
-    $("introCard").classList.add("hidden");
-    $("testCard").classList.remove("hidden");
-    renderQuestions();
-    saveProgress();
-    startTimer();
-    window.scrollTo(0, 0);
-  }
-
-  function renderQuestions() {
-    var box = $("questions");
-    box.innerHTML = "";
-    DATA.questions.forEach(function (q) {
-      var dimClass = { EQ: "b-eq", IQ: "b-iq", AQ: "b-aq" }[q.dim];
-      var opts = q.options.map(function (o, i) {
-        var sel = answers[q.no] === i ? " sel" : "";
-        var chk = answers[q.no] === i ? " checked" : "";
-        return '<label class="opt' + sel + '" data-q="' + q.no + '" data-i="' + i + '">' +
-          '<input type="radio" name="q' + q.no + '" value="' + i + '"' + chk + ">" +
-          '<span class="ol">' + "ABCDE"[i] + "</span><span>" + o + "</span></label>";
-      }).join("");
-      var el = document.createElement("div");
-      el.className = "q";
-      el.innerHTML =
-        '<div class="qtop"><span class="qno">ข้อ ' + q.no + "</span></div>" +
-        '<div class="qtext">' + q.q + "</div>" +
-        '<div class="opts">' + opts + "</div>";
-      box.appendChild(el);
-    });
-    var optEls = box.querySelectorAll(".opt");
-    optEls.forEach(function (opt) {
-      opt.addEventListener("click", function () {
-        var no = +opt.getAttribute("data-q");
-        var i = +opt.getAttribute("data-i");
-        answers[no] = i;
-        box.querySelectorAll('.opt[data-q="' + no + '"]').forEach(function (o) { o.classList.remove("sel"); });
-        opt.classList.add("sel");
-        var inp = opt.querySelector("input"); if (inp) inp.checked = true;
-        updateProgress();
-        saveProgress();
-      });
-    });
-    updateProgress();
-  }
-
-  function updateProgress() {
-    var done = Object.keys(answers).length, total = DATA.questions.length;
-    $("pcount").textContent = done + " / " + total;
-    $("pleft").textContent = done === total ? "ตอบครบแล้ว" : ("เหลืออีก " + (total - done) + " ข้อ");
-    $("pbar").style.width = (done / total * 100) + "%";
-    $("submitBtn").disabled = done !== total;
-  }
-
-  // ---------------- auto-save ----------------
-  function saveProgress() {
-    try { localStorage.setItem(LS_KEY, JSON.stringify({ meta: meta, answers: answers })); } catch (e) {}
-  }
-  function restoreProgress() {
-    try {
-      var s = JSON.parse(localStorage.getItem(LS_KEY) || "null");
-      if (s && s.meta && s.meta.name && s.answers && Object.keys(s.answers).length) {
-        meta = s.meta; answers = s.answers;
-        $("cName").value = meta.name || "";
-        $("introCard").classList.add("hidden");
-        $("testCard").classList.remove("hidden");
-        renderQuestions();
-        if (!meta.startTime) { meta.startTime = Date.now(); saveProgress(); }
-        startTimer();
-      }
-    } catch (e) {}
-  }
-  function clearProgress() { try { localStorage.removeItem(LS_KEY); } catch (e) {} }
-
-  // ---------------- timer ----------------
-  function remainingMs() {
-    if (!meta.startTime) return TIME_LIMIT_MS;
-    return Math.max(0, TIME_LIMIT_MS - (Date.now() - meta.startTime));
-  }
-  function fmt(ms) {
-    var s = Math.floor(ms / 1000);
-    var m = Math.floor(s / 60);
-    var ss = s % 60;
-    return (m < 10 ? "0" : "") + m + ":" + (ss < 10 ? "0" : "") + ss;
-  }
-  function renderTimer() {
-    var el = $("timer");
-    if (!el) return;
-    var ms = remainingMs();
-    el.innerHTML = "\u23F1 " + fmt(ms);
-    el.classList.remove("warn", "danger");
-    if (ms <= 60 * 1000) el.classList.add("danger");
-    else if (ms <= 5 * 60 * 1000) el.classList.add("warn");
-  }
-  function startTimer() {
-    renderTimer();
-    if (timerInterval) clearInterval(timerInterval);
-    timerInterval = setInterval(function () {
-      renderTimer();
-      if (remainingMs() <= 0) {
-        clearInterval(timerInterval); timerInterval = null;
-        autoSubmitTimeUp();
-      }
-    }, 1000);
-  }
-  function stopTimer() {
-    if (timerInterval) { clearInterval(timerInterval); timerInterval = null; }
-  }
-  function autoSubmitTimeUp() {
-    if (submitted) return;
-    alert("หมดเวลาทำแบบทดสอบ (30 นาที) ระบบจะส่งคำตอบที่ทำไว้โดยอัตโนมัติ");
-    submitTest(true);
-  }
-
-  // ---------------- scoring ----------------
-  function scoreAnswers(ansArr, roleName) {
-    var dims = { EQ: { raw: 0, max: 0 }, IQ: { raw: 0, max: 0 }, AQ: { raw: 0, max: 0 } };
-    var valFit = {}; var detail = [];
-    DATA.questions.forEach(function (q, idx) {
-      var sc = DATA.scoring[String(q.no)].scores;
-      var chosen = ansArr[idx];
-      var answered = (chosen != null && chosen >= 0 && chosen < sc.length);
-      var got = answered ? sc[chosen] : 0, mx = Math.max.apply(null, sc), best = sc.indexOf(mx);
-      dims[q.dim].raw += got; dims[q.dim].max += mx;
-      if (!valFit[q.value]) valFit[q.value] = { raw: 0, max: 0 };
-      valFit[q.value].raw += got; valFit[q.value].max += mx;
-      detail.push({ no: q.no, dim: q.dim, value: q.value, q: q.q, options: q.options,
-        chosen: chosen, got: got, mx: mx, best: best });
-    });
-    var norm = {};
-    Object.keys(dims).forEach(function (d) { norm[d] = Math.round(dims[d].raw / dims[d].max * 100); });
-    var role = findRole(roleName);
-    var overall = Math.round(norm.EQ * role.EQ + norm.IQ * role.IQ + norm.AQ * role.AQ);
-    var lowest = Math.min(norm.EQ, norm.IQ, norm.AQ);
-    return { dims: dims, norm: norm, valFit: valFit, detail: detail, role: role, overall: overall, lowest: lowest };
-  }
-  function findRole(name) {
-    var r = DATA.roles.filter(function (x) { return x.name === name; })[0];
-    return r || DATA.roles[0];
-  }
-  function bandFor(score) {
-    for (var i = 0; i < DATA.bands.length; i++) { if (score >= DATA.bands[i].min) return DATA.bands[i]; }
-    return DATA.bands[DATA.bands.length - 1];
-  }
-  function lvlClass(level) {
-    return { "Strong signal": "l-strong", "Suitable signal": "l-suit",
-      "Mixed signal": "l-mix", "Needs validation": "l-need" }[level] || "l-mix";
-  }
-
-  // ---------------- backup code encode/decode ----------------
-  function encodePayload(obj) {
-    var json = JSON.stringify(obj);
-    var b64 = btoa(unescape(encodeURIComponent(json)));
-    var out = "";
-    for (var i = 0; i < b64.length; i++) { out += String.fromCharCode(b64.charCodeAt(i) ^ ((i % 7) + 3)); }
-    return "TANTER1:" + btoa(unescape(encodeURIComponent(out)));
-  }
-  function decodePayload(code) {
-    if (code.indexOf("TANTER1:") !== 0) throw new Error("format");
-    var scr = decodeURIComponent(escape(atob(code.slice(8))));
-    var b64 = "";
-    for (var i = 0; i < scr.length; i++) { b64 += String.fromCharCode(scr.charCodeAt(i) ^ ((i % 7) + 3)); }
-    return JSON.parse(decodeURIComponent(escape(atob(b64))));
-  }
-
-  // ---------------- submit -> Google Sheet ----------------
-  function submitTest(force) {
-    if (submitted) return;
-    if (!force && Object.keys(answers).length !== DATA.questions.length) { alert("กรุณาตอบให้ครบทุกข้อ"); return; }
-    submitted = true;
-    stopTimer();
-    var ansArr = DATA.questions.map(function (q) { return (answers[q.no] == null ? -1 : answers[q.no]); });
-    var res = scoreAnswers(ansArr, meta.role);
-    var band = bandFor(res.overall);
-    lastCode = encodePayload({ v: 1, name: meta.name, role: meta.role, date: meta.date, ans: ansArr });
-
-    var record = {
-      timestamp: meta.date, name: meta.name, role: meta.role,
-      eq: res.norm.EQ, iq: res.norm.IQ, aq: res.norm.AQ,
-      overall: res.overall, lowest: res.lowest, level: band.level,
-      answers: ansArr.map(function (x) { return x < 0 ? "x" : x; }).join(""), code: lastCode
-    };
-
-    $("testCard").classList.add("hidden");
-    $("doneCard").classList.remove("hidden");
-    $("doneName").textContent = meta.name;
-    $("resultCode").textContent = lastCode;
-    window.scrollTo(0, 0);
-
-    var st = $("sendStatus");
-    if (!CONFIG.SHEET_ENDPOINT) {
-      st.innerHTML = '<div class="status info">ยังไม่ได้ตั้งค่าปลายทาง Google Sheet — แสดงรหัสสำรองให้ส่ง HR แทน</div>';
-      $("backupBox").classList.remove("hidden");
-      clearProgress();
-      return;
-    }
-    st.innerHTML = '<div class="status info">กำลังส่งผลให้ HR...</div>';
-    sendToSheet(record, function () {
-      st.innerHTML = '<div class="status ok">ส่งผลเข้าระบบ HR สำเร็จ</div>';
-      clearProgress();
-    }, function () {
-      st.innerHTML = '<div class="status err">ส่งอัตโนมัติไม่สำเร็จ กรุณาส่งรหัสสำรองด้านล่างให้ HR</div>';
-      $("backupBox").classList.remove("hidden");
-      clearProgress();
-    });
-  }
-
-  // Reliable POST via hidden form + iframe (avoids Apps Script no-cors 302 issue)
-  function sendToSheet(record, onOk, onErr) {
-    try {
-      var f = document.createElement("form");
-      f.method = "POST"; f.action = CONFIG.SHEET_ENDPOINT; f.target = "sinkFrame";
-      function add(k, v) { var i = document.createElement("input"); i.type = "hidden"; i.name = k; i.value = v; f.appendChild(i); }
-      add("action", "submit");
-      Object.keys(record).forEach(function (k) { add(k, record[k]); });
-      document.body.appendChild(f);
-      var done = false;
-      var frame = $("sinkFrame");
-      var timer = setTimeout(function () { if (!done) { done = true; cleanup(); onOk(); } }, 4000);
-      frame.onload = function () { if (!done) { done = true; clearTimeout(timer); cleanup(); onOk(); } };
-      function cleanup() { try { document.body.removeChild(f); } catch (e) {} }
-      f.submit();
-    } catch (e) { onErr(); }
-  }
-
-  function copyCode() {
-    try { navigator.clipboard.writeText(lastCode).then(function () { $("copyMsg").textContent = "คัดลอกแล้ว"; }); }
-    catch (e) { $("copyMsg").textContent = "คัดลอกไม่สำเร็จ ลองเลือกข้อความเอง"; }
-  }
-  function downloadCode() {
-    var blob = new Blob([lastCode], { type: "text/plain" });
-    var a = document.createElement("a");
-    a.href = URL.createObjectURL(blob);
-    a.download = "result_" + (meta.name || "candidate").replace(/\s+/g, "_") + ".txt";
-    a.click();
-  }
-
-  // ---------------- HR ----------------
-  function hrLogin() {
-    if ($("hrPass").value === CONFIG.HR_PASSWORD) {
-      $("hrLockCard").classList.add("hidden");
-      $("hrPanel").classList.remove("hidden");
-      if (CONFIG.SHEET_ENDPOINT) loadCandidates();
-      else $("listStatus").innerHTML = '<span style="color:var(--warn)">ยังไม่ได้ตั้งค่า Google Sheet — ใช้ "วางรหัสด้วยมือ" ไปก่อนได้</span>';
-    } else {
-      $("hrErr").textContent = "รหัสผ่านไม่ถูกต้อง";
-    }
-  }
-  function toggleManual() { $("manualCard").classList.toggle("hidden"); }
-
-  function loadCandidates() {
-    if (!CONFIG.SHEET_ENDPOINT) { $("listStatus").textContent = "ยังไม่ได้ตั้งค่า Google Sheet"; return; }
-    $("listStatus").textContent = "กำลังโหลด...";
-    var cb = "cb_" + Date.now();
-    var s = document.createElement("script");
-    window[cb] = function (data) {
-      try {
-        candidates = (data && data.rows) || [];
-        renderCandidateList();
-        $("listStatus").textContent = "พบ " + candidates.length + " รายการ · อัปเดตล่าสุด " + new Date().toLocaleString("th-TH");
-      } catch (e) {
-        $("listStatus").innerHTML = '<span style="color:var(--bad)">อ่านข้อมูลไม่สำเร็จ</span>';
-      } finally {
-        try { delete window[cb]; } catch (e) {}
-        try { s.parentNode.removeChild(s); } catch (e) {}
-      }
-    };
-    s.src = CONFIG.SHEET_ENDPOINT + "?action=list&callback=" + cb;
-    s.onerror = function () {
-      $("listStatus").innerHTML = '<span style="color:var(--bad)">เชื่อมต่อ Sheet ไม่สำเร็จ ตรวจ URL/การ Deploy</span>';
-      try { delete window[cb]; } catch (e) {}
-    };
-    document.body.appendChild(s);
-  }
-
-  function populateRoleFilter() {
-    var sel = $("fRole");
-    if (!sel) return;
-    var seen = {}; var opts = '<option value="">ทุกตำแหน่ง</option>';
-    candidates.forEach(function (c) {
-      var r = c.role || "";
-      if (r && !seen[r]) { seen[r] = true; opts += '<option value="' + r.replace(/"/g, "&quot;") + '">' + r + "</option>"; }
-    });
-    var cur = sel.value;
-    sel.innerHTML = opts;
-    sel.value = cur;
-  }
-
-  function getFiltered() {
-    var q = ($("fSearch") && $("fSearch").value || "").trim().toLowerCase();
-    var role = $("fRole") && $("fRole").value || "";
-    var level = $("fLevel") && $("fLevel").value || "";
-    var minScore = parseInt(($("fScore") && $("fScore").value) || "0", 10);
-    var sort = $("fSort") && $("fSort").value || "date_desc";
-
-    // keep original index so viewCandidate still maps correctly
-    var list = candidates.map(function (c, i) { return { c: c, i: i }; });
-    list = list.filter(function (o) {
-      var c = o.c;
-      if (q && String(c.name || "").toLowerCase().indexOf(q) === -1) return false;
-      if (role && String(c.role || "") !== role) return false;
-      if (level && String(c.level || "") !== level) return false;
-      var ov = Number(c.overall);
-      if (minScore > 0 && !(isFinite(ov) && ov >= minScore)) return false;
-      return true;
-    });
-    function num(v) { var n = Number(v); return isFinite(n) ? n : -1; }
-    function tm(v) { var t = new Date(v).getTime(); return isNaN(t) ? 0 : t; }
-    list.sort(function (a, b) {
-      switch (sort) {
-        case "date_asc": return tm(a.c.timestamp) - tm(b.c.timestamp);
-        case "overall_desc": return num(b.c.overall) - num(a.c.overall);
-        case "overall_asc": return num(a.c.overall) - num(b.c.overall);
-        case "name_asc": return String(a.c.name || "").localeCompare(String(b.c.name || ""), "th");
-        default: return tm(b.c.timestamp) - tm(a.c.timestamp); // date_desc
-      }
-    });
-    return list;
-  }
-
-  function renderCandidateList() {
-    if (!candidates.length) {
-      $("candList").innerHTML = '<p class="note">ยังไม่มีผู้สมัครส่งผล</p>';
-      $("filterBar").classList.add("hidden");
-      $("filterCount").classList.add("hidden");
-      return;
-    }
-    $("filterBar").classList.remove("hidden");
-    $("filterCount").classList.remove("hidden");
-    populateRoleFilter();
-    var list = getFiltered();
-    $("filterCount").textContent = "แสดง " + list.length + " / " + candidates.length + " รายการ";
-    if (!list.length) {
-      $("candList").innerHTML = '<p class="note">ไม่พบผู้สมัครที่ตรงกับเงื่อนไข</p>';
-      return;
-    }
-    var rows = list.map(function (o) {
-      var c = o.c, band = c.level || "";
-      var ov = (c.overall !== null && c.overall !== undefined && c.overall !== "") ? c.overall : "-";
-      var lo = (c.lowest !== null && c.lowest !== undefined && c.lowest !== "") ? c.lowest : "-";
-      var ts = c.timestamp ? new Date(c.timestamp).toLocaleString("th-TH") : "-";
-      return '<tr class="rowlink" data-idx="' + o.i + '">' +
-        "<td>" + ts + "</td><td><b>" + (c.name || "-") + "</b></td><td>" + (c.role || "-") + "</td>" +
-        '<td style="text-align:center">' + ov + "</td>" +
-        '<td style="text-align:center">' + lo + "</td>" +
-        '<td><span class="lvl ' + lvlClass(band) + '">' + band + "</span></td>" +
-        '<td style="text-align:right">&rsaquo;</td></tr>';
-    }).join("");
-    $("candList").innerHTML =
-      '<table><tr><th>วันที่</th><th>ชื่อ</th><th>ตำแหน่ง</th><th style="text-align:center">Overall</th>' +
-      '<th style="text-align:center">ต่ำสุด</th><th>ระดับ</th><th></th></tr>' + rows + "</table>";
-    $("candList").querySelectorAll(".rowlink").forEach(function (tr) {
-      tr.addEventListener("click", function () { viewCandidate(+tr.getAttribute("data-idx")); });
-    });
-  }
-
-  function viewCandidate(i) {
-    var c = candidates[i];
-    var p;
-    try { p = decodePayload(c.code); }
-    catch (e) {
-      if (c.answers) {
-        p = { name: c.name, role: c.role, date: c.timestamp,
-          ans: String(c.answers).split("").map(function (ch) { return ch === "x" ? -1 : Number(ch); }) };
-      } else { alert("ข้อมูลผู้สมัครไม่สมบูรณ์"); return; }
-    }
-    renderDetail(p);
-  }
-
-  function loadCodeFile() { $("fileIn").click(); }
-  function onFile(e) {
-    var f = e.target.files[0]; if (!f) return;
-    var r = new FileReader();
-    r.onload = function () { $("hrCodeIn").value = String(r.result).trim(); };
-    r.readAsText(f);
-  }
-  function hrProcessCode() {
-    var code = $("hrCodeIn").value.trim();
-    $("hrProcErr").textContent = "";
-    var p;
-    try { p = decodePayload(code); }
-    catch (e) { $("hrProcErr").textContent = "รหัสไม่ถูกต้องหรือเสียหาย"; return; }
-    renderDetail(p);
-  }
-
-  function donut(score, color) {
-    var r = 64, c = 2 * Math.PI * r, off = c * (1 - score / 100);
-    return '<svg viewBox="0 0 150 150" width="150" height="150">' +
-      '<circle cx="75" cy="75" r="' + r + '" fill="none" stroke="#e3e6ee" stroke-width="12"/>' +
-      '<circle cx="75" cy="75" r="' + r + '" fill="none" stroke="' + color + '" stroke-width="12" ' +
-      'stroke-linecap="round" stroke-dasharray="' + c + '" stroke-dashoffset="' + off + '" transform="rotate(-90 75 75)"/>' +
-      '<text x="75" y="70" text-anchor="middle" font-size="34" font-weight="800" fill="#1c2130">' + score + "</text>" +
-      '<text x="75" y="94" text-anchor="middle" font-size="12" fill="#6b7488">/ 100</text></svg>';
-  }
-  function dimRow(label, score, color) {
-    return "<tr><td><strong>" + label + "</strong></td>" +
-      '<td style="width:40%"><div class="dimbar"><i style="width:' + score + "%;background:" + color + '"></i></div></td>' +
-      '<td style="text-align:right;font-weight:700">' + score + "</td></tr>";
-  }
-
-  var lastDetail = null, lastMeta = null;
-
-  function renderDetail(p) {
-    var res = scoreAnswers(p.ans, p.role);
-    var n = res.norm, role = res.role, overall = res.overall, lowest = res.lowest, band = bandFor(overall);
-
-    var valHtml = Object.keys(res.valFit).map(function (v) {
-      var f = res.valFit[v], pct = Math.round(f.raw / f.max * 100);
-      return '<div class="valrow"><span class="valname" style="color:' + VALUE_COLORS[v] + '">' + v + "</span>" +
-        '<div class="dimbar" style="flex:1"><i style="width:' + pct + "%;background:" + VALUE_COLORS[v] + '"></i></div>' +
-        '<span style="font-weight:700;min-width:42px;text-align:right">' + pct + "%</span></div>";
-    }).join("");
-
-    var valDef = DATA.values.map(function (x) {
-      return '<tr><td style="color:' + VALUE_COLORS[x.value] + ';font-weight:700">' + x.value + "</td><td>" + x.def + "</td></tr>";
-    }).join("");
-
-    var detailRows = res.detail.map(function (d) {
-      var unanswered = (d.chosen == null || d.chosen < 0);
-      var chosenLetter = unanswered ? "-" : "ABCDE"[d.chosen], bestLetter = "ABCDE"[d.best];
-      var chosenText = unanswered ? "(ไม่ได้ตอบ)" : d.options[d.chosen];
-      var cls, label;
-      if (unanswered) { cls = "ans-wrong"; label = "ไม่ตอบ"; }
-      else if (d.dim === "IQ") { cls = d.got > 0 ? "ans-correct" : "ans-wrong"; label = d.got > 0 ? "ถูก" : "ผิด"; }
-      else if (d.chosen === d.best) { cls = "ans-correct"; label = "ดีที่สุด"; }
-      else if (d.got >= d.mx * 0.5) { cls = "ans-partial"; label = "พอใช้"; }
-      else { cls = "ans-wrong"; label = "ต่ำ"; }
-      var dimC = { EQ: "b-eq", IQ: "b-iq", AQ: "b-aq" }[d.dim];
-      return "<tr><td>" + d.no + '</td><td><span class="badge ' + dimC + '">' + d.dim + "</span></td>" +
-        '<td style="max-width:300px">' + d.q +
-        '<div class="note">ตอบ: <b>' + chosenLetter + ".</b> " + chosenText + "</div>" +
-        '<div class="note" style="color:var(--good)">เฉลย: <b>' + bestLetter + ".</b> " + d.options[d.best] + "</div></td>" +
-        '<td style="text-align:center"><span class="' + cls + '">' + label + "</span>" +
-        '<div class="note">' + d.got + "/" + d.mx + "</div></td></tr>";
-    }).join("");
-
-    var dt = new Date(p.date);
-    var dtStr = isNaN(dt.getTime()) ? "-" : dt.toLocaleString("th-TH");
-    var warn = lowest < 50
-      ? '<p style="color:var(--warn)">มีมิติที่คะแนนต่ำกว่า 50 (ต่ำสุด = ' + lowest + ') — ห้ามใช้คะแนนรวมกลบจุดเสี่ยง ควรเจาะถามในมิติที่ต่ำระหว่างสัมภาษณ์</p>'
-      : "";
-
-    var html =
-      '<div class="card"><div class="spread"><div>' +
-        '<h2 style="margin-bottom:4px">' + (p.name || "(ไม่ระบุชื่อ)") + "</h2>" +
-        '<div class="note">ตำแหน่ง: <b>' + role.name + "</b> · วันที่ทำ: " + dtStr + "</div>" +
-        '<div class="note">น้ำหนัก: EQ ' + Math.round(role.EQ * 100) + "% · IQ " + Math.round(role.IQ * 100) + "% · AQ " + Math.round(role.AQ * 100) + "%</div>" +
-        '</div><span class="lvl ' + lvlClass(band.level) + '">' + band.level + "</span></div></div>" +
-      '<div class="card"><div class="spread" style="align-items:flex-start">' +
-        '<div style="text-align:center">' + donut(overall, "#5b6a86") + '<div class="note" style="margin-top:6px">Overall (ถ่วงน้ำหนักตามตำแหน่ง)</div></div>' +
-        '<div style="flex:1;min-width:260px"><table>' +
-          dimRow("EQ — อารมณ์/บริการ", n.EQ, "#5b6a86") +
-          dimRow("IQ — คิด/คำนวณ", n.IQ, "#7d7f75") +
-          dimRow("AQ — รับผิดชอบ/อดทน", n.AQ, "#da9770") +
-        "</table>" +
-        '<div class="kpis" style="margin-top:14px">' +
-          '<div class="kpi"><div class="n" style="color:#5b6a86">' + overall + '</div><div class="l">Overall</div></div>' +
-          '<div class="kpi"><div class="n" style="color:' + (lowest < 50 ? "#b4595b" : "#4c4543") + '">' + lowest + '</div><div class="l">คะแนนต่ำสุด</div></div>' +
-          '<div class="kpi"><div class="n">' + p.ans.length + '/60</div><div class="l">ตอบครบ</div></div>' +
-          '<div class="kpi"><div class="n" style="font-size:15px;margin-top:9px">' + band.level + '</div><div class="l">ระดับสัญญาณ</div></div>' +
-        "</div></div></div></div>" +
-      '<div class="card"><h2>คำแนะนำ (Decision Support)</h2><p>' + band.interp + "</p>" + warn +
-        '<p class="note">เป็นคำแนะนำเชิงสัญญาณ ไม่ใช่คำสั่งรับหรือไม่รับ ใช้ร่วมกับ Structured Interview, Work Trial, เอกสาร และ Reference Check เสมอ</p></div>' +
-      '<div class="card"><h2>Company Values Fit</h2>' + valHtml +
-        '<p class="note" style="margin-top:6px">คะแนน Values เป็นมุมมองประกอบ ไม่ถูกบวกซ้ำใน Overall Score</p>' +
-        '<table style="margin-top:10px"><tr><th>Value</th><th>นิยามพฤติกรรม</th></tr>' + valDef + "</table></div>" +
-      '<div class="card"><h2>รายละเอียดรายข้อ (เฉลย + คะแนน)</h2>' +
-        '<div class="flex" style="margin-bottom:10px">' +
-          '<button class="btn ghost sm" id="csvBtn" type="button">Export CSV</button>' +
-          '<button class="btn ghost sm" id="printBtn" type="button">พิมพ์ / บันทึก PDF</button></div>' +
-        '<div style="overflow-x:auto"><table><tr><th>ข้อ</th><th>มิติ</th><th>คำถาม / คำตอบ / เฉลย</th>' +
-        '<th style="text-align:center">ผล</th></tr>' + detailRows + "</table></div></div>";
-
-    var box = $("hrResult");
-    box.classList.remove("hidden");
-    box.innerHTML = html;
-    lastDetail = res.detail;
-    lastMeta = { name: p.name, role: role.name, overall: overall, n: n };
-    var csvBtn = $("csvBtn"), printBtn = $("printBtn");
-    if (csvBtn) csvBtn.addEventListener("click", exportCSV);
-    if (printBtn) printBtn.addEventListener("click", function () { window.print(); });
-    box.scrollIntoView({ behavior: "smooth" });
-  }
-
-  function exportCSV() {
-    var d = lastDetail, m = lastMeta;
-    if (!d || !m) return;
-    var rows = [["Candidate", m.name], ["Role", m.role], ["Overall", m.overall],
-      ["EQ", m.n.EQ], ["IQ", m.n.IQ], ["AQ", m.n.AQ], [],
-      ["No", "Dim", "Value", "Question", "Chosen", "ChosenText", "Best", "BestText", "Got", "Max"]];
-    d.forEach(function (x) {
-      rows.push([x.no, x.dim, x.value, x.q, "ABCDE"[x.chosen], x.options[x.chosen],
-        "ABCDE"[x.best], x.options[x.best], x.got, x.mx]);
-    });
-    var csv = "\ufeff" + rows.map(function (r) {
-      return r.map(function (c) { return '"' + String(c == null ? "" : c).replace(/"/g, '""') + '"'; }).join(",");
-    }).join("\n");
-    var blob = new Blob([csv], { type: "text/csv" });
-    var a = document.createElement("a");
-    a.href = URL.createObjectURL(blob);
-    a.download = "assessment_" + (m.name || "candidate").replace(/\s+/g, "_") + ".csv";
-    a.click();
-  }
-
-  // ---------------- wire up events ----------------
-  function boot() {
-    try { initRoles(); } catch (e) {}
-    try { restoreProgress(); } catch (e) {}
-    $("mCand").addEventListener("click", function () { setMode("cand"); });
-    $("mHR").addEventListener("click", function () { setMode("hr"); });
-    $("startBtn").addEventListener("click", startTest);
-    $("submitBtn").addEventListener("click", submitTest);
-    $("copyBtn").addEventListener("click", copyCode);
-    $("dlBtn").addEventListener("click", downloadCode);
-    $("hrLoginBtn").addEventListener("click", hrLogin);
-    $("hrPass").addEventListener("keydown", function (e) { if (e.key === "Enter") hrLogin(); });
-    $("reloadBtn").addEventListener("click", loadCandidates);
-    $("manualBtn").addEventListener("click", toggleManual);
-    var fSearch = $("fSearch"); if (fSearch) fSearch.addEventListener("input", function () { if (candidates.length) renderCandidateList(); });
-    ["fRole", "fLevel", "fScore", "fSort"].forEach(function (id) {
-      var el = $(id);
-      if (el) el.addEventListener("change", function () { if (candidates.length) renderCandidateList(); });
-    });
-    $("procBtn").addEventListener("click", hrProcessCode);
-    $("fileBtn").addEventListener("click", loadCodeFile);
-    $("fileIn").addEventListener("change", onFile);
-  }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", boot);
-  } else {
-    boot();
-  }
+<script>window.ASSESSMENT_CONFIG={"SHEET_ENDPOINT": "https://script.google.com/macros/s/AKfycbzHMSmTwRV5-7Bq5A7hEn7IeGjvnQmi0uMBggvP6VMV4zx6F8l17ngqgjhLJ7SiskQl/exec", "PUBLIC_URL": "https://tantatat-assessmentbm.vercel.app/"};window.ASSESSMENT_DATA={"questions": [{"no": 1, "q": "หลังประชุม ทีม 3 คนสะท้อนว่าคุณเปลี่ยนคำสั่งระหว่างงานเร็ว จนแต่ละคนเข้าใจไม่ตรงกัน คุณจะทำอย่างไร?", "options": ["สรุปคำสั่งล่าสุดในกลุ่มทีม และขอให้ทุกคนยึดข้อความนี้", "ถามตัวอย่างที่ทำให้สับสน แล้วทวนคำสั่งให้ทีมทั้งหมดรับทราบ", "ทวนจุดที่ทีมสับสนและตกลงวิธีแจ้งงานใหม่เมื่อคำสั่งเปลี่ยน", "ให้ทีมส่งรายการที่ยังไม่ชัดมา แล้วตอบแยกเป็นรายคน"]}, {"no": 2, "q": "ก่อนประชุมทบทวนผลงานสาขา คุณเพิ่งได้รับคำร้องเรียนที่ทำให้ไม่พอใจมาก แต่ต้องเป็นผู้นำประชุมในอีก 10 นาที คุณจะทำอย่างไร?", "options": ["แยกอารมณ์ออกจากวาระและให้ทีมทวนข้อมูลก่อนตัดสินใจ", "เริ่มประชุมตามกำหนดและขอให้ทีมรายงานข้อมูลให้ครบก่อนตัดสินใจ", "เลื่อนเรื่องที่มีข้อขัดแย้งไปท้ายประชุมเพื่อให้ตัวเองสงบก่อน", "เตรียมประเด็นที่ต้องถามเป็นข้อเท็จจริง และกำหนดว่าจะไม่สรุปจากอารมณ์"]}, {"no": 3, "q": "ผลงานยอดนัดหมายสาขาต่ำกว่าเป้าเป็นเดือนที่สอง ทีมบอกว่าเป็นเพราะทำเล คุณจะเริ่มทบทวนเรื่องใด?", "options": ["ขอข้อมูลของสาขาใกล้เคียงก่อน เพื่อดูว่าทำเลส่งผลจริงหรือไม่", "ทบทวนกิจกรรมที่ทีมทำในเดือนนี้ว่าครบตามแผนหรือไม่", "แยกข้อมูลจำนวนผู้ติดต่อ นัดหมาย และเข้ารับบริการ เพื่อหาช่วงที่ลูกค้าหลุด", "ตรวจข้อมูลทุกขั้นกับทีม แล้วทดลองแก้จุดที่ทำให้ยอดนัดลดลง"]}, {"no": 4, "q": "ผู้บริหารมอบหมายให้คุณนำโครงการระบบนัดหมายใหม่ ซึ่งเป็นเรื่องที่ไม่เคยดูแลมาก่อน คุณจะรับงานอย่างไร?", "options": ["แยกงานที่ทำได้กับส่วนที่ต้องขอผู้เชี่ยวชาญช่วย แล้วกำหนดงานช่วงแรก", "ระบุสิ่งที่ต้องเรียนรู้ ขอผู้เชี่ยวชาญช่วย และนัดจุดทวนงาน", "รับงานและขอให้ฝ่ายระบบส่งคู่มือเพื่อศึกษาเอง", "แจ้งผู้บริหารว่าต้องใช้เวลาเรียนรู้ก่อนเริ่มโครงการ"]}, {"no": 5, "q": "ลูกค้าร้องเรียนเรื่องค่าบริการเสียงดังต่อหน้าทีม และพนักงานเริ่มโต้เถียงกับลูกค้า คุณในฐานะผู้จัดการจะทำอย่างไร?", "options": ["ขอให้พนักงานหยุดโต้เถียง แล้วแจ้งลูกค้าว่าจะตรวจข้อมูลก่อนตอบ", "เชิญลูกค้าไปคุยในที่สงบ แล้วขอเอกสารค่าบริการมาตรวจ", "พาลูกค้าคุยส่วนตัว ตรวจหลักฐานและแก้ไข แล้วทวนกับทีมหลังเหตุการณ์", "แยกการสนทนาให้เป็นส่วนตัว ตรวจยอดกับเอกสาร และแจ้งขั้นตอนแก้ไขให้ลูกค้า"]}, {"no": 6, "q": "ทีมพบว่าระบบบันทึกการโทรยืนยันนัดหมายลูกค้าซ้ำกันหลายรายการ ทำให้พนักงานบางคนโทรหาลูกค้าคนเดิมซ้ำ แม้ทีมพยายามตรวจเองแล้ว แต่ปัญหายังเกิดอีก คุณในฐานะผู้จัดการจะทำอย่างไร?", "options": ["ให้พนักงานตรวจรายชื่อก่อนโทรทุกครั้งและแจ้งหัวหน้าเวรเมื่อพบรายชื่อซ้ำ เพื่อไม่ให้ลูกค้าได้รับสายซ้ำในวันนั้น", "กำหนดให้หัวหน้าเวรตรวจรายชื่อที่ซ้ำตอนเริ่มกะ และส่งรายการที่ต้องแก้ให้ผู้ดูแลระบบเพื่อตรวจสอบ", "รวบรวมตัวอย่างรายการที่ซ้ำ ตรวจขั้นตอนการบันทึกกับทีมและฝ่ายระบบ กำหนดวิธีบันทึกเดียวกัน แล้วติดตามผลการใช้จริง", "ให้พนักงานที่รับผิดชอบรายชื่อแต่ละชุดตกลงกันเองว่าใครจะโทรก่อน เพื่อให้ทำงานทันตามเป้าหมาย"]}, {"no": 7, "q": "ที่ปรึกษาด้านทันตกรรมที่มียอดขายสูงพูดตำหนิผู้ช่วยทันตแพทย์ต่อหน้าเพื่อนร่วมงานสองครั้งในสัปดาห์นี้ ผู้ช่วยเริ่มไม่มั่นใจและไม่กล้าส่งต่องาน แต่สาขามีคิวเต็มจนไม่สามารถสลับคนทำงานได้ คุณในฐานะผู้จัดการจะจัดการอย่างไร?", "options": ["พูดคุยกับทั้งสองคนแยกกันทันที ชี้แจงว่าการตำหนิต่อหน้าทีมไม่เหมาะสม กำหนดวิธีสื่อสารระหว่างทำงาน และติดตามพฤติกรรมในกะถัดไป", "แจ้งที่ปรึกษาเป็นการส่วนตัวว่าต้องหยุดตำหนิเพื่อนร่วมงานต่อหน้าคนอื่น แล้วให้ทั้งสองคนทำงานตามตารางโดยมีหัวหน้าเวรช่วยติดตาม", "ให้ทั้งสองคนจัดการปัญหากันเอง เพราะสาขามีลูกค้าแน่นและที่ปรึกษาคนดังกล่าวทำยอดขายได้ดี", "ให้ทั้งสองคนทำงานตามตารางเดิม โดยติดตามพฤติกรรมการสื่อสารและการส่งต่องานระหว่างวันของพนักงานทั้ง 2 คน แล้วนัดพูดคุยหลังปิดสาขา"]}, {"no": 8, "q": "พนักงานหน้าเคาน์เตอร์คนใหม่บันทึกเวลานัดหมายลูกค้าผิดหลายครั้งในสัปดาห์นี้ เมื่อสอบถามจึงรู้ว่าไม่กล้าถามเพื่อนร่วมงานเมื่อไม่เข้าใจ เพราะกลัวรบกวนคนอื่น คุณในฐานะผู้จัดการจะทำอย่างไร?", "options": ["ให้พนักงานรุ่นพี่ช่วยตรวจรายการนัดของพนักงานใหม่ช่วงคิวแน่น แล้วพูดคุยถึงขั้นตอนที่ยังสับสนเมื่อจบกะ", "ให้พนักงานรับหน้าที่ต้อนรับในช่วงคิวแน่น และให้ทำหน้าที่รับนัดลูกค้าเฉพาะช่วงที่ลูกค้าน้อยเป็นเวลาหนึ่งสัปดาห์", "จัดทำตัวอย่างการบันทึกนัดหมายให้พนักงานใหม่ใช้ทบทวน และกำหนดให้ขอความช่วยเหลือเมื่อพบรายการที่ไม่แน่ใจ", "คุยเป็นการส่วนตัวเพื่อให้พนักงานกล้าถาม ฝึกขั้นตอนที่บันทึกผิดกับพนักงานที่ชำนาญ และตรวจผลการทำงานจริงในสัปดาห์ถัดไป"]}, {"no": 9, "q": "ระหว่างประชุมทีม คุณมักรีบสรุปและพูดแทรกก่อนพนักงานอธิบายปัญหาจบ ทำให้ช่วงหลังพนักงานไม่ค่อยแจ้งปัญหาเกี่ยวกับเครื่องมือหรือการทำงาน คุณในฐานะผู้จัดการจะปรับตนเองอย่างไร?", "options": ["เปิดให้พนักงานแต่ละคนรายงานปัญหาจนจบก่อนที่คุณจะตอบ แล้วสรุปเรื่องที่ต้องติดตามหลังประชุม", "แจ้งทีมว่าหากไม่สะดวกพูดในประชุมสามารถส่งปัญหาให้คุณทางข้อความส่วนตัวได้", "ขอให้หัวหน้าเวรรวบรวมปัญหาจากทุกคนก่อนประชุม เพื่อให้คุณเป็นผู้สรุปได้รวดเร็วขึ้น", "ยอมรับกับทีมว่าที่ผ่านมาเคยพูดขัดจังหวะ ปรับวิธีประชุมให้ทุกคนพูดได้เต็มที่ และติดตามว่าปัญหาถูกแจ้งเร็วขึ้นหรือไม่"]}, {"no": 10, "q": "ผู้บริหารระดับสูงขอให้คุณตักเตือนพนักงานทุกคน เพราะคะแนนบริการของสาขาลดลง แต่เมื่อคุณตรวจเบื้องต้นพบว่าข้อมูลข้อร้องเรียนยังไม่ครบ และยังไม่ทราบว่าเกิดจากพนักงานคนใด คุณในฐานะผู้จัดการจะทำอย่างไร?", "options": ["แจ้งทีมว่าคะแนนบริการลดลงและขอให้ทุกคนระวังการบริการมากขึ้น ก่อนตรวจรายละเอียดเพิ่มเติม", "แจ้งผู้บริหารว่าข้อมูลยังไม่พอจะตัดสินพนักงานทุกคน ขอเวลาตรวจหลักฐานและพูดคุยกับผู้เกี่ยวข้องก่อนดำเนินการตามข้อเท็จจริง", "รวบรวมข้อมูลคะแนนและข้อร้องเรียนที่มีอยู่ แล้วรายงานผลให้ผู้บริหารทราบ พร้อมเสนอให้รอตรวจข้อมูลก่อนออกคำเตือน", "ตักเตือนพนักงานทุกคนตามคำสั่งผู้บริหารทันทีเพื่อแสดงความรับผิดชอบของสาขา"]}, {"no": 11, "q": "พนักงานคนหนึ่งขอเปลี่ยนตารางงานชั่วคราวด้วยเหตุผลส่วนตัวที่ไม่ต้องการเปิดเผยต่อเพื่อนร่วมทีม แต่การเปลี่ยนเวรอาจทำให้พนักงานคนอื่นรับงานช่วงลูกค้าแน่นเพิ่มขึ้น คุณในฐานะผู้จัดการจะจัดการอย่างไร?", "options": ["ขอให้พนักงานอธิบายเหตุผลเพิ่มเติมกับหัวหน้าเวร เพื่อช่วยพิจารณาว่าควรจัดตารางอย่างไร", "พูดคุยเหตุผลเป็นการส่วนตัวโดยเก็บข้อมูลเท่าที่จำเป็น ตรวจผลต่อตารางและเวลาพัก แล้วปรับแบ่งงานอย่างเป็นธรรมโดยไม่เปิดเผยเรื่องส่วนตัว", "แจ้งเพื่อนร่วมทีมถึงเหตุผลส่วนตัวของพนักงานเพื่อให้ทุกคนเข้าใจและช่วยกันรับงานเพิ่ม", "ตรวจจำนวนคนแต่ละช่วงและเสนอทางเลือกการสลับเวรให้พนักงานเลือก โดยไม่เปิดเผยรายละเอียดเรื่องส่วนตัวแก่ทีม"]}, {"no": 12, "q": "สาขามีพนักงานเริ่มงานสองช่วงเวลา คือ 09.00 น. และ 10.00 น. ทีมกะหลังมักไม่ได้รับข้อมูลโปรโมชั่นใหม่ที่แจ้งในประชุมเช้า ทำให้ลูกค้าได้รับข้อมูลไม่ตรงกัน คุณในฐานะผู้จัดการจะปรับวิธีทำงานอย่างไร?", "options": ["จัดทำช่องทางบันทึกข้อมูลโปรโมชั่นกลางที่พนักงานทั้งสองกะเข้าถึงได้ กำหนดผู้รับผิดชอบอัปเดตและให้พนักงานทวนข้อมูลก่อนเริ่มงาน", "ให้หัวหน้าเวรสรุปโปรโมชั่นจากประชุมเช้าและส่งข้อความให้พนักงานที่เริ่มงาน 10.00 น. ทุกวัน", "แจ้งให้พนักงานที่เริ่มงานช้าอ่านประกาศในกลุ่มก่อนเริ่มกะ และสอบถามหัวหน้าเวรหากมีข้อสงสัย", "กำชับพนักงานกะเช้าให้ส่งต่อข้อมูลสำคัญแก่เพื่อนร่วมงานด้วยตนเองก่อนเริ่มให้บริการลูกค้า"]}, {"no": 13, "q": "พนักงาน 3 คนแจ้งว่าค่าคอมมิชชันรอบล่าสุดต่ำกว่ายอดที่ตนคำนวณไว้ ทำให้เริ่มกังวลเรื่องความถูกต้องและความเป็นธรรมในการจ่ายเงิน คุณสอบถามฝ่ายเงินเดือนแล้ว ได้รับแจ้งว่าจะตรวจสอบรายละเอียดให้ภายใน 5 วันทำการ แต่พนักงานทั้งสามคนต้องการทราบความคืบหน้าจากคุณ คุณในฐานะผู้จัดการจะทำอย่างไร?", "options": ["รวบรวมรายการที่พนักงานสงสัยเป็นรายคน ประสานฝ่ายเงินเดือนเพื่อยืนยันกำหนดแจ้งผล และติดตามความคืบหน้าให้แต่ละคน", "ชี้แจงว่าฝ่ายเงินเดือนจะตรวจสอบภายใน 5 วันทำการ พร้อมรับฟังข้อกังวลของพนักงานแต่ละคนระหว่างรอผล", "ตรวจยอดขายในระบบเทียบกับรายการที่พนักงานแจ้ง แล้วส่งข้อมูลส่วนต่างให้ฝ่ายเงินเดือนตรวจสอบตามกำหนด", "แนะนำให้พนักงานแต่ละคนส่งข้อมูลที่สงสัยถึงฝ่ายเงินเดือนโดยตรง และติดตามผลกับฝ่ายเงินเดือนด้วยตนเอง"]}, {"no": 14, "q": "ในสัปดาห์ที่ผ่านมา ลูกค้า 4 รายแจ้งว่าที่ปรึกษาด้านทันตกรรมอธิบายข้อมูลก่อนรับบริการเร็วเกินไป ทำให้ลูกค้าไม่มีโอกาสสอบถามเรื่องที่ยังไม่เข้าใจ พนักงานรายนี้มียอดขายสูง และชี้แจงว่าต้องรีบอธิบายเพราะมีลูกค้ารอหลายราย คุณในฐานะผู้จัดการจะทำอย่างไร?", "options": ["ให้พนักงานเปิดโอกาสให้ลูกค้าซักถามทุกครั้งหลังอธิบายจบ แล้วตรวจความคิดเห็นของลูกค้าอีกครั้งในสัปดาห์ถัดไป", "ให้พนักงานอธิบายตามวิธีเดิมในช่วงคิวแน่น แต่แจ้งลูกค้าว่าสามารถโทรกลับมาสอบถามเพิ่มเติมภายหลังได้", "พูดคุยกับพนักงานถึงช่วงที่ต้องรีบอธิบาย ให้ทดลองอธิบายทีละหัวข้อและตรวจสอบความเข้าใจของลูกค้า แล้วติดตามผลหลังหนึ่งสัปดาห์", "ให้พนักงานใช้เอกสารสรุปข้อมูลก่อนรับบริการประกอบการอธิบาย เพื่อให้ลูกค้าสามารถอ่านทบทวนรายละเอียดเพิ่มเติมได้"]}, {"no": 15, "q": "ช่วงเวลา 17.00–19.00 น. สาขามีลูกค้าเข้ามาใช้บริการจำนวนมาก คุณจึงมอบหมายให้พนักงานที่ใช้ระบบนัดหมายคล่องที่สุดรับผิดชอบงานรับนัดในช่วงนี้ตลอด 3 สัปดาห์ที่ผ่านมา ล่าสุดพนักงานคนดังกล่าวแจ้งว่ามีภาระงานมากเกินไป ขณะที่พนักงานคนอื่นยังใช้ระบบนัดหมายไม่คล่อง และสาขาไม่สามารถเพิ่มพนักงานได้ คุณในฐานะผู้จัดการจะทำอย่างไร?", "options": ["ให้พนักงานคนอื่นฝึกรับนัดในช่วงที่ลูกค้าน้อยก่อน ส่วนช่วง 17.00–19.00 น. ยังคงมอบหมายให้คนเดิมรับผิดชอบ", "แบ่งงานเอกสารและงานโทรยืนยันนัดให้พนักงานคนอื่นรับผิดชอบ เพื่อลดภาระของพนักงานที่รับนัดช่วงลูกค้าเยอะ", "ให้พนักงานที่รับนัดแจ้งวันที่ต้องการลดภาระงาน แล้วจัดเพื่อนร่วมทีมมารับหน้าที่แทนในวันดังกล่าว", "ให้พนักงานคนอื่นฝึกรับนัดช่วงลูกค้าน้อย เมื่อทำได้ถูกต้องจึงทดลองสลับเวรในช่วง 17.00–19.00 น. และตรวจผลหลังปรับตาราง"]}, {"no": 16, "q": "ระหว่างตรวจรายงานประจำสัปดาห์ คุณพบว่าพนักงานบันทึกจำนวนลูกค้าที่ติดต่อสำเร็จสูงกว่าความเป็นจริง เมื่อสอบถาม พนักงานยอมรับว่าได้นับรวมลูกค้าที่ยังไม่รับสาย เพราะกังวลว่าจะถูกตำหนิหากทำยอดไม่ถึงเป้า ขณะนี้รายงานยังไม่ได้ส่งให้ผู้บริหาร คุณในฐานะผู้จัดการจะทำอย่างไร?", "options": ["ให้พนักงานแก้ยอดให้ตรงก่อนส่งรายงาน และกำหนดให้หัวหน้าเวรช่วยตรวจรายงานทุกวันในสัปดาห์ถัดไป", "ตรวจยอดร่วมกับพนักงาน แก้รายงานตามจริง แล้วพูดคุยถึงความกังวลและวิธีติดตามผลการทำงาน", "ให้พนักงานเขียนชี้แจงเหตุผลที่บันทึกยอดเกินจริง และส่งรายงานที่แก้ไขแล้วให้คุณตรวจอีกครั้ง", "ให้พนักงานแก้ยอดด้วยตนเองก่อนส่งรายงาน โดยกำชับไม่ให้เกิดเหตุการณ์เช่นนี้อีก และตรวจผลในรอบถัดไป"]}, {"no": 17, "q": "พนักงานใหม่บันทึกข้อมูลส่งต่องานผิด 2 ครั้งในสัปดาห์นี้ พนักงานรุ่นพี่ช่วยแก้ไขให้ แต่ตำหนิพนักงานใหม่ต่อหน้าเพื่อนร่วมทีมจนเจ้าตัวไม่กล้าถามเมื่อไม่เข้าใจ คุณจะจัดการอย่างไร?", "options": ["นัดฝึกการบันทึกข้อมูลกับพนักงานใหม่หลังจบกะ และตรวจงานของเขาเพิ่มเติมในสัปดาห์ถัดไป", "จัดทำตัวอย่างการส่งต่องานให้ทีมใช้เหมือนกัน แล้วแจ้งให้ทุกคนตรวจข้อมูลก่อนส่งต่อ", "ให้พนักงานรุ่นพี่ช่วยตรวจงานของพนักงานใหม่ก่อนส่งต่อในช่วงแรก แล้วประเมินความถูกต้องอีกครั้ง", "คุยกับทั้งสองคนแยกกัน ฝึกจุดที่บันทึกผิด และให้พนักงานรุ่นพี่แนะนำงานเป็นการส่วนตัว"]}, {"no": 18, "q": "ช่วงเย็นมีลูกค้าโทรเข้าสาขาจำนวนมาก พนักงานหน้าเคาน์เตอร์คนหนึ่งต้องรับโทรศัพท์เกือบทุกสายจนทำงานอื่นไม่ทัน ทีมเสนอให้แบ่งเวรกันรับโทรศัพท์ แต่พนักงานบางคนยังไม่คล่องเรื่องการตอบคำถามและยืนยันเวลานัดหมาย จึงกลัวว่าจะให้ข้อมูลลูกค้าผิด คุณในฐานะผู้จัดการจะทำอย่างไร?", "options": ["ให้พนักงานที่ยังไม่คล่องฝึกรับสายคู่กับคนที่ชำนาญในช่วงลูกค้าน้อย แล้วค่อยพิจารณาจัดเวรใหม่", "ให้พนักงานฝึกตอบคำถามเรื่องนัดหมายกับคนที่ชำนาญ แล้วทดลองสลับเวรรับสายโดยตรวจข้อมูลนัดหมายหลังรับสาย", "ให้พนักงานที่รับสายคล่องทำหน้าที่เดิมต่อ และให้เพื่อนร่วมทีมช่วยงานเอกสารแทนเพื่อลดภาระ", "ให้หัวหน้าเคาน์เตอร์ช่วยรับโทรศัพท์ในช่วงเย็น แล้วค่อยพิจารณาแบ่งเวรเมื่อพนักงานคนอื่นพร้อม"]}, {"no": 19, "q": "ก่อนเริ่มรับผู้ป่วย คุณพบว่าพนักงานอาวุโสขอให้ผู้ช่วยใหม่ลงชื่อยืนยันการตรวจอุปกรณ์ ทั้งที่ยังตรวจไม่ครบ เพราะต้องการเปิดห้องให้ทันคิวแรกซึ่งจะเริ่มในอีก 15 นาที ผู้ช่วยใหม่ไม่กล้าปฏิเสธ คุณจะทำอย่างไร?", "options": ["หยุดการลงชื่อที่ยังตรวจไม่ครบ ให้ทีมตรวจอุปกรณ์ตามรายการจริง และแจ้งผู้เกี่ยวข้องหากคิวต้องล่าช้า", "เรียกพนักงานอาวุโสมาชี้แจงขั้นตอนการตรวจ แล้วให้ทีมทำรายการที่เหลือก่อนเริ่มรับผู้ป่วย", "ขอให้หัวหน้าเวรเข้ามาตรวจอุปกรณ์แทนผู้ช่วยใหม่ แล้วนำเหตุการณ์ไปหารือหลังจบกะ", "กำชับไม่ให้ผู้ช่วยใหม่ลงชื่อจนกว่าจะตรวจครบ แล้วให้ทั้งสองคนจัดการงานที่เหลือตามหน้าที่"]}, {"no": 20, "q": "ลูกค้าสูงอายุคนหนึ่งแจ้งว่าอ่านรายละเอียดค่าบริการในใบแจ้งยอดไม่ชัด และต้องการให้พนักงานอธิบายก่อนชำระเงิน ขณะนั้นมีลูกค้าอีก 4 คนรอชำระเงิน และมีพนักงานหน้าเคาน์เตอร์ 2 คน คุณในฐานะผู้จัดการจะให้ทีมดูแลลูกค้าอย่างไร?", "options": ["ให้พนักงานคนหนึ่งอ่านยอดรวมและรายการค่าใช้จ่ายหลักให้ลูกค้าฟัง ส่วนอีกคนรับชำระเงินตามคิว", "ให้พนักงานคนหนึ่งอธิบายค่าใช้จ่ายทีละรายการโดยชี้ข้อมูลในใบแจ้งยอด ส่วนอีกคนรับชำระเงินตามคิว", "ให้พนักงานคนหนึ่งอธิบายค่าบริการทีละรายการและถามว่าลูกค้ายังสงสัยตรงไหน ส่วนอีกคนดูแลคิวชำระเงิน", "เชิญลูกค้าไปนั่งรอในพื้นที่รับรองก่อน แล้วให้พนักงานทั้งสองคนรับชำระเงินลูกค้าที่รอให้เสร็จ"]}, {"no": 21, "q": "สาขาทดลองโฆษณาสองแบบเป็นเวลา 2 สัปดาห์ โดยแคมเปญ A ใช้งบ 8,000 บาท มีผู้ติดต่อ 80 คน และเกิดการนัดหมาย 16 ราย ส่วนแคมเปญ B ใช้งบ 6,000 บาท มีผู้ติดต่อ 40 คน และเกิดการนัดหมาย 20 ราย คุณมีงบเพิ่มเติม 4,000 บาทสำหรับทดลองต่อ โดยจำนวนผู้มาตามนัดของทั้งสองแบบยังไม่ทราบ คุณจะจัดสรรงบอย่างไร?", "options": ["เพิ่มงบให้แคมเปญ A เพราะมีผู้ติดต่อมากกว่า แล้วตรวจว่าจำนวนนัดหมายเพิ่มขึ้นหรือไม่", "เพิ่มงบทดลองให้แคมเปญ B แล้วติดตามต้นทุนต่อการนัดหมายและจำนวนผู้มาตามนัดจริง", "คงงบเพิ่มเติมไว้ก่อนสองสัปดาห์ เพื่อรอข้อมูลผู้มาตามนัดจริงจากทั้งสองแคมเปญ", "ย้ายงบบางส่วนจาก A ไป B แล้วตรวจว่าจำนวนนัดหมายและต้นทุนรวมเปลี่ยนไปอย่างไร"]}, {"no": 22, "q": "ระบบนัดหมายของสาขาใช้งานไม่ได้มา 30 นาที ทีมมีรายชื่อนัดที่พิมพ์ไว้ตั้งแต่เช้า แต่หลังพิมพ์เอกสารมีลูกค้าโทรขอเปลี่ยนเวลานัด 2 ราย และมีลูกค้าใหม่ติดต่อเข้ามาอีก 5 ราย คุณในฐานะผู้จัดการจะให้ทีมจัดการข้อมูลอย่างไรระหว่างรอระบบกลับมา?", "options": ["ให้ทีมใช้รายชื่อที่พิมพ์ไว้เป็นหลัก แล้วเขียนรายการเปลี่ยนเวลานัดเพิ่มเติมลงบนเอกสารชุดนั้น", "ให้ทีมแยกบันทึกรายการนัดใหม่และรายการเปลี่ยนนัดไว้ต่างหาก แล้วนำกลับเข้าระบบเมื่อพร้อม", "ให้รับข้อมูลติดต่อของลูกค้าทุกรายไว้ก่อน และหยุดยืนยันเวลานัดจนกว่าระบบจะกลับมาใช้งาน", "ใช้รายชื่อเดิมคู่กับบันทึกการเปลี่ยนแปลงชุดเดียว ระบุเวลารับเรื่อง และตรวจรายการซ้ำก่อนยืนยันเมื่อระบบกลับมา"]}, {"no": 23, "q": "เป้าหมายสาขาคือยืนยันนัดหมายให้ได้อย่างน้อย 80% ของนัดทั้งหมด สัปดาห์แรกมีนัด 50 ราย ยืนยันได้ 40 ราย สัปดาห์ที่สองมีนัด 60 ราย ยืนยันได้ 42 ราย หากต้องรายงานผลรวมสองสัปดาห์ คุณควรสรุปอย่างไร?", "options": ["ยืนยันสำเร็จ 82 จาก 110 นัด คิดเป็นประมาณ 74.5% ซึ่งต่ำกว่าเป้าหมาย 80%", "สัปดาห์ล่าสุดยืนยันได้ 70% จึงควรรายงานเฉพาะสัปดาห์นี้เป็นผลการดำเนินงานปัจจุบัน", "นำอัตรา 80% และ 70% มาเฉลี่ย ได้ 75% เป็นผลรวมของสองสัปดาห์", "สัปดาห์ที่สองยืนยันได้มากขึ้น 2 ราย จึงสรุปว่าประสิทธิภาพการยืนยันนัดดีขึ้น"]}, {"no": 24, "q": "รายงานสาขาแสดงว่ายอดยกเลิกนัดสูงผิดปกติทุกวันศุกร์ แต่เมื่อสอบถามทีมพบว่าบางรายการเป็นลูกค้าขอเลื่อนนัด ไม่ได้ยกเลิกบริการจริง คุณจะตรวจสอบและแก้ไขข้อมูลอย่างไร?", "options": ["ให้พนักงานตรวจรายการยกเลิกทุกเย็นวันศุกร์ แล้วแจ้งยอดที่ต้องแก้ไขให้ผู้จัดการ", "ให้หัวหน้าเคาน์เตอร์รับผิดชอบตรวจรหัสยกเลิกและเลื่อนนัดก่อนสรุปรายงานประจำสัปดาห์", "สุ่มตรวจรายการกับประวัติการติดต่อ แยกกรณีเลื่อนกับยกเลิก แล้วกำหนดวิธีเลือกประเภทนัดให้ทีมใช้ตรงกัน", "แก้จำนวนการยกเลิกในรายงานตามยอดที่พนักงานแจ้ง แล้วเปรียบเทียบตัวเลขอีกครั้งในสัปดาห์ถัดไป"]}, {"no": 25, "q": "ทีมเสนอโปรโมชั่นแพ็กเกจทันตกรรมราคา 8,000 บาท จากราคาปกติ 10,000 บาท โดยต้นทุนต่อแพ็กเกจอยู่ที่ 7,000 บาท และบริษัทกำหนดให้มีกำไรขั้นต้นอย่างน้อย 20% ของราคาขาย ผู้บริหารต้องการให้เริ่มโปรโมชั่นในสัปดาห์หน้า คุณจะเสนออย่างไร?", "options": ["เสนอให้ทดลองขายที่ 8,000 บาทในจำนวนจำกัด แล้วตรวจว่ายอดขายรวมชดเชยกำไรต่อรายการที่ลดลงได้หรือไม่", "ชี้แจงว่า 8,000 บาทให้กำไรขั้นต้นเพียง 12.5% แล้วเสนอปรับราคาหรือต้นทุนให้ผ่านเกณฑ์ก่อนเปิดขาย", "เสนอราคาขาย 9,000 บาท ซึ่งยังมีส่วนลดจากราคาปกติ และตรวจผลของโปรโมชั่นหลังเปิดขาย", "อนุมัติราคา 8,000 บาท เพราะยังเหลือกำไร 1,000 บาทต่อแพ็กเกจ และติดตามยอดขายหลังเริ่มโปรโมชั่น"]}, {"no": 26, "q": "สาขาได้รับข้อร้องเรียนว่าลูกค้ารอนานขึ้น คุณตรวจข้อมูลเฉลี่ยพบว่า สัปดาห์ก่อนใช้เวลาเช็กอิน 5 นาที รอเข้าห้องตรวจ 14 นาที และชำระเงิน 4 นาที ส่วนสัปดาห์นี้เช็กอิน 5 นาที รอเข้าห้องตรวจ 32 นาที และชำระเงิน 4 นาที คุณจะเริ่มแก้ปัญหาอย่างไร?", "options": ["ตรวจช่วงรอเข้าห้องร่วมกับทีมและทันตแพทย์ แล้วทดลองปรับตารางนัดตามเวลาที่ใช้จริง", "เพิ่มพนักงานรับเช็กอินในช่วงลูกค้าเยอะ แล้วตรวจเวลาเฉลี่ยทุกขั้นตอนอีกครั้ง", "ให้ลูกค้าเตรียมเอกสารก่อนเดินทางมาสาขา แล้ววัดเวลาที่ใช้ตั้งแต่เช็กอินจนเข้าห้องตรวจ", "เก็บเวลาเริ่มตรวจเทียบกับเวลานัดของแต่ละราย เพื่อหาว่าคิวประเภทใดล่าช้ามากที่สุด"]}, {"no": 27, "q": "สัปดาห์ก่อนสาขามีลูกค้านัดหมาย 100 ราย และมาตามนัด 80 ราย ส่วนสัปดาห์นี้มีลูกค้านัดหมาย 140 ราย และมาตามนัด 98 ราย ผู้บริหารเห็นว่าจำนวนลูกค้าที่มาเพิ่มขึ้น 18 ราย จึงสรุปว่าการจัดการนัดหมายดีขึ้น และขอให้คุณรายงานผลพร้อมแนวทางดำเนินการในสัปดาห์ถัดไป คุณจะรายงานอย่างไร?", "options": ["แจ้งผู้บริหารว่าลูกค้ามาจริงเพิ่มขึ้น 18 ราย แต่อัตราการมาตามนัดลดจาก 80% เหลือ 70% และเสนอให้ติดตามอัตรานี้ทุกสัปดาห์", "รายงานว่าลูกค้ามาจริงเพิ่มขึ้น แต่อัตราการมาตามนัดลดลง แล้วให้ทีมแยกข้อมูลผู้ขาดนัดตามประเภทบริการ เพื่อหาจุดที่ควรแก้ไขก่อน", "รายงานว่ามีลูกค้ามาใช้บริการเพิ่มขึ้น 18 ราย และเสนอให้ใช้วิธีรับนัดแบบเดิมต่อ เพราะจำนวนลูกค้าที่เข้ามาสาขาเพิ่มขึ้น", "รายงานว่าอัตราการมาตามนัดลดจาก 80% เหลือ 70% แล้วให้ทีมโทรยืนยันนัดเพิ่มอีกครั้งกับลูกค้าทุกราย"]}, {"no": 28, "q": "เวลา 09.00 น. คุณพบว่ามีลูกค้านัดสแกนช่องปากวันนี้ 6 รายในช่วง 10.00–12.00 น. แต่สาขามีเครื่องสแกนเพียง 1 เครื่อง และใช้เวลาประมาณ 30 นาทีต่อราย รวมเวลาเตรียมเครื่องแล้ว จึงรับได้เพียง 4 รายในช่วงดังกล่าว และไม่มีเวลาว่างอื่นสำหรับสแกนในวันนี้ คุณจะจัดการก่อนลูกค้ารายแรกมาถึงอย่างไร?", "options": ["ให้พนักงานโทรแจ้งลูกค้าทั้ง 6 รายว่าเครื่องสแกนอาจให้บริการไม่ทันเวลานัด และสอบถามว่าแต่ละรายยินดีรอหรือไม่", "ให้พนักงานติดต่อขอเลื่อนลูกค้า 2 รายท้ายของตารางไปวันอื่น และรักษาเวลานัดเดิมของลูกค้า 4 รายแรก", "ให้ทันตแพทย์หรือทีมคลินิกช่วยพิจารณาว่ารายใดจำเป็นต้องสแกนวันนี้ แล้วประสานขอเลื่อน 2 รายที่เลื่อนได้ พร้อมเสนอวันใหม่ก่อนเดินทางมา", "ให้พนักงานรับลูกค้าทั้ง 6 รายตามนัดเดิม และแจ้งผู้ที่ต้องรอเมื่อเห็นว่าเวลาสแกนของรายก่อนหน้ายืดออกไป"]}, {"no": 29, "q": "รายงานเดือนนี้แสดงว่าทีมปิดข้อร้องเรียนแล้ว 19 จาก 20 เรื่อง แต่เมื่อคุณตรวจประวัติ พบว่าลูกค้า 3 รายจากกลุ่มที่ปิดเรื่องแล้วกลับมาร้องเรียนเรื่องเดิมอีก ผู้บริหารต้องการใช้รายงานนี้ประเมินคุณภาพการแก้ปัญหาของสาขา คุณจะรายงานและดำเนินการอย่างไร?", "options": ["รายงานว่าปิดในระบบแล้ว 19 เรื่อง แต่มี 3 เรื่องที่กลับมาร้องซ้ำ และให้ทีมตรวจหลักฐานว่าทำไมจึงปิดเรื่องทั้งที่ปัญหายังไม่ยุติ", "ให้ทีมโทรหาลูกค้า 3 รายที่ร้องซ้ำเพื่อสอบถามรายละเอียด แล้วรอให้ได้ข้อมูลครบก่อนสรุปผลกับผู้บริหาร", "รายงานว่าปิดไปแล้ว 19 จาก 20 เรื่อง พร้อมแจ้งว่ามี 3 เรื่องที่กลับมาร้องซ้ำ และให้ทีมติดตามแก้ไขทั้ง 3 เรื่อง", "รายงานว่าปิดข้อร้องเรียนได้ 19 เรื่องตามข้อมูลในระบบ แล้วบันทึก 3 เรื่องที่กลับมาร้องซ้ำเป็นเรื่องใหม่เพื่อติดตามต่อ"]}, {"no": 30, "q": "ทีมทดลองใช้แบบฟอร์มส่งต่องานฉบับใหม่เป็นเวลา 2 สัปดาห์ พบว่าใช้เวลากรอกลดจาก 6 นาทีเหลือ 3 นาทีต่อราย แต่แบบฟอร์มใหม่มีข้อมูลสำคัญไม่ครบ 8 จาก 50 ราย ขณะที่แบบเดิมมีข้อมูลไม่ครบ 2 จาก 50 ราย ข้อมูลเหล่านี้จำเป็นสำหรับพนักงานกะถัดไป คุณจะตัดสินใจอย่างไร?", "options": ["ให้ทีมใช้แบบฟอร์มใหม่ต่อ เพราะประหยัดเวลาได้มากขึ้น โดยแจ้งให้พนักงานทุกคนตรวจช่องข้อมูลก่อนส่งต่องาน", "กลับไปใช้แบบฟอร์มเดิมชั่วคราว แล้วตรวจทั้ง 8 รายว่าขาดข้อมูลช่องใดบ่อยที่สุด ก่อนแก้แบบฟอร์มใหม่และทดลองกับทีมอีกครั้ง", "ใช้แบบฟอร์มใหม่ต่อ แต่ให้หัวหน้าเวรเปิดข้อมูลแต่ละรายเพื่อตรวจและเติมช่องที่ขาด ก่อนส่งให้พนักงานกะถัดไป", "กลับไปใช้แบบฟอร์มเดิมก่อน และส่งผลเปรียบเทียบเรื่องเวลาที่ประหยัดได้กับจำนวนข้อมูลที่ขาดให้ผู้บริหารพิจารณา"]}, {"no": 31, "q": "ลูกค้าชำระค่าบริการผ่านบัตรเป็นเงิน 12,000 บาท แต่ระบบตัดเงินซ้ำอีกหนึ่งรายการ เมื่อทีมตรวจสอบหลักฐานพบว่ามีการตัดเงินซ้ำจริง ลูกค้าไม่พอใจและต้องการให้สาขาคืนเงินโดยเร็วที่สุด ตามระเบียบบริษัท ผู้จัดการสาขามีอำนาจอนุมัติคืนเงินไม่เกิน 10,000 บาทต่อกรณี และยังไม่ทราบว่าสามารถยกเลิกรายการที่ตัดซ้ำได้ทันทีหรือไม่ คุณในฐานะผู้จัดการจะดำเนินการอย่างไร?", "options": ["ขอโทษลูกค้า ส่งหลักฐานขออนุมัติคืนเงิน 12,000 บาทเต็มจำนวนทันที และนัดแจ้งความคืบหน้าภายในวันนี้ตามช่องทางที่ลูกค้าสะดวก", "ขอโทษลูกค้าและเสนอคืนเงิน 10,000 บาทตามวงเงินที่ตนอนุมัติได้ก่อน ส่วนอีก 2,000 บาทจะขออนุมัติคืนเพิ่มเติมภายหลัง", "ขอโทษลูกค้า มอบหลักฐานยืนยันว่ามีการตัดเงินซ้ำ แล้วส่งเรื่องให้ฝ่ายการเงินดำเนินการตามขั้นตอน พร้อมแจ้งให้ลูกค้ารอการติดต่อกลับ", "ขอโทษลูกค้า ประสานฝ่ายการเงินทันทีเพื่อตรวจวิธียกเลิกรายการหรือคืนเงิน 12,000 บาทตามระเบียบ แล้วแจ้งกำหนดที่ตรวจสอบได้และติดตามผลด้วยตนเอง"]}, {"no": 32, "q": "สาขาต้องอบรมระบบใหม่ให้พนักงาน 12 คน โดยทุกคนต้องฝึกกับผู้สอน ผู้สอนสามารถฝึกได้ครั้งละไม่เกิน 4 คน รอบละ 45 นาที วันนี้ห้องว่างรวม 120 นาที และพรุ่งนี้ว่างอีก 45 นาที ผู้สอนคนเดิมสามารถสอนได้ทั้งสองวัน คุณจะจัดอบรมอย่างไร?", "options": ["จัดอบรมวันนี้ 2 รอบ รอบละ 4 คน ใช้เวลา 90 นาที แล้วอบรมอีก 4 คนในวันพรุ่งนี้เป็นรอบสุดท้าย 45 นาที", "จัดอบรมวันนี้ 2 รอบให้พนักงาน 8 คน ส่วนอีก 4 คนให้เรียนจากคู่มือและทำแบบทดสอบแทนการฝึกกับผู้สอน", "จัดอบรมพนักงานทั้งหมด 12 คนในห้องเดียววันนี้ โดยให้ผู้สอนอธิบายระบบพร้อมกันหนึ่งรอบเพื่อประหยัดเวลา", "ขอขยายเวลาใช้ห้องวันนี้อีก 15 นาที เพื่อจัดอบรม 3 รอบต่อเนื่องให้พนักงานครบทั้ง 12 คนภายในวันเดียว"]}, {"no": 33, "q": "สาขาส่งแบบสอบถามความพึงพอใจให้ลูกค้า 200 ราย แต่มีเพียง 20 รายตอบกลับมา ในกลุ่มผู้ตอบมี 18 รายระบุว่าพึงพอใจ ทีมเสนอให้รายงานว่า 'ลูกค้า 90% พึงพอใจ' เพื่อใช้ประเมินคุณภาพบริการของทั้งสาขา คุณจะสรุปผลอย่างไร?", "options": ["รายงานว่าผู้ตอบแบบสอบถาม 18 จาก 20 รายพึงพอใจ คิดเป็น 90% โดยระบุเพิ่มเติมว่ามีผู้ตอบเพียง 20 จาก 200 ราย", "รายงานว่าลูกค้าของสาขา 90% พึงพอใจ เพราะผู้ตอบแบบสอบถาม 18 จาก 20 รายให้ความเห็นในทางบวก", "รายงานผลว่า 18 จาก 20 ผู้ตอบพึงพอใจ พร้อมระบุอัตราตอบกลับ 10% และให้ทีมส่งข้อความเตือนผู้ที่ยังไม่ตอบเพื่อเก็บข้อมูลเพิ่ม", "รายงานว่ามีผู้ตอบแบบสอบถาม 20 ราย และพึงพอใจ 18 ราย โดยหลีกเลี่ยงการใช้เปอร์เซ็นต์ในรายงานครั้งนี้"]}, {"no": 34, "q": "ฝ่ายการตลาดเตรียมลงภาพโปรโมชั่นในวันพรุ่งนี้ โดยข้อความหลักระบุว่า 'ผ่อน 0% ทุกบัตร' แต่เอกสารเงื่อนไขที่ได้รับการยืนยันระบุว่าใช้สิทธิได้เฉพาะบัตรของธนาคาร 2 แห่ง ทีมส่งภาพให้คุณตรวจอนุมัติในวันนี้ คุณจะดำเนินการอย่างไร?", "options": ["ให้ทีมเปลี่ยนข้อความหลักเป็น 'ผ่อน 0% เฉพาะบัตรที่ร่วมรายการ' แล้วใส่รายชื่อธนาคารทั้ง 2 แห่งไว้ในรายละเอียดใต้ภาพ", "อนุมัติภาพเดิมตามกำหนด แล้วให้พนักงานอธิบายเงื่อนไขบัตรที่ร่วมรายการกับลูกค้าเมื่อมีคนสอบถาม", "ไม่อนุมัติภาพเดิม และส่งกลับให้ฝ่ายการตลาดแก้ไข โดยรอภาพใหม่มาให้ตรวจอีกครั้งก่อนเผยแพร่", "ให้ทีมแก้ข้อความหลักให้ระบุชื่อธนาคารทั้ง 2 แห่งที่ใช้สิทธิผ่อน 0% ได้ แล้วตรวจข้อความกับเอกสารเงื่อนไขก่อนอนุมัติ"]}, {"no": 35, "q": "เดือนที่ผ่านมา มีผู้สนใจติดต่อสาขา 80 คน ในจำนวนนี้นัดหมายได้ 40 คน มีลูกค้ามาตามนัด 32 คน และตัดสินใจรับบริการ 24 คน ผู้บริหารให้คุณเลือกตรวจสอบหนึ่งขั้นตอนก่อน เพื่อหาวิธีเพิ่มจำนวนลูกค้าที่รับบริการ คุณจะเริ่มจากจุดใด?", "options": ["ให้ทีมทดลองเสนอวันและเวลานัดหลายทางเลือกตั้งแต่ครั้งแรกที่พูดคุยกับผู้สนใจ เพื่อเพิ่มโอกาสให้ทั้ง 40 คนที่ยังไม่ได้นัดตัดสินใจ", "ตรวจประวัติของผู้สนใจ 40 คนที่ไม่ได้นัด แยกว่าไม่สะดวกวันเวลาที่เสนอ ยังตัดสินใจไม่ได้ หรือติดต่อกลับไม่สำเร็จ แล้วจึงเลือกวิธีติดตาม", "ให้ทีมสอบถามเหตุผลของลูกค้า 8 คนที่มาตามนัดแล้วแต่ยังไม่รับบริการ เพื่อพัฒนาการให้ข้อมูลและการนำเสนอการรักษา", "เพิ่มงบโฆษณาเพื่อให้มีผู้สนใจเข้ามามากกว่า 80 คน โดยยังใช้วิธีรับนัดและติดตามผู้สนใจเหมือนเดือนที่ผ่านมา"]}, {"no": 36, "q": "สาขาใช้ถุงมือเฉลี่ย 12 กล่องต่อสัปดาห์ ปัจจุบันเหลือ 15 กล่อง หากสั่งซื้อวันนี้ ผู้จำหน่ายจะใช้เวลาจัดส่งประมาณ 10 วัน และสาขาใกล้เคียงสามารถให้ยืมถุงมือได้ โดยคาดว่าปริมาณการใช้ยังใกล้เคียงเดิม คุณจะจัดการอย่างไร?", "options": ["สั่งซื้อถุงมือวันนี้ ประสานขอยืมถุงมือสำรองให้พอใช้จนสินค้ามาถึง และปรับระดับคงเหลือที่ต้องเริ่มสั่งซื้อในรอบต่อไปให้เหมาะกับเวลาจัดส่ง 10 วัน", "สั่งซื้อถุงมือวันนี้ แล้วให้พนักงานตรวจนับจำนวนคงเหลือทุกเย็น เพื่อรายงานทันทีเมื่อจำนวนใกล้หมด", "รออีก 3 วันแล้วค่อยสั่งซื้อ เพราะถุงมือ 15 กล่องที่เหลือยังเพียงพอสำหรับการทำงานได้มากกว่าหนึ่งสัปดาห์", "สั่งซื้อถุงมือวันนี้ และประสานยืมอย่างน้อย 3 กล่องจากสาขาใกล้เคียง เพื่อให้มีถุงมือพอใช้ระหว่างรอสินค้ารอบใหม่"]}, {"no": 37, "q": "เดือนที่ผ่านมา สาขามีที่ปรึกษาด้านทันตกรรม 2 คน ซึ่งได้รับรายชื่อลูกค้าที่สนใจบริการประเภทเดียวกันจากโฆษณาชุดเดียวกัน โดยมีผลการทำงานดังนี้ พนักงาน ก ได้รับรายชื่อผู้สนใจ 40 ราย และนัดหมายสำเร็จ 24 ราย (60%) พนักงาน ข ได้รับรายชื่อผู้สนใจ 25 ราย และนัดหมายสำเร็จ 10 ราย (40%) ผู้บริหารต้องการให้คุณพัฒนาผลงานของพนักงาน ข ในเดือนถัดไป โดยยังใช้ทีมงานเดิม คุณในฐานะผู้จัดการจะเริ่มดำเนินการอย่างไร?", "options": ["ให้พนักงาน ข โทรติดตามลูกค้าที่สนใจแต่ยังไม่ได้นัดหมายอีกครั้งทุกราย แล้วตรวจยอดนัดหมายเมื่อสิ้นเดือน เพื่อดูว่าการโทรเพิ่มช่วยให้ผลงานดีขึ้นหรือไม่", "ตรวจบันทึกการพูดคุยกับลูกค้าของพนักงาน ข เพื่อหาว่าลูกค้าไม่ได้นัดเพราะอะไร จากนั้นฝึกวิธีแก้ปัญหาที่พบและติดตามผลงานทุกสัปดาห์", "แจ้งพนักงาน ข ว่าอัตรานัดหมายของตนต่ำกว่าพนักงาน ก และกำหนดให้เพิ่มอัตรานัดหมายจาก 40% เป็น 60% ในเดือนหน้า โดยให้รายงานยอดทุกวัน", "ให้พนักงาน ข สังเกตวิธีพูดคุยและเสนอเวลานัดของพนักงาน ก แล้วทดลองนำวิธีที่เหมาะสมมาใช้กับลูกค้าของตน พร้อมตรวจผลหลังหนึ่งสัปดาห์"]}, {"no": 38, "q": "พรุ่งนี้เวลา 10.00 น. มีลูกค้านัดทำหัตถการที่ตามมาตรฐานต้องมีผู้ช่วยทันตแพทย์ 2 คน แต่ผู้ช่วยคนหนึ่งลาป่วยกะทันหัน ทำให้ช่วง 10.00–11.00 น. เหลือผู้ช่วยที่ผ่านการฝึกเพียงคนเดียว สาขาใกล้เคียงแจ้งว่าสามารถส่งผู้ช่วยอีกคนมาถึงได้เวลา 11.00 น. คุณในฐานะผู้จัดการจะทำอย่างไร?", "options": ["ให้พนักงานหน้าเคาน์เตอร์ที่ยังไม่ผ่านการฝึกมาช่วยงานในห้องหัตถการชั่วคราว เพื่อให้ลูกค้าเริ่มตามเวลานัดเดิม", "ยืนยันเวลามาถึงของผู้ช่วยจากสาขาใกล้เคียงกับผู้เกี่ยวข้อง แล้วประสานทันตแพทย์และลูกค้าเพื่อเปลี่ยนเวลาเริ่มหัตถการให้มีผู้ช่วยครบ", "ให้ลูกค้าเดินทางมาตามนัด 10.00 น. ก่อน แล้วอธิบายว่าต้องรอจนผู้ช่วยอีกคนเดินทางมาถึงเวลา 11.00 น.", "ประสานยืนยันให้ผู้ช่วยจากสาขาใกล้เคียงมาถึงเวลา 11.00 น. แล้วให้ทีมคลินิกเตรียมเลื่อนหัตถการออกไปหนึ่งชั่วโมง"]}, {"no": 39, "q": "สาขาต้องแต่งตั้งหัวหน้าเคาน์เตอร์หนึ่งคน โดยตำแหน่งนี้ต้องดูแลความถูกต้องของงานและช่วยสอนพนักงานใหม่ ในเดือนที่ผ่านมา พนักงาน ก ดูแลนัดหมาย 100 ราย พบข้อผิดพลาด 5 ราย ส่วนพนักงาน ข ดูแล 70 ราย พบข้อผิดพลาด 1 ราย และเคยช่วยสอนพนักงานใหม่ 2 คน คุณจะเลือกผู้รับตำแหน่งอย่างไร?", "options": ["แต่งตั้งพนักงาน ก เพราะดูแลนัดหมายได้มากกว่า และให้พนักงาน ข ช่วยสอนงานตามเดิม", "พิจารณาพนักงาน ข เป็นตัวเลือกหลัก เพราะมีข้อผิดพลาดน้อยและมีประสบการณ์ช่วยสอนพนักงานใหม่", "กำหนดเกณฑ์เรื่องความถูกต้อง การแก้ปัญหา และการดูแลทีม แล้วให้ทั้งสองคนทดลองทำหน้าที่หัวหน้าเวรคนละ 3 กะก่อนตัดสินใจ", "ให้พนักงาน ก ทดลองเป็นหัวหน้าเคาน์เตอร์ก่อน เพราะมีประสบการณ์รับงานมากกว่า แล้วให้พนักงาน ข ช่วยตรวจความถูกต้อง"]}, {"no": 40, "q": "วันศุกร์สาขามีพนักงาน Customer Service 4 คน โดย ก และ ข ทำงาน 09.00–18.00 น. ค ทำงาน 10.00–19.00 น. และ ง ทำงาน 12.00–21.00 น. จากข้อมูลลูกค้า ช่วง 18.00–19.00 น. ต้องมีพนักงานอย่างน้อย 3 คน แต่ตารางปัจจุบันเหลือเพียง 2 คน ขณะที่ช่วง 09.00–10.00 น. ต้องมีอย่างน้อย 1 คน บริษัทอนุญาตให้ปรับเวลาเริ่มงานได้หากพนักงานยินยอมและชั่วโมงทำงานรวมเท่าเดิม คุณจะจัดการอย่างไร?", "options": ["ขอความยินยอมให้พนักงาน ข เปลี่ยนเวรจาก 09.00–18.00 น. เป็น 10.00–19.00 น. แล้วแจ้งตารางใหม่ให้ทีมทราบ", "ขอให้พนักงาน ก ทำงานล่วงเวลาถึง 19.00 น. โดยประสานการอนุมัติค่าล่วงเวลาตามระเบียบบริษัท", "ให้พนักงาน ค และ ง แบ่งหน้าที่รับลูกค้าและโทรศัพท์ในช่วง 18.00–19.00 น. ใหม่ เพื่อลดเวลารอ", "คงตารางเวรเดิมไว้ และให้พนักงาน 2 คนที่อยู่ถึง 19.00 น. พยายามรับลูกค้าให้เร็วขึ้น"]}, {"no": 41, "q": "เช้าวันจันทร์หัวหน้าเวรหน้าเคาน์เตอร์ลาป่วยกะทันหัน วันนี้มีพนักงานที่ชำนาญระบบนัดหมาย 1 คนและพนักงานใหม่ 2 คน โดยยังไม่มีคนจากสาขาอื่นมาช่วยได้ คุณในฐานะผู้จัดการสามารถลงมาช่วยงานหน้าเคาน์เตอร์ได้ แต่มีลูกค้ารอรับบริการอยู่แล้ว 8 ราย คุณจะจัดงานอย่างไร?", "options": ["มอบหมายพนักงานที่ชำนาญให้ทำหน้าที่หัวหน้าเวรแทนชั่วคราว ส่วนคุณลงมาช่วยรับลูกค้าและตรวจงานที่พนักงานใหม่ยังไม่คล่อง", "คุณรับผิดชอบตรวจนัดหมายและตอบคำถามลูกค้าทั้งหมดด้วยตนเอง ส่วนพนักงานอีก 3 คนช่วยเตรียมเอกสารและจัดคิว", "ให้พนักงานใหม่รับลูกค้าและบันทึกนัดหมายตามปกติ ส่วนคุณช่วยแก้รายการที่ผิดเมื่อพนักงานมาขอคำแนะนำ", "ให้พนักงานที่ชำนาญรับงานตรวจนัดหมาย คุณจัดลำดับลูกค้าที่รอและช่วยแก้เคสยาก ส่วนพนักงานใหม่รับงานที่ผ่านการฝึกแล้ว"]}, {"no": 42, "q": "สัปดาห์นี้ทีมถูกตรวจพบว่าจัดเตรียมเครื่องมือก่อนรับผู้ป่วยไม่ครบตามรายการ 2 ครั้ง แม้จะตรวจพบและแก้ไขก่อนเริ่มหัตถการได้ทัน แต่พนักงานเริ่มกังวลว่าจะถูกตำหนิและขอให้ลดความถี่การตรวจ ผู้จัดการต้องรักษามาตรฐานการตรวจตามกำหนดของบริษัท คุณจะทำอย่างไร?", "options": ["ชี้แจงกับทีมว่าการตรวจเป็นข้อกำหนดของบริษัท แล้วให้ทุกคนตรวจเครื่องมือตามรายการเดิมต่อไป", "มอบหมายผู้ช่วยอาวุโสให้ตรวจรายการเครื่องมือก่อนเริ่มแต่ละกะ และรายงานรายการที่ขาดให้คุณทราบทุกวัน", "ทบทวนกับทีมว่าเครื่องมือส่วนใดตกหล่น ให้ผู้รับผิดชอบจัดเตรียมตามรายการและตรวจร่วมกันช่วงแรก โดยคงการตรวจตามมาตรฐานเดิม", "ให้ทีมตรวจเฉพาะอุปกรณ์ที่ใช้บ่อยระหว่างช่วงคิวแน่น แล้วกลับมาตรวจรายการทั้งหมดเมื่อมีเวลาว่าง"]}, {"no": 43, "q": "วันแรกที่สาขาเปลี่ยนมาใช้ระบบรับนัดหมายใหม่ พบว่ามีรายการนัดหมายบันทึกเวลาไม่ตรงกับที่ลูกค้ายืนยัน 12 ราย ทีมเริ่มไม่มั่นใจและขอให้กลับไปใช้ระบบเดิม โดยบริษัทมีวิธีบันทึกนัดหมายสำรองที่อนุมัติไว้สำหรับช่วงระบบขัดข้อง คุณในฐานะผู้จัดการจะทำอย่างไร?", "options": ["ให้ทีมใช้วิธีบันทึกนัดหมายสำรองก่อน แล้วขอให้ฝ่ายระบบตรวจรายการผิดทั้ง 12 รายก่อนเปิดระบบใหม่อีกครั้ง", "ให้พนักงานแก้เวลานัดทั้ง 12 รายในระบบใหม่ แล้วใช้งานต่อทั้งสาขาตามปกติเพื่อให้ทุกคนคุ้นเคยเร็วขึ้น", "ยกเลิกการใช้ระบบใหม่และกลับไปใช้ระบบเดิมทั้งสาขา โดยแจ้งผู้บริหารว่าทีมยังไม่พร้อมเปลี่ยนระบบ", "ใช้วิธีรับนัดสำรองชั่วคราว ตรวจสาเหตุกับฝ่ายระบบและทีม แล้วทดสอบกับรายการนัดจำนวนจำกัดก่อนเปิดใช้ทั้งหมด"]}, {"no": 44, "q": "ผู้บริหารกำหนดให้สาขาเพิ่มจำนวนลูกค้านัดหมายอีก 20% ภายในหนึ่งเดือน ทีมทดลองใช้วิธีโทรติดตามลูกค้าใหม่มาแล้ว 2 สัปดาห์ แต่ยอดนัดหมายยังไม่เพิ่ม และพนักงานเริ่มหมดกำลังใจเพราะต้องโทรมากขึ้นโดยไม่เห็นผล คุณยังไม่สามารถขอพนักงานเพิ่มได้ คุณจะนำทีมดำเนินงานในสองสัปดาห์ที่เหลืออย่างไร?", "options": ["คุยกับทีมว่าลูกค้าไม่ได้นัดเพราะอะไร เลือกปรับวิธีโทรเพียงบางจุด และกำหนดผลที่ต้องตรวจเมื่อครบหนึ่งสัปดาห์", "ให้ทีมใช้วิธีโทรเดิมต่ออีกหนึ่งสัปดาห์ และพูดคุยให้กำลังใจพนักงานระหว่างรอเปรียบเทียบผล", "กำชับให้พนักงานแต่ละคนโทรหาลูกค้าเพิ่มขึ้นทุกวัน และตรวจจำนวนสายที่โทรได้ก่อนเลิกงาน", "แบ่งเป้าหมายที่เหลือออกเป็นรายสัปดาห์ และให้หัวหน้าทีมช่วยตรวจจำนวนผู้ติดต่อกับจำนวนนัดที่ได้ทุกวัน"]}, {"no": 45, "q": "คุณวางแผนให้พนักงานหน้าเคาน์เตอร์หมุนเวียนหน้าที่รับนัดหมาย เพื่อไม่ให้มีเพียงคนเดียวที่ทำงานนี้ได้ แต่พนักงานอาวุโสที่รับนัดคล่องที่สุดไม่ต้องการสอนเพื่อน เพราะกังวลว่าการสอนจะทำให้คิวลูกค้าล่าช้า ขณะนี้ยังไม่มีผู้สอนคนอื่น คุณจะจัดการอย่างไร?", "options": ["คุยกับพนักงานอาวุโสถึงเวลาที่ไม่สะดวกสอน แล้วกำหนดช่วงลูกค้าน้อยให้ฝึกเพื่อนและติดตามผลก่อนเริ่มหมุนเวียนงาน", "ให้พนักงานใหม่สังเกตการรับนัดของพนักงานอาวุโสในช่วงลูกค้าน้อย แล้วทดลองรับนัดโดยมีผู้ตรวจงาน", "ให้พนักงานอาวุโสรับนัดเหมือนเดิมไปก่อน แล้วมอบงานเอกสารและโทรยืนยันนัดให้เพื่อนคนอื่นช่วย", "แจ้งพนักงานอาวุโสว่าการสอนงานเป็นหน้าที่ที่ต้องทำ และให้เริ่มสอนเพื่อนทันทีในช่วงคิวลูกค้าแน่น"]}, {"no": 46, "q": "คุณให้พนักงานคนหนึ่งทดลองเป็นหัวหน้าเวรหน้าเคาน์เตอร์เป็นสัปดาห์แรก พบว่ามีการส่งต่องานไม่ครบ 2 ครั้ง แม้ทีมช่วยตรวจและแก้ได้ทัน พนักงานรู้สึกไม่มั่นใจและขอถอนตัวจากบทบาทนี้ แต่ยังบอกว่าอยากพัฒนาตนเอง โดยมีหัวหน้าเวรที่มีประสบการณ์สามารถช่วยดูงานได้อีก 3 กะ คุณจะทำอย่างไร?", "options": ["ให้หัวหน้าเวรที่มีประสบการณ์ช่วยตรวจงานส่งต่อของพนักงานคนนี้อีก 3 กะ แล้วประเมินความพร้อมอีกครั้ง", "คุยกับพนักงานว่าข้อมูลส่วนใดส่งต่อไม่ครบ ให้ฝึกแก้จุดนั้นโดยมีหัวหน้าเวรช่วยตรวจ 3 กะ ก่อนประเมินว่าจะรับหน้าที่ต่ออย่างไร", "อนุมัติให้พนักงานถอนตัวทันที แล้วให้หัวหน้าเวรที่มีประสบการณ์รับหน้าที่แทนอย่างถาวร", "ขอให้พนักงานทดลองเป็นหัวหน้าเวรต่อจนครบเดือน โดยกำชับให้ตรวจเอกสารส่งต่องานทุกครั้งก่อนจบกะ"]}, {"no": 47, "q": "สาขามีพนักงาน Customer Service 4 คน แต่มี 1 คนลาฉุกเฉินเป็นเวลา 10 วัน ช่วง 17.00–19.00 น. ลูกค้าแน่น พนักงานที่เหลือกังวลว่าจะทำงานไม่ทัน และไม่สามารถเพิ่มคนหรือทำงานล่วงเวลาได้ คุณจะจัดการอย่างไร?", "options": ["แบ่งหน้าที่ใหม่ตามความถนัดของพนักงานทั้ง 3 คน แล้วตรวจผลหลังใช้แผน 5 วัน", "ลงมาช่วยรับโทรศัพท์เองทุกเย็น ส่วนพนักงานทั้ง 3 คนทำหน้าที่เดิมต่อไป", "ถามทีมว่างานใดติดขัดที่สุด แบ่งหน้าที่ตามความถนัด และตรวจงานค้างทุกเย็นเพื่อปรับแผนวันถัดไป", "ให้ทุกคนทำหน้าที่เดิมและช่วยกันทำให้เร็วขึ้น หากมีลูกค้าร้องเรียนจึงค่อยปรับงาน"]}, {"no": 48, "q": "พนักงาน Customer Service มาทำงานสาย 3 ครั้งใน 2 สัปดาห์ ทำให้เพื่อนต้องเปิดเคาน์เตอร์แทน คุณเคยเตือนด้วยวาจาหลังมาสายครั้งที่ 2 แต่พนักงานยังมาสายอีก โดยบอกว่ามีปัญหาเรื่องการเดินทาง คุณในฐานะผู้จัดการจะจัดการอย่างไร?", "options": ["เรียกพนักงานคุยเป็นการส่วนตัว อธิบายว่าการมาสายกระทบเพื่อนร่วมงานอย่างไร แล้วกำชับให้มาตรงเวลาและติดตามอีกหนึ่งสัปดาห์", "ตรวจเวลาเข้างานและพูดคุยเป็นการส่วนตัว รับฟังปัญหาการเดินทาง ตักเตือนและบันทึกตามระเบียบบริษัท พร้อมตกลงวิธีแก้ไขและวันติดตามผล", "ให้พนักงานคนอื่นรับหน้าที่เปิดเคาน์เตอร์แทนชั่วคราว และมอบหมายงานอื่นให้พนักงานที่มาสายเมื่อมาถึงสาขา", "ให้หัวหน้าเวรโทรเตือนพนักงานก่อนเวลาเข้างานทุกเช้า และรอดูว่าพนักงานจะกลับมาตรงเวลาได้หรือไม่"]}, {"no": 49, "q": "ผู้ช่วยทันตแพทย์ 2 คนมีทักษะใกล้เคียงกัน แต่คนหนึ่งได้รับเคสที่ใช้เวลานานติดต่อกัน 4 วันจนรู้สึกเหนื่อยล้า ส่วนอีกคนได้รับเคสสั้นเป็นส่วนใหญ่ โดยคิวลูกค้าพรุ่งนี้ยืนยันแล้ว คุณจะจัดการอย่างไร?", "options": ["สลับงานให้ผู้ช่วยทั้งสองคนรับลูกค้าจำนวนเท่ากัน โดยไม่ได้ดูว่าแต่ละเคสใช้เวลาทำงานมากน้อยต่างกันแค่ไหน", "ประสานทีมคลินิกให้สลับแบ่งเคสที่ใช้เวลานานระหว่างผู้ช่วยทั้งสองคนอย่างเหมาะสม ตั้งแต่สัปดาห์หน้าเป็นต้นไป", "จัดเวลาพักเพิ่มให้ผู้ช่วยที่เหนื่อยล้าระหว่างวันพรุ่งนี้ แต่ยังให้รับผิดชอบเคสตามตารางเดิม", "คุยกับผู้ช่วยทั้งสองคนและทีมทันตแพทย์ ตรวจว่าเคสพรุ่งนี้งานไหนหนักหรือต้องใช้เวลานาน แล้วแบ่งงานและจัดเวลาพักใหม่โดยไม่กระทบเวลานัดลูกค้า"]}, {"no": 50, "q": "ลูกค้าไม่พอใจเรื่องเวลานัดหมายและต่อว่าพนักงาน Customer Service อย่างรุนแรงหน้าเคาน์เตอร์ จนพนักงานร้องไห้ ขณะนั้นมีลูกค้าคนอื่นรออยู่ และยังไม่ทราบว่าใครเป็นฝ่ายผิด คุณในฐานะผู้จัดการจะพูดและจัดการอย่างไร?", "options": ["พูดว่า “ขออภัยที่ทำให้ไม่สะดวกค่ะ ดิฉันขอตรวจสอบเรื่องนี้ให้นะคะ” เชิญลูกค้าไปพูดคุยในจุดที่เหมาะสม ให้พนักงานอีกคนดูแลคิวแทน และกลับมาพูดคุยกับพนักงานที่ถูกตำหนิหลังแก้ปัญหา", "พูดว่า “เข้าใจว่าคุณลูกค้าไม่พอใจค่ะ ดิฉันขอรับเรื่องและตรวจสอบให้นะคะ” จากนั้นรับเรื่องแทนพนักงานที่หน้าเคาน์เตอร์ ตรวจข้อมูลและเสนอทางแก้ไข แล้วจึงพูดให้กำลังใจพนักงาน", "พูดว่า “ขออภัยค่ะ เดี๋ยวให้พนักงานอีกคนตรวจสอบนัดหมายให้นะคะ” แล้วให้พนักงานที่ถูกตำหนิไปพัก ก่อนติดตามผลการแก้ไขจากเพื่อนร่วมงาน", "พูดว่า “ขออภัยค่ะ ดิฉันจะตักเตือนพนักงานให้ค่ะ” แล้วให้พนักงานที่ถูกตำหนิรีบตรวจสอบและแก้ไขนัดหมายของลูกค้า"]}, {"no": 51, "q": "พนักงาน 2 คนแจ้งว่าหัวหน้าเวรมักแบ่งรายชื่อลูกค้าที่ติดต่อง่ายให้คนที่สนิทกัน คุณตรวจข้อมูลย้อนหลัง 2 สัปดาห์และพบว่ามีการแบ่งงานลักษณะนี้จริง แม้หัวหน้าเวรจะมีผลงานดี คุณจะทำอย่างไร?", "options": ["กำหนดให้แบ่งรายชื่อลูกค้าใหม่ตามลำดับที่เข้ามา และใช้เกณฑ์เดียวกันกับทุกคนตั้งแต่วันถัดไป", "ฝึกพนักงานที่ได้รับลูกค้าติดต่อยากให้มีทักษะติดตามลูกค้ามากขึ้น แล้วตรวจผลงานหลังฝึก", "คุยกับหัวหน้าเวรโดยใช้ข้อมูลที่พบ รับฟังเหตุผล แล้วกำหนดเกณฑ์แบ่งงานที่ตรวจสอบได้และติดตามผล", "ตำหนิหัวหน้าเวรต่อหน้าทีม แล้วให้พนักงานที่ร้องเรียนรับหน้าที่แบ่งรายชื่อลูกค้าแทนทันที"]}, {"no": 52, "q": "เดือนหน้าบริษัทจะประเมินพนักงานจากยอดขาย ความถูกต้องของงาน และความคิดเห็นลูกค้า แทนการเน้นยอดขายอย่างเดียว แม้มีคู่มือเกณฑ์ใหม่แล้ว แต่พนักงานบางคนกังวลว่าคะแนนจะลดลง คุณจะช่วยทีมอย่างไร?", "options": ["อธิบายเกณฑ์ด้วยตัวอย่าง ให้ทีมทดลองให้คะแนนงานจริง แล้วทบทวนจุดที่ยังไม่เข้าใจก่อนเริ่มใช้", "ประชุมอธิบายเกณฑ์ใหม่พร้อมตัวอย่างคะแนน และเปิดโอกาสให้พนักงานสอบถาม", "ส่งคู่มือให้พนักงานอ่านและลงชื่อรับทราบก่อนเริ่มประเมินตามเกณฑ์ใหม่", "บอกพนักงานว่าคะแนนของทุกคนจะไม่ลดลง เพื่อให้ทีมสบายใจกับเกณฑ์ใหม่"]}, {"no": 53, "q": "ผู้ช่วยทันตแพทย์ที่ทำงานมา 2 ปีต้องการเติบโตเป็น Treatment Advisor และอาจลาออกหากไม่เห็นโอกาสภายในเดือนนี้ แต่สาขายังไม่มีตำแหน่งว่าง และการย้ายต้องผ่านการอบรมและอนุมัติ คุณจะทำอย่างไร?", "options": ["สอบถามฝ่ายบุคคลเรื่องคุณสมบัติและขั้นตอนย้ายตำแหน่ง แล้วนัดแจ้งข้อมูลให้พนักงานภายในสัปดาห์นี้", "เพิ่มโอกาสให้พนักงานรับผิดชอบงานผู้ช่วยทันตแพทย์ที่หลากหลายขึ้น เพื่อให้เห็นโอกาสพัฒนาตนเอง", "รับปากว่าจะช่วยย้ายพนักงานเป็น Treatment Advisor ภายในเดือนหน้า เพื่อให้มั่นใจว่ามีโอกาสเติบโต", "พูดคุยเป้าหมาย ประสานฝ่ายบุคคลเรื่องโอกาสจริง และร่วมวางแผนฝึกทักษะที่จำเป็นพร้อมกำหนดวันติดตาม"]}, {"no": 54, "q": "ก่อนเปิดสาขา 15 นาที พนักงานพูดกลางที่ประชุมว่า 'ผู้จัดการให้หนูรับลูกค้าช่วงคิวแน่นบ่อยกว่าคนอื่น' คุณยังไม่ได้ตรวจตารางแบ่งงานย้อนหลัง จะจัดการอย่างไร?", "options": ["รับฟังโดยไม่โต้เถียง แล้วนัดคุยเป็นการส่วนตัวหลังช่วงลูกค้าเร่งด่วน พร้อมตรวจตารางย้อนหลัง", "รับฟังและตรวจตารางย้อนหลัง คุยกับผู้เกี่ยวข้องหลังช่วงเร่งด่วน แล้วชี้แจงเกณฑ์แบ่งงานและปรับหากพบว่าไม่เป็นธรรม", "ลดงานช่วงคิวแน่นของพนักงานคนดังกล่าวในวันนี้ก่อน แล้วค่อยตรวจตารางย้อนหลังภายหลัง", "แจ้งว่าการแบ่งงานเป็นหน้าที่ผู้จัดการ และให้ทุกคนกลับไปเตรียมเปิดสาขาตามปกติ"]}, {"no": 55, "q": "สาขาปรับปรุงเคาน์เตอร์ 7 วัน ทำให้จุดชำระเงินลดจาก 2 จุดเหลือ 1 จุด หลังผ่านไป 2 วัน ลูกค้ารอนานขึ้นและพนักงาน Customer Service ทั้ง 3 คนเริ่มโต้เถียงเรื่องการแบ่งงาน คุณจะจัดการอย่างไร?", "options": ["กำหนดให้พนักงานแต่ละคนรับผิดชอบงานชำระเงิน ต้อนรับและจัดคิว และรับโทรศัพท์อย่างชัดเจน", "ให้พนักงานทั้งสามคนสลับกันรับชำระเงินทุกหนึ่งชั่วโมง เพื่อแบ่งภาระงานให้ใกล้เคียงกัน", "คุยกับทีมถึงจุดที่ลูกค้ารอนาน แบ่งหน้าที่ชัดเจน แจ้งเวลารอแก่ลูกค้า และตรวจผลทุกวัน", "ให้พนักงานทุกคนช่วยกันทำทุกหน้าที่ตามลูกค้าที่เข้ามา โดยไม่กำหนดผู้รับผิดชอบเฉพาะ"]}, {"no": 56, "q": "พนักงาน Customer Service ได้รับแต่งตั้งเป็นหัวหน้าเวรมา 2 สัปดาห์ แต่เพื่อนร่วมงานยังข้ามมาขอให้คุณตัดสินใจเรื่องแบ่งงานและเวลาพัก ซึ่งอยู่ในอำนาจหัวหน้าเวรคนใหม่ ทำให้หัวหน้าเวรเริ่มไม่มั่นใจ คุณจะทำอย่างไร?", "options": ["คุยกับหัวหน้าเวรถึงปัญหา ชี้แจงขอบเขตหน้าที่ให้ทีมเข้าใจ และช่วยให้คำแนะนำเมื่อมีเคสยากพร้อมติดตามผล", "ประชุมทีมเพื่อยืนยันอำนาจหัวหน้าเวร และให้พนักงานเสนอปัญหางานประจำวันผ่านหัวหน้าเวรก่อน", "ให้หัวหน้าเวรทำหน้าที่ต่อ แต่อนุญาตให้พนักงานมาขอคำตัดสินจากคุณได้อีกสองสัปดาห์", "ยกเลิกการแต่งตั้งหัวหน้าเวรคนใหม่ แล้วเลือกคนที่เพื่อนร่วมงานยอมรับมากกว่า"]}, {"no": 57, "q": "คุณอ่านตารางทันตแพทย์ผิด จึงสั่งให้ทีมโทรเลื่อนนัดลูกค้า 8 ราย ทั้งที่ทันตแพทย์มาทำงานตามปกติ ลูกค้า 3 รายไม่พอใจและพนักงานเริ่มโทษกัน คุณจะทำอย่างไร?", "options": ["ให้ทีมติดต่อทั้ง 8 รายเพื่อเสนอเวลากลับตามเดิมหากยังว่าง และคุณช่วยตรวจตารางที่แก้ไขก่อนยืนยัน", "แจ้งทีมว่าคุณอ่านตารางผิด ประสานขอโทษลูกค้าและคืนเวลานัดเดิมเท่าที่ทำได้ แล้วกำหนดให้ตรวจตารางก่อนสั่งเลื่อนนัดทุกครั้ง", "ให้พนักงานโทรแก้ไขนัดหมายทั้งหมด และกำชับให้ตรวจตารางก่อนทำตามคำสั่งผู้จัดการทุกครั้ง", "ยอมรับกับทีมว่าคุณอ่านตารางผิด ให้พนักงานโทรแก้ไขนัดหมาย และคุณโทรขอโทษลูกค้า 3 รายที่ไม่พอใจด้วยตนเอง"]}, {"no": 58, "q": "พนักงานที่ปิดยอดเงินประจำวันได้คล่องที่สุดจะย้ายสาขาในอีก 7 วัน ส่วนพนักงานอีก 2 คนมีสิทธิใช้ระบบแล้ว แต่ยังปิดยอดเองไม่คล่อง คุณจะเตรียมทีมอย่างไร?", "options": ["ให้พนักงานคนเดิมสอนอีก 2 คนและทดลองปิดยอดจริงโดยมีผู้สอนตรวจ พร้อมทำรายการขั้นตอนที่ต้องตรวจให้ใช้หลังย้าย", "ให้พนักงานคนเดิมปิดยอดจนถึงวันย้าย แล้วมอบหมายให้พนักงานที่อาวุโสที่สุดรับช่วงโดยใช้คู่มือของระบบ", "ให้พนักงานคนเดิมสอนผู้รับช่วง 1 คน และทดลองปิดยอดด้วยกันก่อนย้าย โดยคุณช่วยตรวจรายงานในสัปดาห์แรก", "ให้พนักงานคนเดิมเขียนคู่มือพร้อมตัวอย่างการปิดยอด แล้วให้พนักงานอีก 2 คนอ่านและสอบถามก่อนวันย้าย"]}, {"no": 59, "q": "ยอดนัดหมายลดลง ทีม Customer Service บอกว่า Treatment Advisor ตอบลูกค้าช้า ส่วน Treatment Advisor บอกว่า Customer Service ส่งข้อมูลไม่ครบ ขณะนี้มีลูกค้า 5 รายรอคำตอบข้ามวัน และทั้งสองทีมเริ่มโทษกัน คุณจะจัดการอย่างไร?", "options": ["ให้ทั้งสองทีมรวบรวมปัญหาที่พบ แล้วประชุมตกลงว่าข้อมูลใดต้องส่งต่อและใครรับผิดชอบติดตามลูกค้า", "รับรายชื่อลูกค้า 5 รายมาช่วยติดตามด้วยตนเอง แล้วกำชับให้ทั้งสองทีมส่งข้อมูลลูกค้าให้ครบทุกครั้ง", "ให้ตัวแทนทั้งสองทีมตรวจลูกค้า 5 รายที่ค้างร่วมกัน กำหนดผู้รับผิดชอบและเวลาตอบกลับแต่ละราย แล้วทบทวนผลหลัง 3 วัน", "ให้ทั้งสองทีมตกลงกันเองว่าใครควรรับผิดชอบลูกค้าที่ค้าง แล้วรายงานจำนวนนัดหมายให้คุณทราบเมื่อสิ้นสัปดาห์"]}, {"no": 60, "q": "ลูกค้า 3 รายร้องเรียนว่าราคาที่ Customer Service แจ้งทางโทรศัพท์ไม่ตรงกับราคาที่ Treatment Advisor แจ้งหน้าสาขา คุณพบว่าทั้งสองทีมใช้ตารางราคาคนละฉบับ และเริ่มโทษกันว่าอีกฝ่ายแจ้งข้อมูลผิด คุณในฐานะผู้จัดการจะจัดการอย่างไร?", "options": ["ให้ทั้งสองทีมเปรียบเทียบตารางราคาและเลือกใช้ฉบับที่ลงวันที่ใหม่กว่า แล้วแจ้งลูกค้าทั้ง 3 รายให้ยึดราคาตามเอกสารนั้น", "ตรวจสอบราคาที่บริษัทอนุมัติกับฝ่ายที่รับผิดชอบ ติดต่อชี้แจงลูกค้าทั้ง 3 ราย และส่งตารางราคาที่ถูกต้องให้ทั้งสองทีมใช้เหมือนกัน", "ให้พนักงานทั้งสองทีมหยุดใช้ตารางราคาเดิม และสอบถามราคาจากฝ่ายที่รับผิดชอบก่อนแจ้งลูกค้าทุกราย ส่วนลูกค้า 3 รายที่ร้องเรียนให้รอการติดต่อกลับจากฝ่ายนั้น", "ตรวจสอบราคาที่อนุมัติ ติดต่อชี้แจงและประสานแก้ไขให้ลูกค้า 3 รายตามนโยบายบริษัท จากนั้นให้สองทีมใช้ตารางราคาเดียวกัน และกำหนดผู้รับผิดชอบอัปเดตเมื่อราคาเปลี่ยน"]}], "roles": [{"name": "ผู้จัดการสาขา"}, {"name": "หัวหน้างาน"}, {"name": "ผู้จัดการ / ผู้บริหาร"}]};</script><script>(function(){'use strict';
+const $=id=>document.getElementById(id),esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const DATA=window.ASSESSMENT_DATA,CONFIG=window.ASSESSMENT_CONFIG,API=CONFIG.SHEET_ENDPOINT,VERSION='MANAGEMENT-JG13-2026-11-11',KEY='assessment60-management-jg13-one-question-v2';
+let meta=null,answers={},locked=false,busy=false,sent=false,expired=false,currentIndex=0,endReason='',endedAt='',lastBackup=null,candidates=[],chosen=null,session=null;
+function inHRMaster(){try{return parent!==window&&!!(parent.HRA60Bridge||parent.HRU?.token)}catch(e){return false}}
+function parentSession(){try{if(parent===window)return null;if(parent.HRA60Bridge)return parent.HRA60Bridge.getSession();return parent.HRU?.token?parent.HRU:null}catch(e){return null}}
+function auth(){let s=parentSession()||session;if(!s?.token)throw Error('เข้าสู่ระบบด้วยบัญชี HR Master ก่อน');return s.token}
+function frameSend(data){return new Promise((resolve,reject)=>{let id='a60_'+crypto.randomUUID().replace(/-/g,''),frame=document.createElement('iframe'),f=document.createElement('form');frame.name=id;frame.hidden=true;f.hidden=true;f.method='POST';f.action=API;f.target=id;Object.entries({...data,requestId:id}).forEach(([k,v])=>{let input=document.createElement('input');input.name=k;input.value=v;f.appendChild(input)});function finish(err,d){clearTimeout(timer);window.removeEventListener('message',receive);frame.remove();f.remove();err?reject(err):resolve(d)}function receive(e){if(!/^https:\/\/([a-z0-9-]+\.)*googleusercontent\.com$/.test(e.origin)&&e.origin!=='https://script.google.com')return;let d=e.data;try{if(typeof d==='string')d=JSON.parse(d)}catch(err){return}if(d?.requestId===id)finish(null,d)}let timer=setTimeout(()=>finish(Error('ยังไม่ได้รับคำยืนยัน กรุณาส่งซ้ำคำตอบเดิม หรือส่งไฟล์สำรองให้ HR')),60000);window.addEventListener('message',receive);document.body.append(frame,f);f.submit()})}
+async function send(data){let response;try{let ac=new AbortController(),tm=setTimeout(()=>ac.abort(),20000);try{let r=await fetch(API,{method:'POST',body:new URLSearchParams({...data,mode:'fetch'}),keepalive:true,signal:ac.signal});response=await r.json()}finally{clearTimeout(tm)}}catch(e){response=await frameSend(data)}if(response.status!=='ok')throw Error(response.message||'ส่งไม่สำเร็จ');return response}
+function jsonp(action,p){return new Promise((resolve,reject)=>{let cb='a60cb_'+crypto.randomUUID().replace(/-/g,''),s=document.createElement('script'),timer;function clean(){clearTimeout(timer);delete window[cb];s.remove()}window[cb]=r=>{clean();r.status==='ok'?resolve(r):reject(Error(r.message||'อ่านผลไม่ได้'))};s.onerror=()=>{clean();reject(Error('เชื่อมต่อไม่ได้ กรุณาลองโหลดใหม่'))};timer=setTimeout(()=>{clean();reject(Error('เชื่อมต่อหมดเวลา'))},30000);s.src=API+'?'+new URLSearchParams({action,...p,callback:cb});document.head.append(s)})}
+async function get(action,p={}){let token=auth();try{if(parent!==window&&parentSession()&&typeof parent.hrGet==='function')return await parent.hrGet(action,{...p,token})}catch(e){throw e}return jsonp(action,{...p,token})}
+async function post(action,p={}){let token=auth();if(parent!==window&&parentSession()&&typeof parent.hrPost==='function')return parent.hrPost(action,{...p,token});return send({action,...p,token})}
+function setMode(mode){if(mode!=='cand'&&activeExam()){endForLeaving('page_exit');return;}$('mCand').classList.toggle('active',mode==='cand');$('mHR').classList.toggle('active',mode==='hr');$('candView').classList.toggle('hidden',mode!=='cand');$('hrView').classList.toggle('hidden',mode!=='hr')}
+function save(){if(!meta||sent)return;try{sessionStorage.setItem(KEY,JSON.stringify({meta,answers,locked,expired,currentIndex,endReason,endedAt,version:VERSION}))}catch(e){}}
+function restore(){try{let d=JSON.parse(sessionStorage.getItem(KEY)||'null');if(!d||d.version!==VERSION||!d.meta?.name||!/^a60_[A-Za-z0-9_-]{16,100}$/.test(d.meta.id)||!Number.isFinite(d.meta.startTime))return;if(Object.entries(d.answers||{}).some(([k,v])=>!Number.isInteger(+k)||+k<1||+k>60||![0,1,2,3].includes(v)))return;meta=d.meta;answers=d.answers;locked=!!d.locked;expired=!!d.expired;currentIndex=Math.max(0,Math.min(59,Number(d.currentIndex)||0));endReason=d.endReason||'';endedAt=d.endedAt||'';document.body.classList.toggle('exam-in-progress',!locked);$('introCard').classList.add('hidden');$('testCard').classList.remove('hidden');for(let i=0;i<currentIndex;i++){if(!answered(DATA.questions[i].no)){currentIndex=i;break}}renderQuestions();if(locked){$('retryBox').classList.remove('hidden');$('sendStatus').textContent='มีคำตอบรอการยืนยัน ส่งซ้ำคำตอบเดิมได้';$('doneCard').classList.remove('hidden');$('doneName').textContent=meta.name;lastBackup=backupData();$('backupBox').classList.remove('hidden')}tick()}catch(e){}}
+function start(){let name=$('cName').value.trim(),role=$('cRole').value;if(role==='__other__')role=$('cRoleOther').value.trim();if(name.split(/\s+/).length<2){alert('กรุณากรอกชื่อและนามสกุล');return}if(!role){alert('กรุณาเลือกตำแหน่ง');return}if(!$('candidateConsent').checked||!$('examRules').checked){alert('กรุณายืนยันการส่งข้อมูลและรับทราบกติกาสอบ');return}meta={id:'a60_'+crypto.randomUUID(),name,role,branch:$('cBranch').value.trim(),date:new Date().toISOString(),startTime:Date.now()};answers={};currentIndex=0;document.body.classList.add('exam-in-progress');$('introCard').classList.add('hidden');$('testCard').classList.remove('hidden');renderQuestions();save();tick();$('testCard').scrollIntoView({block:'start'})}
+function renderQuestions(){let q=DATA.questions[currentIndex],box=$('questions');box.innerHTML='<div class="q"><div class="qtop"><span class="qno">ข้อ '+q.no+' / 60</span></div><div class="qtext">'+esc(q.q)+'</div><div class="opts">'+q.options.map((o,i)=>'<label class="opt'+(answers[q.no]===i?' sel':'')+'"><input type="radio" name="q'+q.no+'" value="'+i+'" '+(answers[q.no]===i?'checked ':'')+(locked?'disabled':'')+'><span class="ol">'+'ABCD'[i]+'</span><span>'+esc(o)+'</span></label>').join('')+'</div><div class="exam-watermark">'+esc(meta?.name||'')+' · '+esc(meta?.id.slice(-8)||'')+' · เอกสารใช้ในการประเมินเท่านั้น</div></div>';$('questionNo').textContent='ข้อ '+q.no+' / 60';$('prevQuestion').disabled=currentIndex===0||locked;$('nextQuestion').disabled=currentIndex===59||locked;updateProgress()}
+function answered(no){return Number.isInteger(answers[no])&&answers[no]>=0&&answers[no]<=3}
+function navigateQuestion(delta){if(!meta||locked||busy||sent)return;if(delta>0&&!answered(DATA.questions[currentIndex].no))return;if(left()===0){tick();return}currentIndex=Math.max(0,Math.min(59,currentIndex+delta));save();renderQuestions();$('testCard').scrollIntoView({block:'start'})}
+$('questions').onchange=e=>{if(locked||busy||sent)return;if(left()===0){tick();return}if(/^q\d+$/.test(e.target.name)){answers[+e.target.name.slice(1)]=+e.target.value;let opts=e.target.closest('.opts');opts.querySelectorAll('.opt').forEach(o=>o.classList.toggle('sel',o.querySelector('input').checked));save();updateProgress()}};
+function left(){return meta?Math.max(0,3600000-(Date.now()-meta.startTime)):3600000}
+function updateProgress(){let n=Object.keys(answers).length;$('pcount').textContent=n+' / 60';$('pleft').textContent=n===60?'ตอบครบแล้ว':'เหลืออีก '+(60-n)+' ข้อ';$('pbar').style.width=n/60*100+'%';$('submitBtn').disabled=n!==60||locked||busy;$('nextQuestion').disabled=currentIndex===59||locked||busy||!answered(DATA.questions[currentIndex].no);$('nextQuestion').title=answered(DATA.questions[currentIndex].no)?'ไปข้อถัดไป':'กรุณาเลือกคำตอบข้อนี้ก่อน'}
+function tick(){if(!meta||sent)return;let sec=Math.ceil(left()/1000);$('timer').textContent='⏱ '+String(Math.floor(sec/60)).padStart(2,'0')+':'+String(sec%60).padStart(2,'0');$('timer').classList.toggle('warn',sec<=300);$('timer').classList.toggle('danger',sec<=60);if(!sec&&!locked){submitTest(true,'timeout')}}
+function backupData(){return {format:'HR_A60_BACKUP_V2',version:VERSION,submissionId:meta.id,name:meta.name,role:meta.role,branch:meta.branch,answers:JSON.stringify(DATA.questions.map(q=>answers[q.no]==null?'-':'ABCD'[answers[q.no]])),timeExpired:String(expired),endReason,endedAt,examPolicy:'one-question-v2',startedAt:new Date(meta.startTime).toISOString(),deadline:new Date(meta.startTime+3600000).toISOString()}}
+async function submitTest(force=false,reason='manual'){if(busy||sent||!meta)return;if(!force&&!locked&&Object.keys(answers).length!==60)return;if(!locked){endReason=reason;endedAt=new Date().toISOString();expired=reason==='timeout';locked=true}busy=true;document.body.classList.remove('exam-in-progress');save();renderQuestions();lastBackup=backupData();$('testCard').classList.add('hidden');$('doneCard').classList.remove('hidden');$('doneName').textContent=meta.name;$('resultCode').textContent=JSON.stringify(lastBackup,null,2);$('sendStatus').textContent='กำลังส่งคำตอบ รอเลขยืนยันจากระบบ…';$('retryBox').classList.add('hidden');try{let r=await send({action:'a60Submit',...lastBackup});sent=true;try{sessionStorage.removeItem(KEY)}catch(e){}$('sendStatus').textContent='ส่งสำเร็จ · เลขรับผล '+r.id+' · '+endLabel(endReason);$('receiptHeading').textContent='✅ ส่งแบบทดสอบสำเร็จ';$('backupBox').classList.add('hidden')}catch(e){$('sendStatus').textContent=e.message;$('receiptHeading').textContent='ยังไม่ได้รับคำยืนยัน';$('backupBox').classList.remove('hidden');$('retryBox').classList.remove('hidden')}finally{busy=false;save()}}
+function download(text,name,type='application/json'){let u=URL.createObjectURL(new Blob([text],{type})),a=document.createElement('a');a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),1000)}
+async function hrLogin(){let button=$('hrLoginBtn'),embedded=inHRMaster();button.disabled=true;if(embedded){setMode('hr');$('hrLockCard').classList.add('hidden');$('hrPanel').classList.remove('hidden');$('listStatus').textContent='กำลังโหลดผล Assessment 60…'}try{if(embedded&&!parentSession())throw Error('กรุณาตรวจสิทธิ์ Assessment 60 หรือเข้าสู่ระบบ HR Master ใหม่');if(!embedded&&!parentSession())session=await send({action:'hrLogin',id:$('hrUser').value.trim(),password:$('hrPass').value});$('hrPass').value='';await loadCandidates();$('hrLockCard').classList.add('hidden');$('hrPanel').classList.remove('hidden')}catch(e){if(embedded){$('listStatus').textContent=e.message+' · กดโหลดรายชื่อเพื่อลองอีกครั้ง';$('hrLockCard').classList.add('hidden')}else{session=null;$('hrErr').textContent=e.message}}finally{button.disabled=false}}
+async function loadCandidates(){let b=$('reloadBtn');b.disabled=true;$('listStatus').textContent='กำลังโหลด…';try{let r=await get('hrA60List');candidates=r.items;populateRoleFilter();renderCandidateList();$('listStatus').textContent='พบ '+r.total+' รายการ · แสดงล่าสุดสูงสุด 500 · '+new Date().toLocaleString('th-TH');return r}catch(e){$('listStatus').textContent=e.message;throw e}finally{b.disabled=false}}
+function populateRoleFilter(){let old=$('fRole').value;$('fRole').innerHTML='<option value="">ทุกตำแหน่ง</option>'+[...new Set(candidates.map(c=>c.role).filter(Boolean))].sort().map(x=>'<option value="'+esc(x)+'">'+esc(x)+'</option>').join('');$('fRole').value=old}
+function getFiltered(){let q=$('fSearch').value.toLowerCase().trim(),role=$('fRole').value,band=$('fLevel').value,min=+$('fScore').value,sort=$('fSort').value;return candidates.filter(c=>(c.name+' '+c.role+' '+c.branch).toLowerCase().includes(q)&&(!role||role===c.role)&&(!band||band===c.result.band)&&(!min||(c.result.percent!=null&&c.result.percent>=min))).sort((a,b)=>{if(sort==='name_asc')return a.name.localeCompare(b.name,'th');if(sort==='overall_asc'||sort==='overall_desc'){let x=a.result.percent,y=b.result.percent;if(x==null&&y!=null)return 1;if(y==null&&x!=null)return -1;return sort==='overall_asc'?x-y:y-x}return sort==='date_asc'?Date.parse(a.at)-Date.parse(b.at):Date.parse(b.at)-Date.parse(a.at)})}
+function renderCandidateList(){let list=getFiltered();$('filterBar').classList.remove('hidden');$('filterCount').classList.remove('hidden');$('filterCount').textContent='แสดง '+list.length+' / '+candidates.length+' รายการ';$('candList').innerHTML='<table><tr><th>วันที่</th><th>ชื่อ / ตำแหน่ง</th><th>Overall</th><th>ระดับผล</th><th></th></tr>'+list.map(c=>'<tr><td>'+esc(new Date(c.at).toLocaleString('th-TH'))+'</td><td><b>'+esc(c.name)+'</b><br>'+esc(c.role)+' · '+esc(c.branch||'–')+'</td><td><strong style="font-size:25px">'+(c.result.percent==null?'–':c.result.percent.toFixed(1)+'%')+'</strong><br>'+(c.result.total==null?'ตอบ '+c.result.answeredCount+'/60':c.result.total+'/240')+'</td><td>'+esc(c.result.band)+'<br><small>'+esc(endLabel(c.endReason||(c.timeExpired?'timeout':'')))+'</small></td><td><button class="btn ghost sm" data-id="'+esc(c.id)+'">ดูผล</button></td></tr>').join('')+'</table>'}
+async function viewCandidate(id){$('detailStatus').textContent='กำลังโหลดผล…';try{let r=await get('hrA60Detail',{id});renderDetail(r.record,r.questions);$('detailStatus').textContent=''}catch(e){$('detailStatus').textContent=e.message}}
+function radarHTML(v){const axis=['BOLD','CRAFTED','PROGRESSIVE','EQ','IQ','AQ'],p=(i,r)=>[170+Math.sin(i*Math.PI/3)*r,150-Math.cos(i*Math.PI/3)*r],points=(r)=>axis.map((k,i)=>p(i,r).join(',')).join(' ');return '<figure style="max-width:400px;margin:18px auto"><svg viewBox="0 0 340 310" role="img" aria-label="กราฟคะแนน 6 ด้าน ร้อยละเทียบคะแนนเต็มด้านละ 80"><g fill="none" stroke="currentColor" opacity=".22">'+[.25,.5,.75,1].map(r=>'<polygon points="'+points(92*r)+'"/>').join('')+axis.map((k,i)=>'<path d="M170 150 L'+p(i,92).join(' ')+'"/>').join('')+'</g><polygon points="'+axis.map((k,i)=>p(i,92*v.dimensions[k].percent/100).join(',')).join(' ')+'" fill="var(--accent)" fill-opacity=".24" stroke="var(--accent)" stroke-width="2"/>'+axis.map((k,i)=>{let q=p(i,122);return '<text x="'+q[0]+'" y="'+q[1]+'" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="currentColor">'+k+' '+v.dimensions[k].percent.toFixed(1)+'%</text>'}).join('')+'</svg><figcaption class="note">6 ด้านของคำตอบชุดเดียวกัน · ไม่บวกรวมซ้ำเป็น 480 คะแนน</figcaption></figure>'}
+const DIMS=['BOLD','CRAFTED','PROGRESSIVE','EQ','IQ','AQ'];
+function renderDetail(r,questions){chosen={record:r,questions};let v=r.result,full=v.completed!==false,box=$('hrResult');box.classList.remove('hidden');box.innerHTML='<div class="card"><h2>'+esc(r.name)+'</h2><p>ตำแหน่ง '+esc(r.role)+' · สาขา '+esc(r.branch||'–')+' · '+esc(new Date(r.at).toLocaleString('th-TH'))+'</p><p class="note">ชุด '+esc(r.version)+' · '+esc(r.source)+'</p><p class="note">สาเหตุสิ้นสุด: '+esc(endLabel(r.endReason||(r.timeExpired?'timeout':'')))+'</p><div class="flex report-actions"><button class="btn" id="printBtn">พิมพ์ / บันทึก PDF</button><button class="btn ghost" id="csvBtn">Export CSV รายข้อ</button></div></div><div class="card"><h2 style="font-size:34px">'+(full?v.total+' / 240 · '+v.percent.toFixed(1)+'%':endLabel(r.endReason||(r.timeExpired?'timeout':''))+' · ตอบ '+v.answeredCount+'/60 ข้อ')+'</h2><p>'+esc(v.band)+'</p>'+(full?radarHTML(v)+'<table><tr><th>ด้าน</th><th>คะแนน</th><th>%</th><th>ระดับผล</th></tr>'+DIMS.map(k=>'<tr><td><b>'+k+'</b></td><td>'+v.dimensions[k].score+'/80</td><td><div class="dimbar"><i style="width:'+v.dimensions[k].percent+'%"></i></div>'+v.dimensions[k].percent.toFixed(1)+'%</td><td>'+esc(v.dimensions[k].band)+'</td></tr>').join('')+'</table>':'<p>ยังไม่คิดคะแนนรวมและไม่แปลผล รอ HR ตรวจสอบ</p>')+'<p class="note">Overall ใช้คะแนน 60 ข้อรวมเพียงครั้งเดียว ไม่ถ่วงน้ำหนักตามตำแหน่ง และไม่บวกทั้ง 6 ด้านซ้ำ เกณฑ์ตาม Excel: ≥75% สูง, ≥50% ระดับกลาง, ต่ำกว่า50% ควรสำรวจเพิ่มเติม ไม่ใช่เกณฑ์ผ่าน/ไม่ผ่าน IQ เป็นมิติการคิดวิเคราะห์สถานการณ์งาน ไม่ใช่ผลวัดเชาวน์ปัญญา</p></div><div class="card"><h2>รายละเอียดรายข้อ</h2><table><tr><th>ข้อ / ด้าน</th><th>คำถาม คำตอบ และเหตุผล</th><th>คะแนน</th></tr>'+questions.map((q,i)=>{let x=q.options.find(x=>x.letter===r.answers[i]);return '<tr><td>'+q.id+'<br>'+q.core+' / '+q.dimension+'</td><td>'+esc(q.question)+'<br><b>ตอบ '+esc(x?x.letter+'. '+x.text:'ไม่ได้ตอบ')+'</b>'+(x?'<p class="note">'+esc(x.reason)+'</p>':'')+'<details><summary>คะแนนและเหตุผลทุกตัวเลือก</summary>'+q.options.map(o=>'<p>'+o.letter+'. '+esc(o.text)+' ('+o.score+'/4)<br>'+esc(o.reason)+'</p>').join('')+'</details></td><td>'+(x?x.score+'/4':'–')+'</td></tr>'}).join('')+'</table></div>';$('printBtn').onclick=()=>window.print();$('csvBtn').onclick=exportCSV;box.scrollIntoView({block:'start'})}
+function exportCSV(){if(!chosen)return;let {record:r,questions}=chosen,cell=v=>'"'+String(v??'').replace(/^[=+@-]/,"'$&").replace(/"/g,'""')+'"',rows=[['Name','Position','Version','Question','Core','Dimension','Answer','Score','Reason'],...questions.map((q,i)=>{let x=q.options.find(x=>x.letter===r.answers[i]);return [r.name,r.role,r.version,q.id,q.core,q.dimension,r.answers[i],x?.score??'',x?.reason??'']})];download('\ufeff'+rows.map(r=>r.map(cell).join(',')).join('\r\n'),'Assessment60-detail.csv','text/csv;charset=utf-8')}
+async function importBackup(){let e=$('hrProcErr');try{let d=JSON.parse($('hrCodeIn').value);if(d.format!=='HR_A60_BACKUP_V2'||d.version!==VERSION)throw Error('ใช้ JSON สำรองชุด Management JG13+ เท่านั้น ผลข้อสอบเก่าเปิดจากระบบเดิม');if(!confirm('นำเข้าคำตอบสำรองของ '+String(d.name||'')+' โดยระบุแหล่งที่มาว่า HR นำเข้า?'))return;let r=await post('hrA60Import',{version:d.version,submissionId:d.submissionId,name:d.name,role:d.role,branch:d.branch||'',answers:d.answers,timeExpired:d.timeExpired||'',endReason:d.endReason||'',endedAt:d.endedAt||'',examPolicy:d.examPolicy||'',startedAt:d.startedAt||'',deadline:d.deadline||''});await loadCandidates();await viewCandidate(r.id);e.textContent='บันทึกแล้ว'}catch(err){e.textContent=err.message}}
+function candidateURL(){return CONFIG.PUBLIC_URL}
+function boot(){DATA.roles.forEach(r=>{let o=document.createElement('option');o.value=o.textContent=r.name;$('cRole').append(o)});let o=document.createElement('option');o.value='__other__';o.textContent='อื่นๆ (ระบุเอง)';$('cRole').append(o);$('cRole').onchange=()=>{$('cRoleOther').classList.toggle('hidden',$('cRole').value!=='__other__')};$('mCand').onclick=()=>setMode('cand');$('mHR').onclick=()=>setMode('hr');$('startBtn').onclick=start;$('submitBtn').onclick=()=>submitTest(false);$('retrySend').onclick=()=>submitTest(true,endReason||'manual');$('prevQuestion').onclick=()=>navigateQuestion(-1);$('nextQuestion').onclick=()=>navigateQuestion(1);$('hrLoginBtn').onclick=hrLogin;$('hrPass').onkeydown=e=>{if(e.key==='Enter')hrLogin()};$('reloadBtn').onclick=()=>loadCandidates().catch(()=>{});$('candList').onclick=e=>{let b=e.target.closest('[data-id]');if(b)viewCandidate(b.dataset.id)};['fSearch','fRole','fLevel','fScore','fSort'].forEach(id=>$(id).addEventListener(id==='fSearch'?'input':'change',renderCandidateList));$('manualBtn').onclick=()=>$('manualCard').classList.toggle('hidden');$('fileBtn').onclick=()=>$('fileIn').click();$('fileIn').onchange=async e=>{let f=e.target.files[0];if(f){if(f.size>30000){$('hrProcErr').textContent='ไฟล์ใหญ่เกินไป';return}$('hrCodeIn').value=await f.text()}};$('procBtn').onclick=importBackup;$('copyBtn').onclick=()=>navigator.clipboard.writeText(JSON.stringify(lastBackup)).then(()=>$('copyMsg').textContent='คัดลอกแล้ว').catch(()=>$('copyMsg').textContent='คัดลอกข้อความจากช่องรหัสได้เลย');$('dlBtn').onclick=()=>download(JSON.stringify(lastBackup,null,2),'Assessment60-backup.json');$('publicLink').value=candidateURL();$('copyPublic').onclick=()=>navigator.clipboard.writeText($('publicLink').value).then(()=>$('detailStatus').textContent='คัดลอกลิงก์แล้ว').catch(()=>$('publicLink').select());restore();setInterval(tick,500);if(inHRMaster()){setMode('hr');hrLogin()}}
+function endLabel(reason){return ({manual:'ส่งโดยผู้ทำแบบทดสอบ',timeout:'ครบเวลา 60 นาที',tab_switch:'สลับแท็บหรือซ่อนหน้าข้อสอบ',window_blur:'ออกจากหน้าต่างข้อสอบ',page_exit:'ออกจากหน้าข้อสอบ'})[reason]||'ไม่ได้บันทึกสาเหตุ (ผลเดิม)'}
+function endForLeaving(reason){if(!meta||sent||locked)return;submitTest(true,left()===0?'timeout':reason)}
+window.addEventListener('blur',()=>endForLeaving('window_blur'));
+document.addEventListener('visibilitychange',()=>{if(document.hidden)endForLeaving('tab_switch');else tick()});
+window.addEventListener('pagehide',()=>{endForLeaving('page_exit');save()});
+window.addEventListener('beforeunload',()=>{endForLeaving('page_exit');save()});
+function activeExam(){return !!meta&&!locked&&!sent}
+document.addEventListener('contextmenu',e=>{if(activeExam())e.preventDefault()});
+document.addEventListener('copy',e=>{if(activeExam())e.preventDefault()});
+document.addEventListener('cut',e=>{if(activeExam())e.preventDefault()});
+document.addEventListener('dragstart',e=>{if(activeExam())e.preventDefault()});
+document.addEventListener('keydown',e=>{if(!activeExam())return;let k=e.key.toLowerCase();if(e.key==='PrintScreen'||((e.ctrlKey||e.metaKey)&&['p','c','s','u'].includes(k))){e.preventDefault();$('examNotice').textContent='ไม่อนุญาตให้คัดลอกหรือบันทึกข้อสอบ ';}});
+boot();if(new URLSearchParams(location.search).get('mode')==='hr'&&!activeExam())setMode('hr');
 })();
-
-</script>
-
-
-</body></html>
+</script></body></html>
